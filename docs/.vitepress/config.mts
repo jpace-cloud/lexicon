@@ -3,8 +3,9 @@ import { defineConfig } from 'vitepress';
 export default defineConfig({
   title: 'Lexicon',
   description: 'Design system for The Pace product family',
+  base: '/lexicon/',
   head: [
-    ['link', { rel: 'icon', href: '/logo.svg' }],
+    ['link', { rel: 'icon', href: '/lexicon/logo.svg' }],
     ['meta', { property: 'og:title', content: 'Lexicon — Design System' }],
     ['meta', { property: 'og:description', content: 'Tokens, components, and patterns for The Pace products' }],
     ['link', { rel: 'preconnect', href: 'https://api.fontshare.com' }],
@@ -18,7 +19,9 @@ export default defineConfig({
     nav: [
       { text: 'Docs', link: '/start/' },
       { text: 'Components', link: '/components/overview' },
+      { text: 'Playground', link: '/playground/' },
       { text: 'Pro', link: '/pro/' },
+      { text: 'The Pace', link: 'https://thepace.io' },
     ],
     sidebar: {
       '/': [
@@ -90,7 +93,7 @@ export default defineConfig({
     ],
     footer: {
       message: 'Released under the MIT License.',
-      copyright: '© 2026 The Pace',
+      copyright: 'A product by <a href="https://thepace.io" target="_blank" rel="noopener">The Pace</a> — © 2026',
     },
     search: {
       provider: 'local',

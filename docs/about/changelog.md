@@ -16,4 +16,4 @@ All notable changes to Lexicon are documented here.
 - **CSS output**: `lexicon.css` (tokens + component classes), `lexicon-bundle.css` (includes reset), and minified variants.
 - **Tailwind CSS preset**: extends colours, fonts, spacing, radii, shadows, durations, and easing.
 - **Build pipeline**: `build-tokens.js` (JSON to CSS), `build-css.js` (bundle generation), `validate-tokens.js` (reference integrity checks).
-- **VitePress documentation site** at [lexicon.thepace.io](https://lexicon.thepace.io).
+- **VitePress documentation site** at [thepace.io/lexicon](https://thepace.io/lexicon).

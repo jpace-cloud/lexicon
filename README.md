@@ -80,7 +80,7 @@ function App() {
 - Advanced components (DataTable, Chart, Dashboard layout, Command palette, and more)
 - Pre-built page templates (Dashboard, Settings, Auth, Pricing, and more)
 - Complete Figma library with all variants, auto-layout, and Figma Variables
-- [Learn more](https://lexicon.thepace.io/pro/)
+- [Learn more](https://thepace.io/lexicon/pro/)
 
 ## Building
 
@@ -108,7 +108,7 @@ npm run docs:build
 npm run docs:preview
 ```
 
-Docs deploy to [lexicon.thepace.io](https://lexicon.thepace.io).
+Docs deploy to [thepace.io/lexicon](https://thepace.io/lexicon).
 
 ## License
 

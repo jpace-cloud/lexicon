@@ -22,7 +22,7 @@ Lexicon is released under the MIT licence. The source code, token definitions, b
 
 - Repository: [github.com/jpace-cloud/lexicon](https://github.com/jpace-cloud/lexicon)
 - Package: [@thepace/lexicon on npm](https://www.npmjs.com/package/@thepace/lexicon)
-- Documentation: [lexicon.thepace.io](https://lexicon.thepace.io)
+- Documentation: [thepace.io/lexicon](https://thepace.io/lexicon)
 
 ## Pro
 
