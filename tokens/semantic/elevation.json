@@ -1,0 +1,13 @@
+{
+  "level": {
+    "0": "none",
+    "1": "{shadows.sm}",
+    "2": "{shadows.md}",
+    "3": "{shadows.lg}",
+    "4": "{shadows.xl}"
+  },
+  "glow": {
+    "default": "{shadows.glow-purple}",
+    "lg": "{shadows.glow-purple-lg}"
+  }
+}

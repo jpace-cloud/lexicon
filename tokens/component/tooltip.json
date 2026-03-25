@@ -1,0 +1,17 @@
+{
+  "default": {
+    "bg": "{bg.elevated}",
+    "text": "{text.primary}",
+    "border": "{border.default}",
+    "radius": "{radii.md}",
+    "shadow": "{shadows.md}",
+    "padding": "{spacing.2} {spacing.3}",
+    "font-size": "{fontSize.sm}",
+    "max-width": "240px",
+    "delay": "{duration.slow}"
+  },
+  "arrow": {
+    "size": "6px",
+    "bg": "{bg.elevated}"
+  }
+}

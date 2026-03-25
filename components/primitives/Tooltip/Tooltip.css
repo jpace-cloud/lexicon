@@ -1,0 +1,94 @@
+.lex-tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+.lex-tooltip__bubble {
+  position: absolute;
+  z-index: 1100;
+  background-color: var(--tooltip-default-bg);
+  color: var(--tooltip-default-text);
+  border: 1px solid var(--tooltip-default-border);
+  border-radius: var(--tooltip-default-radius);
+  box-shadow: var(--tooltip-default-shadow);
+  padding: var(--tooltip-default-padding);
+  font-family: var(--body-font);
+  font-size: var(--tooltip-default-font-size);
+  max-width: var(--tooltip-default-max-width);
+  white-space: normal;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--motion-duration-fast) var(--motion-easing-default);
+  line-height: var(--line-height-normal);
+}
+
+.lex-tooltip__bubble--visible {
+  opacity: 1;
+}
+
+/* ── Positions ── */
+.lex-tooltip__bubble--top {
+  bottom: calc(100% + var(--tooltip-arrow-size) + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lex-tooltip__bubble--bottom {
+  top: calc(100% + var(--tooltip-arrow-size) + 4px);
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.lex-tooltip__bubble--left {
+  right: calc(100% + var(--tooltip-arrow-size) + 4px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lex-tooltip__bubble--right {
+  left: calc(100% + var(--tooltip-arrow-size) + 4px);
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* ── Arrow ── */
+.lex-tooltip__arrow {
+  position: absolute;
+  width: var(--tooltip-arrow-size);
+  height: var(--tooltip-arrow-size);
+  background-color: var(--tooltip-arrow-bg);
+  border: 1px solid var(--tooltip-default-border);
+  transform: rotate(45deg);
+}
+
+.lex-tooltip__bubble--top .lex-tooltip__arrow {
+  bottom: calc(-1 * var(--tooltip-arrow-size) / 2);
+  left: 50%;
+  margin-left: calc(-1 * var(--tooltip-arrow-size) / 2);
+  border-top: none;
+  border-left: none;
+}
+
+.lex-tooltip__bubble--bottom .lex-tooltip__arrow {
+  top: calc(-1 * var(--tooltip-arrow-size) / 2);
+  left: 50%;
+  margin-left: calc(-1 * var(--tooltip-arrow-size) / 2);
+  border-bottom: none;
+  border-right: none;
+}
+
+.lex-tooltip__bubble--left .lex-tooltip__arrow {
+  right: calc(-1 * var(--tooltip-arrow-size) / 2);
+  top: 50%;
+  margin-top: calc(-1 * var(--tooltip-arrow-size) / 2);
+  border-bottom: none;
+  border-left: none;
+}
+
+.lex-tooltip__bubble--right .lex-tooltip__arrow {
+  left: calc(-1 * var(--tooltip-arrow-size) / 2);
+  top: 50%;
+  margin-top: calc(-1 * var(--tooltip-arrow-size) / 2);
+  border-top: none;
+  border-right: none;
+}

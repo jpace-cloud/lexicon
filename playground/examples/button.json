@@ -1,0 +1,11 @@
+{
+  "component": "Button",
+  "variants": ["primary", "secondary", "ghost", "danger"],
+  "sizes": ["sm", "md", "lg"],
+  "examples": [
+    { "variant": "primary", "size": "md", "children": "Save changes" },
+    { "variant": "secondary", "size": "md", "children": "Cancel" },
+    { "variant": "ghost", "size": "sm", "children": "Learn more" },
+    { "variant": "danger", "size": "md", "children": "Delete" }
+  ]
+}

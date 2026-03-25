@@ -1,0 +1,120 @@
+.lex-input {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--body-font);
+}
+
+.lex-input__label {
+  font-size: var(--input-label-font-size);
+  font-weight: var(--input-label-font-weight);
+  color: var(--input-label-color);
+  margin-bottom: var(--input-label-margin-bottom);
+}
+
+.lex-input__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lex-input__field {
+  width: 100%;
+  background-color: var(--input-default-bg);
+  border: 1px solid var(--input-default-border);
+  border-radius: var(--input-default-radius);
+  color: var(--input-default-text);
+  font-family: var(--body-font);
+  outline: none;
+  transition: var(--input-default-transition);
+}
+
+.lex-input__field::placeholder {
+  color: var(--input-default-placeholder);
+}
+
+.lex-input__field:focus {
+  border-color: var(--input-default-border-focus);
+  box-shadow: 0 0 0 1px var(--input-default-border-focus);
+}
+
+/* ── Sizes ── */
+.lex-input--sm .lex-input__field {
+  height: var(--input-sizes-sm-height);
+  padding: 0 var(--input-sizes-sm-padding-x);
+  font-size: var(--input-sizes-sm-font-size);
+}
+
+.lex-input--md .lex-input__field {
+  height: var(--input-sizes-md-height);
+  padding: 0 var(--input-sizes-md-padding-x);
+  font-size: var(--input-sizes-md-font-size);
+}
+
+.lex-input--lg .lex-input__field {
+  height: var(--input-sizes-lg-height);
+  padding: 0 var(--input-sizes-lg-padding-x);
+  font-size: var(--input-sizes-lg-font-size);
+}
+
+/* ── Icon slots ── */
+.lex-input__icon {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-muted);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.lex-input__icon--leading {
+  left: var(--space-3);
+}
+
+.lex-input__icon--trailing {
+  right: var(--space-3);
+}
+
+.lex-input__wrapper:has(.lex-input__icon--leading) .lex-input__field {
+  padding-left: var(--space-10);
+}
+
+.lex-input__wrapper:has(.lex-input__icon--trailing) .lex-input__field {
+  padding-right: var(--space-10);
+}
+
+/* ── Error state ── */
+.lex-input--error .lex-input__field {
+  border-color: var(--input-default-border-error);
+}
+
+.lex-input--error .lex-input__field:focus {
+  border-color: var(--input-default-border-error);
+  box-shadow: 0 0 0 1px var(--input-default-border-error);
+}
+
+.lex-input__error {
+  font-size: var(--input-error-font-size);
+  color: var(--input-error-color);
+  margin-top: var(--input-error-margin-top);
+  margin-bottom: 0;
+}
+
+.lex-input__helper {
+  font-size: var(--input-helper-font-size);
+  color: var(--input-helper-color);
+  margin-top: var(--input-helper-margin-top);
+  margin-bottom: 0;
+}
+
+/* ── Disabled ── */
+.lex-input--disabled .lex-input__field {
+  background-color: var(--input-disabled-bg);
+  color: var(--input-disabled-text);
+  opacity: var(--input-disabled-opacity);
+  cursor: var(--input-disabled-cursor);
+}
+
+.lex-input--disabled .lex-input__label {
+  opacity: var(--input-disabled-opacity);
+}

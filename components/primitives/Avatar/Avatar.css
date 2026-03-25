@@ -1,0 +1,126 @@
+.lex-avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  background-color: var(--avatar-default-bg);
+  color: var(--avatar-default-text);
+  font-family: var(--body-font);
+  font-weight: var(--avatar-default-font-weight);
+  border: var(--avatar-default-border);
+  vertical-align: middle;
+}
+
+/* ── Shape ── */
+.lex-avatar--round {
+  border-radius: var(--avatar-default-radius);
+}
+
+.lex-avatar--square {
+  border-radius: var(--avatar-square-radius);
+}
+
+/* ── Sizes ── */
+.lex-avatar--xs {
+  width: var(--avatar-sizes-xs-size);
+  height: var(--avatar-sizes-xs-size);
+  font-size: var(--avatar-sizes-xs-font-size);
+}
+
+.lex-avatar--sm {
+  width: var(--avatar-sizes-sm-size);
+  height: var(--avatar-sizes-sm-size);
+  font-size: var(--avatar-sizes-sm-font-size);
+}
+
+.lex-avatar--md {
+  width: var(--avatar-sizes-md-size);
+  height: var(--avatar-sizes-md-size);
+  font-size: var(--avatar-sizes-md-font-size);
+}
+
+.lex-avatar--lg {
+  width: var(--avatar-sizes-lg-size);
+  height: var(--avatar-sizes-lg-size);
+  font-size: var(--avatar-sizes-lg-font-size);
+}
+
+.lex-avatar--xl {
+  width: var(--avatar-sizes-xl-size);
+  height: var(--avatar-sizes-xl-size);
+  font-size: var(--avatar-sizes-xl-font-size);
+}
+
+/* ── Image ── */
+.lex-avatar__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Initials ── */
+.lex-avatar__initials {
+  line-height: 1;
+  user-select: none;
+}
+
+/* ── Fallback icon ── */
+.lex-avatar__fallback {
+  width: 60%;
+  height: 60%;
+}
+
+/* ── Status indicator ── */
+.lex-avatar__status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: var(--avatar-status-size);
+  height: var(--avatar-status-size);
+  border-radius: var(--radii-full);
+  border: var(--avatar-status-border);
+}
+
+.lex-avatar__status--online {
+  background-color: var(--avatar-status-online);
+}
+
+.lex-avatar__status--offline {
+  background-color: var(--avatar-status-offline);
+}
+
+.lex-avatar__status--busy {
+  background-color: var(--avatar-status-busy);
+}
+
+/* ── Avatar Group ── */
+.lex-avatar-group {
+  display: inline-flex;
+  align-items: center;
+}
+
+.lex-avatar-group > .lex-avatar {
+  margin-left: var(--avatar-group-overlap);
+}
+
+.lex-avatar-group > .lex-avatar:first-child {
+  margin-left: 0;
+}
+
+.lex-avatar-group__counter {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--avatar-sizes-md-size);
+  height: var(--avatar-sizes-md-size);
+  border-radius: var(--avatar-default-radius);
+  background-color: var(--avatar-group-counter-bg);
+  color: var(--avatar-group-counter-text);
+  font-family: var(--body-font);
+  font-size: var(--avatar-sizes-sm-font-size);
+  font-weight: var(--font-weight-medium);
+  margin-left: var(--avatar-group-overlap);
+  border: var(--avatar-default-border);
+}

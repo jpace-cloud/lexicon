@@ -1,0 +1,39 @@
+{
+  "overlay": {
+    "bg": "{bg.overlay}"
+  },
+  "dialog": {
+    "bg": "{bg.surface-2}",
+    "border": "{border.subtle}",
+    "radius": "{radii.xl}",
+    "shadow": "{shadows.xl}",
+    "padding": "{spacing.6}"
+  },
+  "title": {
+    "font-size": "{fontSize.lg}",
+    "font-weight": "{fontWeight.semibold}",
+    "color": "{text.primary}",
+    "margin-bottom": "{spacing.2}"
+  },
+  "description": {
+    "font-size": "{fontSize.base}",
+    "color": "{text.secondary}",
+    "line-height": "{lineHeight.relaxed}"
+  },
+  "footer": {
+    "padding-top": "{spacing.6}",
+    "gap": "{spacing.3}"
+  },
+  "close": {
+    "size": "32px",
+    "color": "{text.muted}",
+    "color-hover": "{text.primary}",
+    "transition": "{transition.colors}"
+  },
+  "sizes": {
+    "sm": { "max-width": "400px" },
+    "md": { "max-width": "560px" },
+    "lg": { "max-width": "720px" },
+    "full": { "max-width": "calc(100vw - 48px)", "max-height": "calc(100vh - 48px)" }
+  }
+}

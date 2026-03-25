@@ -1,0 +1,42 @@
+{
+  "default": {
+    "bg": "{bg.surface-1}",
+    "border": "{border.default}",
+    "border-focus": "{border.focus}",
+    "border-error": "{status.error}",
+    "text": "{text.primary}",
+    "placeholder": "{text.muted}",
+    "radius": "{radii.md}",
+    "height": "40px",
+    "padding-x": "{spacing.3}",
+    "font-size": "{fontSize.base}",
+    "transition": "{transition.colors}"
+  },
+  "disabled": {
+    "bg": "{bg.surface-2}",
+    "text": "{text.disabled}",
+    "opacity": "0.6",
+    "cursor": "not-allowed"
+  },
+  "label": {
+    "font-size": "{fontSize.sm}",
+    "font-weight": "{fontWeight.medium}",
+    "color": "{text.secondary}",
+    "margin-bottom": "{spacing.1}"
+  },
+  "helper": {
+    "font-size": "{fontSize.xs}",
+    "color": "{text.muted}",
+    "margin-top": "{spacing.1}"
+  },
+  "error": {
+    "font-size": "{fontSize.xs}",
+    "color": "{status.error}",
+    "margin-top": "{spacing.1}"
+  },
+  "sizes": {
+    "sm": { "height": "32px", "padding-x": "{spacing.2}", "font-size": "{fontSize.sm}" },
+    "md": { "height": "40px", "padding-x": "{spacing.3}", "font-size": "{fontSize.base}" },
+    "lg": { "height": "48px", "padding-x": "{spacing.4}", "font-size": "{fontSize.md}" }
+  }
+}

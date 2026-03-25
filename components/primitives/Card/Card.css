@@ -1,0 +1,73 @@
+.lex-card {
+  font-family: var(--body-font);
+  overflow: hidden;
+}
+
+/* ── Variants ── */
+.lex-card--default {
+  background-color: var(--card-default-bg);
+  border: 1px solid var(--card-default-border);
+  border-radius: var(--card-default-radius);
+  padding: var(--card-default-padding);
+  box-shadow: var(--card-default-shadow);
+}
+
+.lex-card--elevated {
+  background-color: var(--card-elevated-bg);
+  border: 1px solid var(--card-elevated-border);
+  border-radius: var(--card-elevated-radius);
+  padding: var(--card-elevated-padding);
+  box-shadow: var(--card-elevated-shadow);
+}
+
+.lex-card--outlined {
+  background-color: var(--card-outlined-bg);
+  border: 1px solid var(--card-outlined-border);
+  border-radius: var(--card-outlined-radius);
+  padding: var(--card-outlined-padding);
+  box-shadow: var(--card-outlined-shadow);
+}
+
+/* ── Clickable ── */
+.lex-card--clickable {
+  cursor: var(--card-clickable-cursor);
+  transition: var(--card-clickable-transition);
+}
+
+.lex-card--clickable:hover {
+  border-color: var(--card-clickable-border-hover);
+  box-shadow: var(--card-clickable-shadow-hover);
+}
+
+.lex-card--clickable:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Sub-components ── */
+.lex-card__header {
+  padding: var(--card-header-padding);
+  border-bottom: 1px solid var(--card-header-border-bottom);
+  font-size: var(--card-header-font-size);
+  font-weight: var(--card-header-font-weight);
+  color: var(--text-primary);
+  margin: calc(-1 * var(--card-default-padding));
+  margin-bottom: var(--card-default-padding);
+}
+
+.lex-card__footer {
+  padding: var(--card-footer-padding);
+  border-top: 1px solid var(--card-footer-border-top);
+  background-color: var(--card-footer-bg);
+  margin: calc(-1 * var(--card-default-padding));
+  margin-top: var(--card-default-padding);
+}
+
+.lex-card__media {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  margin: calc(-1 * var(--card-default-padding));
+  margin-bottom: var(--card-default-padding);
+  width: calc(100% + 2 * var(--card-default-padding));
+}

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lexicon Playground</title>
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+  <link rel="stylesheet" href="../css/reset.css" />
+  <link rel="stylesheet" href="../css/lexicon.css" />
+  <style>
+    body {
+      font-family: var(--font-family-body);
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      min-height: 100vh;
+      padding: 48px 24px;
+    }
+    .playground {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-family: var(--font-family-heading);
+      font-size: var(--font-size-4xl);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+    .subtitle {
+      font-size: var(--font-size-md);
+      color: var(--text-secondary);
+      margin-bottom: 48px;
+    }
+    .section {
+      margin-bottom: 48px;
+    }
+    .section h2 {
+      font-family: var(--font-family-heading);
+      font-size: var(--font-size-xl);
+      font-weight: 600;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+    .controls {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .control-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .control-group label {
+      font-size: var(--font-size-xs);
+      font-weight: 500;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .control-group select {
+      padding: 6px 12px;
+      font-size: var(--font-size-sm);
+      background: var(--bg-surface-1);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radii-md);
+      color: var(--text-primary);
+      cursor: pointer;
+    }
+    .preview {
+      padding: 32px;
+      background: var(--bg-surface-1);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radii-lg);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 120px;
+    }
+    .code-block {
+      background: var(--bg-surface-2);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radii-md);
+      padding: 16px;
+      margin-top: 12px;
+      font-family: var(--font-family-mono);
+      font-size: var(--font-size-sm);
+      line-height: 1.6;
+      color: var(--text-secondary);
+      overflow-x: auto;
+      position: relative;
+    }
+    .copy-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      padding: 4px 10px;
+      font-size: 11px;
+      font-weight: 500;
+      background: var(--bg-surface-3);
+      border: 1px solid var(--border-default);
+      border-radius: var(--radii-sm);
+      color: var(--text-muted);
+      cursor: pointer;
+    }
+    .copy-btn:hover { color: var(--text-primary); }
+
+    /* Button preview styles */
+    .demo-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: none;
+      cursor: pointer;
+      font-family: var(--font-family-body);
+      transition: background-color 200ms, border-color 200ms;
+    }
+    .demo-button[data-variant="primary"] {
+      background: var(--button-primary-bg);
+      color: var(--button-primary-text);
+      border: 1px solid transparent;
+    }
+    .demo-button[data-variant="primary"]:hover { background: var(--button-primary-bg-hover); }
+    .demo-button[data-variant="secondary"] {
+      background: transparent;
+      color: var(--button-secondary-text);
+      border: 1px solid var(--border-default);
+    }
+    .demo-button[data-variant="secondary"]:hover { background: var(--bg-surface-3); }
+    .demo-button[data-variant="ghost"] {
+      background: transparent;
+      color: var(--interactive-default);
+      border: 1px solid transparent;
+    }
+    .demo-button[data-variant="ghost"]:hover { background: var(--interactive-muted); }
+    .demo-button[data-variant="danger"] {
+      background: var(--button-danger-bg);
+      color: var(--button-danger-text);
+      border: 1px solid transparent;
+    }
+    .demo-button[data-variant="danger"]:hover { background: var(--button-danger-bg-hover); }
+    .demo-button[data-size="sm"] {
+      height: 32px; padding: 0 12px; font-size: var(--font-size-sm); border-radius: var(--radii-md);
+    }
+    .demo-button[data-size="md"] {
+      height: 40px; padding: 0 20px; font-size: var(--font-size-base); border-radius: var(--radii-lg);
+    }
+    .demo-button[data-size="lg"] {
+      height: 48px; padding: 0 24px; font-size: var(--font-size-md); border-radius: var(--radii-lg);
+    }
+    .demo-button:focus-visible {
+      outline: 2px solid var(--border-focus);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+  <div class="playground">
+    <h1>Lexicon Playground</h1>
+    <p class="subtitle">Experiment with Lexicon components and tokens interactively.</p>
+
+    <div class="section">
+      <h2>Button</h2>
+      <div class="controls">
+        <div class="control-group">
+          <label>Variant</label>
+          <select id="btn-variant">
+            <option value="primary">Primary</option>
+            <option value="secondary">Secondary</option>
+            <option value="ghost">Ghost</option>
+            <option value="danger">Danger</option>
+          </select>
+        </div>
+        <div class="control-group">
+          <label>Size</label>
+          <select id="btn-size">
+            <option value="sm">Small</option>
+            <option value="md" selected>Medium</option>
+            <option value="lg">Large</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="preview" id="btn-preview">
+        <button class="demo-button" data-variant="primary" data-size="md" id="demo-btn">
+          Button
+        </button>
+      </div>
+
+      <div class="code-block" id="btn-code">
+        <button class="copy-btn" onclick="copyCode()">Copy</button>
+        <pre id="btn-code-text">&lt;Button variant="primary" size="md"&gt;
+  Button
+&lt;/Button&gt;</pre>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Token Explorer</h2>
+      <div class="preview" style="flex-direction: column; gap: 16px; align-items: stretch;">
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-purple-50);" title="purple-50"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-purple-100);" title="purple-100"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-purple-200);" title="purple-200"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-purple-300);" title="purple-300"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-purple-400);" title="purple-400"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-purple-500);" title="purple-500"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-purple-600);" title="purple-600"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-purple-700);" title="purple-700"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-purple-800);" title="purple-800"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-purple-900);" title="purple-900"></div>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-50); border: 1px solid var(--border-subtle);" title="grey-50"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-100);" title="grey-100"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-200);" title="grey-200"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-300);" title="grey-300"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-400);" title="grey-400"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-500);" title="grey-500"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-600);" title="grey-600"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-700);" title="grey-700"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-800);" title="grey-800"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-900);" title="grey-900"></div>
+          <div style="width: 48px; height: 48px; border-radius: var(--radii-md); background: var(--color-grey-950);" title="grey-950"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const variantSelect = document.getElementById('btn-variant');
+    const sizeSelect = document.getElementById('btn-size');
+    const demoBtn = document.getElementById('demo-btn');
+    const codeText = document.getElementById('btn-code-text');
+
+    function updateButton() {
+      const variant = variantSelect.value;
+      const size = sizeSelect.value;
+      demoBtn.setAttribute('data-variant', variant);
+      demoBtn.setAttribute('data-size', size);
+      codeText.textContent = `<Button variant="${variant}" size="${size}">\n  Button\n</Button>`;
+    }
+
+    variantSelect.addEventListener('change', updateButton);
+    sizeSelect.addEventListener('change', updateButton);
+
+    function copyCode() {
+      navigator.clipboard.writeText(codeText.textContent).then(() => {
+        const btn = document.querySelector('.copy-btn');
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = 'Copy'; }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>

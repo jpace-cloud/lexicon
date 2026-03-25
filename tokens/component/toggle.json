@@ -1,0 +1,28 @@
+{
+  "track": {
+    "bg-off": "{bg.surface-3}",
+    "bg-on": "{interactive.default}",
+    "border": "{border.default}",
+    "radius": "{radii.full}",
+    "transition": "{transition.colors}"
+  },
+  "thumb": {
+    "bg": "{ink.light}",
+    "shadow": "{shadows.sm}",
+    "radius": "{radii.full}",
+    "transition": "{transition.transform}"
+  },
+  "disabled": {
+    "opacity": "0.5",
+    "cursor": "not-allowed"
+  },
+  "label": {
+    "font-size": "{fontSize.base}",
+    "color": "{text.secondary}",
+    "gap": "{spacing.3}"
+  },
+  "sizes": {
+    "sm": { "track-width": "36px", "track-height": "20px", "thumb-size": "16px" },
+    "md": { "track-width": "44px", "track-height": "24px", "thumb-size": "20px" }
+  }
+}

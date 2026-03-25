@@ -1,0 +1,9 @@
+{
+  "component": "Card",
+  "variants": ["default", "elevated", "outlined"],
+  "examples": [
+    { "variant": "default", "header": "Card Title", "body": "Card content goes here." },
+    { "variant": "elevated", "header": "Elevated Card", "body": "This card has a shadow." },
+    { "variant": "outlined", "header": "Outlined Card", "body": "This card has a visible border." }
+  ]
+}

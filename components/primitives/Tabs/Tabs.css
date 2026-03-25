@@ -1,0 +1,96 @@
+.lex-tabs {
+  font-family: var(--body-font);
+}
+
+/* ── Tab List ── */
+.lex-tabs__list {
+  display: flex;
+  gap: var(--tabs-list-gap);
+}
+
+.lex-tabs__list--underline {
+  border-bottom: 1px solid var(--tabs-list-border-bottom);
+}
+
+.lex-tabs__list--pills {
+  gap: var(--space-1);
+}
+
+.lex-tabs__list--enclosed {
+  background-color: var(--tabs-enclosed-bg);
+  border: 1px solid var(--tabs-enclosed-border);
+  border-radius: var(--tabs-enclosed-radius);
+  padding: var(--space-1);
+}
+
+/* ── Tab Button ── */
+.lex-tabs__tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--tabs-tab-padding);
+  font-family: var(--body-font);
+  font-size: var(--tabs-tab-font-size);
+  font-weight: var(--tabs-tab-font-weight);
+  color: var(--tabs-tab-text);
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: var(--tabs-tab-transition);
+  outline: none;
+  position: relative;
+}
+
+.lex-tabs__tab:hover {
+  color: var(--tabs-tab-text-hover);
+}
+
+.lex-tabs__tab:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: -2px;
+  border-radius: var(--radii-sm);
+}
+
+/* ── Underline variant ── */
+.lex-tabs__tab--underline {
+  margin-bottom: -1px;
+  border-bottom: var(--tabs-underline-indicator-height) solid transparent;
+}
+
+.lex-tabs__tab--underline.lex-tabs__tab--active {
+  color: var(--tabs-tab-text-active);
+  border-bottom-color: var(--tabs-underline-indicator-color);
+}
+
+/* ── Pills variant ── */
+.lex-tabs__tab--pills {
+  border-radius: var(--tabs-pills-radius);
+}
+
+.lex-tabs__tab--pills.lex-tabs__tab--active {
+  background-color: var(--tabs-pills-bg-active);
+  color: var(--tabs-pills-text-active);
+}
+
+/* ── Enclosed variant ── */
+.lex-tabs__tab--enclosed {
+  border-radius: calc(var(--tabs-enclosed-radius) - 2px);
+}
+
+.lex-tabs__tab--enclosed.lex-tabs__tab--active {
+  background-color: var(--tabs-enclosed-bg-active);
+  color: var(--tabs-tab-text-active);
+}
+
+/* ── Panel ── */
+.lex-tabs__panel {
+  padding-top: var(--tabs-panel-padding-top);
+  outline: none;
+}
+
+.lex-tabs__panel:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radii-sm);
+}

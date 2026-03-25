@@ -1,0 +1,93 @@
+.lex-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--toggle-label-gap);
+  font-family: var(--body-font);
+}
+
+.lex-toggle--label-left {
+  flex-direction: row;
+}
+
+.lex-toggle--label-right {
+  flex-direction: row;
+}
+
+/* ── Label ── */
+.lex-toggle__label {
+  font-size: var(--toggle-label-font-size);
+  color: var(--toggle-label-color);
+  user-select: none;
+}
+
+/* ── Track ── */
+.lex-toggle__track {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: var(--toggle-track-bg-off);
+  border: 1px solid var(--toggle-track-border);
+  border-radius: var(--toggle-track-radius);
+  cursor: pointer;
+  padding: 2px;
+  outline: none;
+  transition: var(--toggle-track-transition);
+}
+
+.lex-toggle__track--on {
+  background-color: var(--toggle-track-bg-on);
+  border-color: var(--toggle-track-bg-on);
+}
+
+.lex-toggle__track:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Thumb ── */
+.lex-toggle__thumb {
+  display: block;
+  background-color: var(--toggle-thumb-bg);
+  border-radius: var(--toggle-thumb-radius);
+  box-shadow: var(--toggle-thumb-shadow);
+  transition: var(--toggle-thumb-transition);
+}
+
+/* ── Sizes ── */
+.lex-toggle--sm .lex-toggle__track {
+  width: var(--toggle-sizes-sm-track-width);
+  height: var(--toggle-sizes-sm-track-height);
+}
+
+.lex-toggle--sm .lex-toggle__thumb {
+  width: var(--toggle-sizes-sm-thumb-size);
+  height: var(--toggle-sizes-sm-thumb-size);
+}
+
+.lex-toggle--sm .lex-toggle__track--on .lex-toggle__thumb {
+  transform: translateX(calc(var(--toggle-sizes-sm-track-width) - var(--toggle-sizes-sm-thumb-size) - 6px));
+}
+
+.lex-toggle--md .lex-toggle__track {
+  width: var(--toggle-sizes-md-track-width);
+  height: var(--toggle-sizes-md-track-height);
+}
+
+.lex-toggle--md .lex-toggle__thumb {
+  width: var(--toggle-sizes-md-thumb-size);
+  height: var(--toggle-sizes-md-thumb-size);
+}
+
+.lex-toggle--md .lex-toggle__track--on .lex-toggle__thumb {
+  transform: translateX(calc(var(--toggle-sizes-md-track-width) - var(--toggle-sizes-md-thumb-size) - 6px));
+}
+
+/* ── Disabled ── */
+.lex-toggle--disabled {
+  opacity: var(--toggle-disabled-opacity);
+}
+
+.lex-toggle--disabled .lex-toggle__track {
+  cursor: var(--toggle-disabled-cursor);
+}

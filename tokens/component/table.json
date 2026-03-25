@@ -1,0 +1,31 @@
+{
+  "header": {
+    "bg": "{bg.surface-2}",
+    "text": "{text.muted}",
+    "font-size": "{fontSize.xs}",
+    "font-weight": "{fontWeight.semibold}",
+    "letter-spacing": "{letterSpacing.wider}",
+    "text-transform": "uppercase",
+    "padding": "{spacing.3} {spacing.4}",
+    "border-bottom": "{border.default}"
+  },
+  "row": {
+    "bg": "transparent",
+    "bg-hover": "{bg.surface-1}",
+    "bg-striped": "{bg.surface-1}",
+    "text": "{text.secondary}",
+    "font-size": "{fontSize.base}",
+    "padding": "{spacing.3} {spacing.4}",
+    "border-bottom": "{border.subtle}",
+    "transition": "{transition.colors}"
+  },
+  "footer": {
+    "bg": "{bg.surface-1}",
+    "padding": "{spacing.3} {spacing.4}",
+    "border-top": "{border.default}"
+  },
+  "density": {
+    "compact": { "padding": "{spacing.2} {spacing.3}" },
+    "comfortable": { "padding": "{spacing.4} {spacing.5}" }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "bg": {
+    "primary": "{grey.950}",
+    "surface-1": "{grey.900}",
+    "surface-2": "{grey.850}",
+    "surface-3": "{grey.800}",
+    "elevated": "{grey.700}",
+    "overlay": "rgba(0, 0, 0, 0.6)"
+  },
+  "text": {
+    "primary": "{ink.light}",
+    "secondary": "{grey.300}",
+    "muted": "{grey.400}",
+    "disabled": "{grey.500}",
+    "inverse": "{ink.dark}"
+  },
+  "border": {
+    "subtle": "rgba(255, 255, 255, 0.06)",
+    "default": "rgba(255, 255, 255, 0.1)",
+    "strong": "{grey.600}",
+    "focus": "{purple.500}"
+  },
+  "interactive": {
+    "default": "{purple.500}",
+    "hover": "{purple.400}",
+    "active": "{purple.600}",
+    "muted": "rgba(124, 58, 237, 0.1)"
+  }
+}

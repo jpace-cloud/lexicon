@@ -1,0 +1,66 @@
+.lex-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--body-font);
+}
+
+/* ── Header ── */
+.lex-table__header {
+  background-color: var(--table-header-bg);
+}
+
+.lex-table__header-cell {
+  text-align: left;
+  color: var(--table-header-text);
+  font-size: var(--table-header-font-size);
+  font-weight: var(--table-header-font-weight);
+  letter-spacing: var(--table-header-letter-spacing);
+  text-transform: var(--table-header-text-transform);
+  padding: var(--table-header-padding);
+  border-bottom: 1px solid var(--table-header-border-bottom);
+}
+
+/* ── Rows ── */
+.lex-table__row {
+  background-color: var(--table-row-bg);
+  transition: var(--table-row-transition);
+}
+
+.lex-table__row:hover {
+  background-color: var(--table-row-bg-hover);
+}
+
+/* ── Cells ── */
+.lex-table__cell {
+  color: var(--table-row-text);
+  font-size: var(--table-row-font-size);
+  padding: var(--table-row-padding);
+  border-bottom: 1px solid var(--table-row-border-bottom);
+}
+
+/* ── Striped ── */
+.lex-table--striped tbody .lex-table__row:nth-child(even) {
+  background-color: var(--table-row-bg-striped);
+}
+
+/* ── Density ── */
+.lex-table--density-compact .lex-table__cell,
+.lex-table--density-compact .lex-table__header-cell {
+  padding: var(--table-density-compact-padding);
+}
+
+.lex-table--density-comfortable .lex-table__cell,
+.lex-table--density-comfortable .lex-table__header-cell {
+  padding: var(--table-density-comfortable-padding);
+}
+
+/* ── Sticky header ── */
+.lex-table--sticky-header .lex-table__header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.lex-table--sticky-header .lex-table__header-cell {
+  background-color: var(--table-header-bg);
+}

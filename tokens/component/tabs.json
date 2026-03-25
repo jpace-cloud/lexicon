@@ -1,0 +1,33 @@
+{
+  "list": {
+    "border-bottom": "{border.subtle}",
+    "gap": "{spacing.1}"
+  },
+  "tab": {
+    "text": "{text.muted}",
+    "text-active": "{text.primary}",
+    "text-hover": "{text.secondary}",
+    "font-size": "{fontSize.base}",
+    "font-weight": "{fontWeight.medium}",
+    "padding": "{spacing.2} {spacing.4}",
+    "transition": "{transition.colors}"
+  },
+  "underline": {
+    "indicator-color": "{interactive.default}",
+    "indicator-height": "2px"
+  },
+  "pills": {
+    "bg-active": "{interactive.muted}",
+    "text-active": "{interactive.default}",
+    "radius": "{radii.md}"
+  },
+  "enclosed": {
+    "bg": "{bg.surface-1}",
+    "bg-active": "{bg.surface-2}",
+    "border": "{border.subtle}",
+    "radius": "{radii.md}"
+  },
+  "panel": {
+    "padding-top": "{spacing.4}"
+  }
+}

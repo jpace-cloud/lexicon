@@ -1,0 +1,42 @@
+{
+  "name": "@thepace/lexicon",
+  "version": "1.0.0",
+  "description": "Design tokens, components, and system for The Pace product family",
+  "main": "css/lexicon.css",
+  "exports": {
+    ".": "./css/lexicon.css",
+    "./css": "./css/lexicon.css",
+    "./css/reset": "./css/reset.css",
+    "./tailwind": "./tailwind/lexicon-preset.js",
+    "./components": "./components/index.ts",
+    "./components/*": "./components/primitives/*/index.ts",
+    "./tokens/*": "./tokens/*"
+  },
+  "scripts": {
+    "build:tokens": "node scripts/build-tokens.js",
+    "build:css": "node scripts/build-css.js",
+    "validate": "node scripts/validate-tokens.js",
+    "build": "npm run validate && npm run build:tokens && npm run build:css",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "design-tokens",
+    "design-system",
+    "css-variables",
+    "tailwind-preset",
+    "react-components",
+    "ui-components"
+  ],
+  "author": "The Pace <hello@thepace.io>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jpace-cloud/lexicon"
+  },
+  "homepage": "https://lexicon.thepace.io",
+  "devDependencies": {
+    "vitepress": "^1.6.4"
+  }
+}

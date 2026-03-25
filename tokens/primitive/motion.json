@@ -1,0 +1,22 @@
+{
+  "duration": {
+    "instant": "0ms",
+    "fast": "100ms",
+    "normal": "200ms",
+    "slow": "300ms",
+    "slower": "500ms"
+  },
+  "easing": {
+    "default": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "in": "cubic-bezier(0.4, 0, 1, 1)",
+    "out": "cubic-bezier(0, 0, 0.2, 1)",
+    "in-out": "cubic-bezier(0.4, 0, 0.2, 1)",
+    "spring": "cubic-bezier(0.175, 0.885, 0.32, 1.275)"
+  },
+  "transition": {
+    "colors": "color var(--motion-duration-normal) var(--motion-easing-default), background-color var(--motion-duration-normal) var(--motion-easing-default), border-color var(--motion-duration-normal) var(--motion-easing-default)",
+    "opacity": "opacity var(--motion-duration-normal) var(--motion-easing-default)",
+    "transform": "transform var(--motion-duration-normal) var(--motion-easing-default)",
+    "all": "all var(--motion-duration-normal) var(--motion-easing-default)"
+  }
+}

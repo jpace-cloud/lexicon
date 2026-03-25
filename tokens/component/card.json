@@ -1,0 +1,40 @@
+{
+  "default": {
+    "bg": "{bg.surface-1}",
+    "border": "{border.subtle}",
+    "radius": "{radii.lg}",
+    "padding": "{spacing.6}",
+    "shadow": "none"
+  },
+  "elevated": {
+    "bg": "{bg.surface-2}",
+    "border": "transparent",
+    "radius": "{radii.lg}",
+    "padding": "{spacing.6}",
+    "shadow": "{shadows.md}"
+  },
+  "outlined": {
+    "bg": "transparent",
+    "border": "{border.default}",
+    "radius": "{radii.lg}",
+    "padding": "{spacing.6}",
+    "shadow": "none"
+  },
+  "clickable": {
+    "border-hover": "{border.strong}",
+    "shadow-hover": "{shadows.sm}",
+    "cursor": "pointer",
+    "transition": "{transition.all}"
+  },
+  "header": {
+    "padding": "{spacing.6}",
+    "border-bottom": "{border.subtle}",
+    "font-size": "{fontSize.lg}",
+    "font-weight": "{fontWeight.semibold}"
+  },
+  "footer": {
+    "padding": "{spacing.4} {spacing.6}",
+    "border-top": "{border.subtle}",
+    "bg": "{bg.surface-2}"
+  }
+}

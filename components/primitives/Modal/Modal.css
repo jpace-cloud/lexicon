@@ -1,0 +1,131 @@
+.lex-modal__overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--modal-overlay-bg);
+  padding: var(--space-6);
+  animation: lex-modal-fade-in var(--motion-duration-normal) var(--motion-easing-out);
+}
+
+.lex-modal__dialog {
+  background-color: var(--modal-dialog-bg);
+  border: 1px solid var(--modal-dialog-border);
+  border-radius: var(--modal-dialog-radius);
+  box-shadow: var(--modal-dialog-shadow);
+  padding: var(--modal-dialog-padding);
+  width: 100%;
+  max-height: calc(100vh - var(--space-12));
+  overflow-y: auto;
+  font-family: var(--body-font);
+  outline: none;
+  animation: lex-modal-scale-in var(--motion-duration-slow) var(--motion-easing-spring);
+}
+
+/* ── Sizes ── */
+.lex-modal__dialog--sm {
+  max-width: var(--modal-sizes-sm-max-width);
+}
+
+.lex-modal__dialog--md {
+  max-width: var(--modal-sizes-md-max-width);
+}
+
+.lex-modal__dialog--lg {
+  max-width: var(--modal-sizes-lg-max-width);
+}
+
+.lex-modal__dialog--full {
+  max-width: var(--modal-sizes-full-max-width);
+  max-height: var(--modal-sizes-full-max-height);
+}
+
+/* ── Header ── */
+.lex-modal__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.lex-modal__title {
+  margin: 0;
+  font-family: var(--heading-font);
+  font-size: var(--modal-title-font-size);
+  font-weight: var(--modal-title-font-weight);
+  color: var(--modal-title-color);
+  margin-bottom: var(--modal-title-margin-bottom);
+}
+
+.lex-modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--modal-close-size);
+  height: var(--modal-close-size);
+  background: none;
+  border: none;
+  border-radius: var(--radii-md);
+  color: var(--modal-close-color);
+  cursor: pointer;
+  padding: 0;
+  transition: var(--modal-close-transition);
+  outline: none;
+}
+
+.lex-modal__close:hover {
+  color: var(--modal-close-color-hover);
+}
+
+.lex-modal__close:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* ── Description ── */
+.lex-modal__description {
+  margin: 0 0 var(--space-4) 0;
+  font-size: var(--modal-description-font-size);
+  color: var(--modal-description-color);
+  line-height: var(--modal-description-line-height);
+}
+
+/* ── Body ── */
+.lex-modal__body {
+  color: var(--text-secondary);
+  font-size: var(--body-md-size);
+  line-height: var(--body-md-line-height);
+}
+
+/* ── Footer ── */
+.lex-modal__footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--modal-footer-gap);
+  padding-top: var(--modal-footer-padding-top);
+}
+
+/* ── Animations ── */
+@keyframes lex-modal-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes lex-modal-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

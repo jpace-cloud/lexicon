@@ -1,0 +1,31 @@
+{
+  "default": {
+    "bg": "{interactive.muted}",
+    "text": "{interactive.default}",
+    "font-weight": "{fontWeight.semibold}",
+    "border": "2px solid {bg.primary}",
+    "radius": "{radii.full}"
+  },
+  "square": {
+    "radius": "{radii.md}"
+  },
+  "status": {
+    "online": "{status.success}",
+    "offline": "{grey.500}",
+    "busy": "{status.error}",
+    "size": "10px",
+    "border": "2px solid {bg.primary}"
+  },
+  "sizes": {
+    "xs": { "size": "24px", "font-size": "{fontSize.xs}" },
+    "sm": { "size": "32px", "font-size": "{fontSize.sm}" },
+    "md": { "size": "40px", "font-size": "{fontSize.base}" },
+    "lg": { "size": "48px", "font-size": "{fontSize.md}" },
+    "xl": { "size": "64px", "font-size": "{fontSize.xl}" }
+  },
+  "group": {
+    "overlap": "-8px",
+    "counter-bg": "{bg.surface-3}",
+    "counter-text": "{text.muted}"
+  }
+}
