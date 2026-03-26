@@ -92,8 +92,8 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/jpace-cloud/lexicon' },
     ],
     footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'A product by <a href="https://thepace.io" target="_blank" rel="noopener">The Pace</a> — © 2026',
+      message: 'Released under the MIT License. A product by <a href="https://thepace.io" target="_blank" rel="noopener">The Pace</a>.',
+      copyright: '© 2026 The Pace',
     },
     search: {
       provider: 'local',
