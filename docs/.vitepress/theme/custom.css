@@ -358,3 +358,89 @@
     transform: none;
   }
 }
+
+/* ── Responsive ────────────────────────────────────────────────────────────── */
+
+/* Tablet */
+@media (max-width: 768px) {
+  /* Landing page feature cards */
+  .VPFeature {
+    padding: 20px !important;
+  }
+
+  /* Component preview containers */
+  .component-preview {
+    padding: 20px;
+    gap: 8px;
+  }
+
+  /* Token grids — 2 columns on tablet */
+  .token-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 8px;
+  }
+
+  /* Pricing cards stack */
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pricing-card {
+    padding: 20px;
+  }
+
+  /* Logo grid — fewer columns */
+  .logo-grid {
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    gap: 16px;
+  }
+
+  /* Type specimens */
+  .type-specimen {
+    padding: 12px;
+  }
+
+  /* Shadow cards */
+  .shadow-card {
+    width: 100px;
+    height: 60px;
+    margin: 4px;
+  }
+
+  /* Tables — horizontal scroll */
+  .vp-doc table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Mobile */
+@media (max-width: 375px) {
+  .VPFeature {
+    padding: 16px !important;
+  }
+
+  .component-preview {
+    padding: 16px;
+    flex-direction: column;
+  }
+
+  .token-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pricing-card {
+    padding: 16px;
+  }
+
+  .logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .logo-category {
+    margin: 16px 0 4px;
+  }
+}
