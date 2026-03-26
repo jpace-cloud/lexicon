@@ -24,3 +24,7 @@ features:
   - title: Framework Agnostic
     details: Use Lexicon as plain CSS custom properties, a Tailwind preset, or React components. One token set, multiple consumption paths — pick what fits your stack.
 ---
+
+## Works across frameworks and platforms
+
+<LogoGrid />

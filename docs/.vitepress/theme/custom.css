@@ -1,26 +1,44 @@
-/* ── Lexicon docs theme overrides ──────────────────────────────────────────── */
+/* ── Lexicon docs theme — design-system-spec.md alignment ──────────────────── */
 
 :root {
-  --vp-c-brand-1: #7C3AED;
-  --vp-c-brand-2: #A78BFA;
-  --vp-c-brand-3: #C4B5FD;
-  --vp-c-brand-soft: rgba(124, 58, 237, 0.12);
-
+  /* Backgrounds */
   --vp-c-bg: #090a0f;
   --vp-c-bg-alt: #0f1015;
   --vp-c-bg-soft: #16171d;
   --vp-c-bg-mute: #1e1f26;
 
+  /* Brand */
+  --vp-c-brand-1: #7C3AED;
+  --vp-c-brand-2: #A78BFA;
+  --vp-c-brand-3: #C4B5FD;
+  --vp-c-brand-soft: rgba(124, 58, 237, 0.08);
+
+  /* Text */
   --vp-c-text-1: #FFFFFF;
   --vp-c-text-2: #C5C6CA;
   --vp-c-text-3: #A1A1AA;
 
+  /* Borders */
   --vp-c-border: rgba(255, 255, 255, 0.08);
   --vp-c-divider: rgba(255, 255, 255, 0.06);
 
+  /* Typography */
   --vp-font-family-base: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   --vp-font-family-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+
+  /* Radius */
+  --vp-border-radius: 8px;
+  --vp-border-radius-lg: 12px;
+
+  /* Custom tokens from spec */
+  --bg-surface-2: #16171d;
+  --bg-surface-3: #1e1f26;
+  --border-default: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+  --shadow-card-hover: 0 4px 20px rgba(124, 58, 237, 0.08);
 }
+
+/* ── Dark mode overrides ─────────────────────────────────────────────────── */
 
 .dark {
   --vp-c-bg: #090a0f;
@@ -40,26 +58,44 @@
   --vp-c-brand-3: #5B21B6;
 }
 
-/* Headings use Satoshi */
+/* ── Heading font override ───────────────────────────────────────────────── */
+
 .vp-doc h1,
 .vp-doc h2,
 .vp-doc h3,
-.vp-doc h4 {
+.vp-doc h4,
+.VPHero .name,
+.VPHero .text,
+.VPFeature .title {
   font-family: 'Satoshi Variable', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
   letter-spacing: -0.02em;
 }
 
-/* Hero title */
-.VPHero .name,
-.VPHero .text {
-  font-family: 'Satoshi Variable', 'Satoshi', -apple-system, BlinkMacSystemFont, sans-serif;
+/* Lexicon H1 cap: 40px per spec */
+.vp-doc h1 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  line-height: 1.15;
 }
 
-/* Component preview container */
+.vp-doc h2 {
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+.vp-doc h3 {
+  font-weight: 600;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+}
+
+/* ── Component preview container (Layer 2 — glass for premium feel) ──────── */
+
 .component-preview {
   padding: 32px;
   background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
+  border: 1.5px solid var(--border-default);
   border-radius: 12px;
   margin: 16px 0;
   display: flex;
@@ -69,7 +105,8 @@
   flex-wrap: wrap;
 }
 
-/* Token swatch grid */
+/* ── Token swatch grid ───────────────────────────────────────────────────── */
+
 .token-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
@@ -79,8 +116,8 @@
 
 .token-swatch {
   aspect-ratio: 1;
-  border-radius: 8px;
-  border: 1px solid var(--vp-c-divider);
+  border-radius: 6px;
+  border: 1px solid var(--border-default);
   display: flex;
   align-items: flex-end;
   padding: 8px;
@@ -89,7 +126,22 @@
   color: var(--vp-c-text-3);
 }
 
-/* Pro badge */
+/* ── Feature cards (landing page) ────────────────────────────────────────── */
+
+.VPFeature {
+  border: 1px solid var(--border-default) !important;
+  border-radius: 8px !important;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease !important;
+}
+
+.VPFeature:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--border-hover) !important;
+}
+
+/* ── Pro badge ───────────────────────────────────────────────────────────── */
+
 .pro-badge {
   display: inline-block;
   font-size: 10px;
@@ -104,7 +156,8 @@
   margin-left: 6px;
 }
 
-/* Pricing cards */
+/* ── Pricing cards ───────────────────────────────────────────────────────── */
+
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -113,11 +166,22 @@
 }
 
 .pricing-card {
-  padding: 28px;
-  background: var(--vp-c-bg-soft);
-  border: 1px solid var(--vp-c-divider);
+  padding: 24px;
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-default);
   border-radius: 12px;
   text-align: center;
+  transition: transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+}
+
+.pricing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--border-hover);
+}
+
+.pricing-card.featured {
+  border: 1.5px solid #7C3AED;
 }
 
 .pricing-card h3 {
@@ -130,7 +194,7 @@
 .pricing-card .price {
   font-size: 32px;
   font-weight: 700;
-  color: var(--vp-c-brand-1);
+  color: var(--vp-c-text-1);
   margin-bottom: 4px;
 }
 
@@ -155,7 +219,7 @@
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
-  transition: filter 150ms;
+  transition: filter 200ms ease;
 }
 
 .pricing-card .cta:hover {
@@ -163,30 +227,134 @@
 }
 
 .pricing-card .cta-primary {
-  background: var(--vp-c-brand-1);
+  background: #7C3AED;
   color: #fff;
 }
 
 .pricing-card .cta-outline {
   background: transparent;
   color: var(--vp-c-text-1);
-  border: 1px solid var(--vp-c-border, rgba(255,255,255,0.08));
+  border: 1px solid var(--border-default);
 }
 
-.pricing-card.featured {
-  border-color: var(--vp-c-brand-1);
+.pricing-card .cta-outline:hover {
+  border-color: var(--border-hover);
 }
 
-/* Card hover */
-.pricing-card {
-  transition: transform 300ms ease, box-shadow 300ms ease;
-}
-.pricing-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 20px rgba(124, 58, 237, 0.08);
-}
+/* ── Props table styling ─────────────────────────────────────────────────── */
 
-/* Props table styling */
 .vp-doc table {
   font-size: 13px;
+}
+
+.vp-doc table th {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--vp-c-text-3);
+}
+
+/* ── Section rhythm: Neo-brutalist accents ────────────────────────────────── */
+
+/* Tip/Warning/Danger callout left accent — 3px per spec */
+.vp-doc .custom-block {
+  border-left-width: 3px;
+}
+
+/* Code blocks — darker bg */
+.vp-doc div[class*='language-'] {
+  background: var(--bg-surface-2) !important;
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+}
+
+/* ── Framework logo grid ─────────────────────────────────────────────────── */
+
+.logo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 24px;
+  align-items: center;
+  justify-items: center;
+  margin: 16px 0;
+}
+
+.logo-grid img {
+  max-height: 24px;
+  width: auto;
+  opacity: 0.5;
+  transition: opacity 200ms ease;
+}
+
+.logo-grid img:hover {
+  opacity: 0.7;
+}
+
+/* Logo category section */
+.logo-category {
+  margin: 24px 0 8px;
+}
+
+.logo-category-label {
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--vp-c-text-3);
+  margin-bottom: 12px;
+}
+
+/* ── Comparison table — spec-aligned ─────────────────────────────────────── */
+
+.comparison-table td:nth-child(2),
+.comparison-table td:nth-child(3) {
+  text-align: center;
+}
+
+.comparison-table .check {
+  color: #A78BFA;
+}
+
+.comparison-table .dash {
+  color: var(--vp-c-text-3);
+}
+
+/* ── Token specimen blocks ───────────────────────────────────────────────── */
+
+.type-specimen {
+  margin: 12px 0;
+  padding: 16px;
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+}
+
+.spacing-block {
+  display: inline-block;
+  height: 20px;
+  background: rgba(124, 58, 237, 0.2);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  border-radius: 4px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.shadow-card {
+  display: inline-block;
+  width: 120px;
+  height: 80px;
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  margin: 8px;
+}
+
+/* ── Reduced motion ──────────────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .VPFeature:hover,
+  .pricing-card:hover {
+    transform: none;
+  }
 }
