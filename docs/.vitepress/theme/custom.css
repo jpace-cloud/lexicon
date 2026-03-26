@@ -1,17 +1,33 @@
 /* ── Lexicon docs theme — design-system-spec.md alignment ──────────────────── */
 
+/* ── Dark mode (default for VitePress) ─────────────────────────────────────── */
+
 :root {
+  /* Typography */
+  --vp-font-family-base: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --vp-font-family-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+
+  /* Radius */
+  --vp-border-radius: 8px;
+  --vp-border-radius-lg: 12px;
+
+  /* Brand (same in both modes) */
+  --vp-c-brand-1: #7C3AED;
+  --vp-c-brand-2: #A78BFA;
+  --vp-c-brand-3: #C4B5FD;
+  --vp-c-brand-soft: rgba(124, 58, 237, 0.08);
+
+  /* Shared accent */
+  --shadow-card-hover: 0 4px 20px rgba(124, 58, 237, 0.08);
+}
+
+.dark {
   /* Backgrounds */
   --vp-c-bg: #090a0f;
   --vp-c-bg-alt: #0f1015;
   --vp-c-bg-soft: #16171d;
   --vp-c-bg-mute: #1e1f26;
-
-  /* Brand */
-  --vp-c-brand-1: #7C3AED;
-  --vp-c-brand-2: #A78BFA;
-  --vp-c-brand-3: #C4B5FD;
-  --vp-c-brand-soft: rgba(124, 58, 237, 0.08);
+  --vp-c-bg-elv: #1e1f26;
 
   /* Text */
   --vp-c-text-1: #FFFFFF;
@@ -21,41 +37,50 @@
   /* Borders */
   --vp-c-border: rgba(255, 255, 255, 0.08);
   --vp-c-divider: rgba(255, 255, 255, 0.06);
+  --vp-c-gutter: rgba(255, 255, 255, 0.06);
 
-  /* Typography */
-  --vp-font-family-base: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --vp-font-family-mono: 'JetBrains Mono', 'SF Mono', 'Fira Code', monospace;
+  /* Brand in dark */
+  --vp-c-brand-1: #A78BFA;
+  --vp-c-brand-2: #7C3AED;
+  --vp-c-brand-3: #5B21B6;
 
-  /* Radius */
-  --vp-border-radius: 8px;
-  --vp-border-radius-lg: 12px;
-
-  /* Custom tokens from spec */
+  /* Custom surface tokens */
   --bg-surface-2: #16171d;
   --bg-surface-3: #1e1f26;
   --border-default: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 255, 255, 0.15);
-  --shadow-card-hover: 0 4px 20px rgba(124, 58, 237, 0.08);
 }
 
-/* ── Dark mode overrides ─────────────────────────────────────────────────── */
+/* ── Light mode ────────────────────────────────────────────────────────────── */
 
-.dark {
-  --vp-c-bg: #090a0f;
-  --vp-c-bg-alt: #0f1015;
-  --vp-c-bg-soft: #16171d;
-  --vp-c-bg-elv: #1e1f26;
+html:not(.dark) {
+  /* Backgrounds */
+  --vp-c-bg: #FFFFFF;
+  --vp-c-bg-alt: #F8F8FA;
+  --vp-c-bg-soft: #F0F0F3;
+  --vp-c-bg-mute: #E8E8EC;
+  --vp-c-bg-elv: #FFFFFF;
 
-  --vp-c-text-1: #FFFFFF;
-  --vp-c-text-2: #C5C6CA;
-  --vp-c-text-3: #A1A1AA;
+  /* Text */
+  --vp-c-text-1: #101828;
+  --vp-c-text-2: #344054;
+  --vp-c-text-3: #667085;
 
-  --vp-c-divider: rgba(255, 255, 255, 0.06);
-  --vp-c-gutter: rgba(255, 255, 255, 0.06);
+  /* Borders */
+  --vp-c-border: rgba(0, 0, 0, 0.08);
+  --vp-c-divider: rgba(0, 0, 0, 0.06);
+  --vp-c-gutter: rgba(0, 0, 0, 0.06);
 
-  --vp-c-brand-1: #A78BFA;
-  --vp-c-brand-2: #7C3AED;
-  --vp-c-brand-3: #5B21B6;
+  /* Brand in light */
+  --vp-c-brand-1: #7C3AED;
+  --vp-c-brand-2: #A78BFA;
+  --vp-c-brand-3: #C4B5FD;
+
+  /* Custom surface tokens */
+  --bg-surface-2: #F0F0F3;
+  --bg-surface-3: #E8E8EC;
+  --border-default: rgba(0, 0, 0, 0.08);
+  --border-hover: rgba(0, 0, 0, 0.15);
 }
 
 /* ── Heading font override ───────────────────────────────────────────────── */
@@ -90,7 +115,7 @@
   letter-spacing: -0.01em;
 }
 
-/* ── Component preview container (Layer 2 — glass for premium feel) ──────── */
+/* ── Component preview container ───────────────────────────────────────────── */
 
 .component-preview {
   padding: 32px;
@@ -262,7 +287,7 @@
   border-left-width: 3px;
 }
 
-/* Code blocks — darker bg */
+/* Code blocks */
 .vp-doc div[class*='language-'] {
   background: var(--bg-surface-2) !important;
   border: 1px solid var(--border-default);
@@ -273,22 +298,22 @@
 
 .logo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  gap: 32px;
   align-items: center;
   justify-items: center;
   margin: 16px 0;
 }
 
 .logo-grid img {
-  max-height: 24px;
+  height: 32px;
   width: auto;
-  opacity: 0.5;
+  opacity: 0.6;
   transition: opacity 200ms ease;
 }
 
 .logo-grid img:hover {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
 /* Logo category section */
@@ -363,24 +388,20 @@
 
 /* Tablet */
 @media (max-width: 768px) {
-  /* Landing page feature cards */
   .VPFeature {
     padding: 20px !important;
   }
 
-  /* Component preview containers */
   .component-preview {
     padding: 20px;
     gap: 8px;
   }
 
-  /* Token grids — 2 columns on tablet */
   .token-grid {
     grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     gap: 8px;
   }
 
-  /* Pricing cards stack */
   .pricing-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -390,25 +411,21 @@
     padding: 20px;
   }
 
-  /* Logo grid — fewer columns */
   .logo-grid {
-    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 20px;
   }
 
-  /* Type specimens */
   .type-specimen {
     padding: 12px;
   }
 
-  /* Shadow cards */
   .shadow-card {
     width: 100px;
     height: 60px;
     margin: 4px;
   }
 
-  /* Tables — horizontal scroll */
   .vp-doc table {
     display: block;
     overflow-x: auto;

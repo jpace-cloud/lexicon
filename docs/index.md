@@ -22,7 +22,7 @@ features:
   - title: 10 Primitives
     details: Button, Input, Card, Badge, Table, Modal, Tooltip, Avatar, Tabs, and Toggle. Each component is token-driven, accessible by default, and ships with full TypeScript types.
   - title: Framework Agnostic
-    details: Use Lexicon as plain CSS custom properties, a Tailwind preset, or React components. One token set, multiple consumption paths — pick what fits your stack.
+    details: Use Lexicon as plain CSS custom properties or a Tailwind preset. Token values are portable to any platform — SwiftUI, Compose, CSS-in-JS, and more.
 ---
 
 ## Works across frameworks and platforms
