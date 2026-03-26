@@ -29,7 +29,7 @@ One-time purchase. Lifetime updates. No subscription.
     <div class="features">
       All Pro components, all page templates, Figma library (1 seat).
     </div>
-    <a class="cta cta-outline" href="mailto:jonathan@thepace.io?subject=Lexicon%20Pro%20—%20Individual">
+    <a class="cta cta-outline" href="https://parlance.business/api/lexicon-checkout?tier=individual">
       Get Individual →
     </a>
   </div>
@@ -40,7 +40,7 @@ One-time purchase. Lifetime updates. No subscription.
     <div class="features">
       Everything in Individual + team Figma library access (up to 10 seats), priority support.
     </div>
-    <a class="cta cta-primary" href="mailto:jonathan@thepace.io?subject=Lexicon%20Pro%20—%20Team">
+    <a class="cta cta-primary" href="https://parlance.business/api/lexicon-checkout?tier=team">
       Get Team →
     </a>
   </div>
@@ -51,11 +51,15 @@ One-time purchase. Lifetime updates. No subscription.
     <div class="features">
       Everything in Team + unlimited seats, custom token configuration, dedicated onboarding.
     </div>
-    <a class="cta cta-outline" href="mailto:jonathan@thepace.io?subject=Lexicon%20Pro%20—%20Organisation">
+    <a class="cta cta-outline" href="https://parlance.business/api/lexicon-checkout?tier=organisation">
       Get Organisation →
     </a>
   </div>
 </div>
+
+<p style="text-align: center; margin-top: 16px; font-size: 13px; color: var(--vp-c-text-3);">
+  Prefer to pay by invoice? Contact <a href="mailto:jonathan@thepace.io">jonathan@thepace.io</a>
+</p>
 
 ## Advanced components
 
