@@ -5,7 +5,7 @@ export default defineConfig({
   description: 'Design system for The Pace product family',
   base: '/lexicon/',
   head: [
-    ['link', { rel: 'icon', href: '/lexicon/logo.svg' }],
+    ['link', { rel: 'icon', href: '/lexicon/favicon.png', type: 'image/png' }],
     ['meta', { property: 'og:title', content: 'Lexicon — Design System' }],
     ['meta', { property: 'og:description', content: 'Tokens, components, and patterns for The Pace products' }],
     ['link', { rel: 'preconnect', href: 'https://api.fontshare.com' }],
