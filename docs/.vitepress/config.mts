@@ -112,6 +112,17 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Patterns',
+          items: [
+            { text: 'Form Layout', link: '/patterns/form-layout' },
+            { text: 'Settings Page', link: '/patterns/settings-page' },
+            { text: 'Data Table', link: '/patterns/data-table' },
+            { text: 'Card Grid', link: '/patterns/card-grid' },
+            { text: 'Loading States', link: '/patterns/loading-states' },
+            { text: 'Dashboard Header', link: '/patterns/dashboard-header' },
+          ],
+        },
+        {
           text: 'Integrations',
           items: [
             { text: 'Tailwind CSS', link: '/integrations/tailwind' },
@@ -142,8 +153,8 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/jpace-cloud/lexicon' },
     ],
     footer: {
-      message: 'Released under the MIT License. A product by <a href="https://thepace.io" target="_blank" rel="noopener">The Pace</a>.',
-      copyright: '© 2026 The Pace',
+      message: 'Released under the MIT License. A product by <a href="https://thepace.io" target="_blank" rel="noopener">the pace</a>.',
+      copyright: '© 2026 the pace',
     },
     search: {
       provider: 'local',

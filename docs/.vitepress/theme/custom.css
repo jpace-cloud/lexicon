@@ -2986,6 +2986,340 @@ html:not(.dark) .lex-timeline__item--completed .lex-timeline__dot { background: 
 .lex-chart-tooltip__label { flex: 1; }
 .lex-chart-tooltip__value { font-weight: 600; font-variant-numeric: tabular-nums; }
 
+/* ── Pattern: Form Layout ──────────────────────────────────────────────── */
+
+.lex-pattern-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.lex-pattern-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.lex-input-group--full {
+  grid-column: 1 / -1;
+}
+
+.lex-pattern-form__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.lex-helper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  margin-top: 4px;
+  color: var(--vp-c-text-3);
+}
+
+.lex-helper--success { color: var(--color-status-success); }
+.lex-helper--error { color: var(--color-status-error); }
+
+.lex-checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 12px;
+}
+
+.lex-radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.lex-radio-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ── Pattern: Settings Page ───────────────────────────────────────────── */
+
+.lex-pattern-settings {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 24px;
+  width: 100%;
+}
+
+.lex-pattern-settings__nav {
+  border-right: 1px solid var(--border-default);
+  padding-right: 16px;
+}
+
+.lex-pattern-settings__content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lex-pattern-settings__section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lex-pattern-settings__heading {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.lex-pattern-settings__desc {
+  font-size: 13px;
+  color: var(--vp-c-text-3);
+  margin: 0;
+}
+
+.lex-pattern-settings__toggle-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.lex-pattern-settings__toggle-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.lex-pattern-settings__toggle-desc {
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  margin-top: 2px;
+}
+
+.lex-pattern-settings__actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+/* ── Pattern: Data Table ──────────────────────────────────────────────── */
+
+.lex-pattern-datatable {
+  width: 100%;
+}
+
+.lex-pattern-datatable__toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.lex-pattern-datatable__toolbar-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.lex-search-input {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  padding: 0 10px;
+}
+
+.lex-search-input input {
+  border: none;
+  background: transparent;
+  outline: none;
+  color: var(--vp-c-text-1);
+  font-size: 13px;
+  padding: 6px 0;
+}
+
+.lex-search-input svg {
+  color: var(--vp-c-text-3);
+  flex-shrink: 0;
+}
+
+.lex-table-wrapper {
+  overflow-x: auto;
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+}
+
+.lex-table-wrapper .lex-table {
+  margin: 0;
+  border: none;
+}
+
+.lex-pattern-datatable__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--vp-c-text-3);
+}
+
+.lex-pattern-datatable__count {
+  font-size: 13px;
+  color: var(--vp-c-text-3);
+}
+
+/* ── Pattern: Card Grid ───────────────────────────────────────────────── */
+
+.lex-pattern-cardgrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.lex-card__media {
+  border-radius: 8px 8px 0 0;
+}
+
+.lex-card__body {
+  padding: 16px;
+}
+
+.lex-card__title {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.lex-card__desc {
+  font-size: 13px;
+  color: var(--vp-c-text-2);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.lex-pattern-activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.lex-pattern-activity-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+/* ── Pattern: Loading States ──────────────────────────────────────────── */
+
+.lex-pattern-loading-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.lex-pattern-loading-card:last-child {
+  border-bottom: none;
+}
+
+.lex-pattern-populated-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.lex-pattern-populated-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.lex-pattern-populated-item:last-child {
+  border-bottom: none;
+}
+
+/* ── Pattern: Dashboard Header ────────────────────────────────────────── */
+
+.lex-pattern-dash-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.lex-pattern-dash-header__title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 4px 0 0;
+}
+
+.lex-pattern-dash-header__actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.lex-pattern-stats-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.lex-pattern-stat {
+  background: var(--bg-surface-2);
+  border: 1px solid var(--border-default);
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.lex-pattern-stat__label {
+  font-size: 12px;
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.lex-pattern-stat__value {
+  font-size: 24px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  margin-bottom: 4px;
+}
+
+.lex-pattern-stat__trend {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.lex-pattern-stat__trend--up { color: var(--color-status-success); }
+.lex-pattern-stat__trend--down { color: var(--color-status-error); }
+
 /* ── Reduced motion ──────────────────────────────────────────────────────── */
 
 @media (prefers-reduced-motion: reduce) {
@@ -3041,6 +3375,31 @@ html:not(.dark) .lex-timeline__item--completed .lex-timeline__dot { background: 
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+  }
+
+  .lex-pattern-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .lex-pattern-settings {
+    grid-template-columns: 1fr;
+  }
+
+  .lex-pattern-settings__nav {
+    border-right: none;
+    border-bottom: 1px solid var(--border-default);
+    padding-right: 0;
+    padding-bottom: 12px;
+  }
+
+  .lex-sidebar-nav {
+    flex-direction: row;
+    gap: 4px;
+    overflow-x: auto;
+  }
+
+  .lex-pattern-cardgrid {
+    grid-template-columns: 1fr;
   }
 }
 
