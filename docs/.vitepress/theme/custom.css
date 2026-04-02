@@ -54,156 +54,180 @@
 /* ── Light mode ────────────────────────────────────────────────────────────── */
 
 html:not(.dark) {
-  /* Backgrounds */
+  /* ── VitePress: Backgrounds ──────────────────────────────────────────── */
   --vp-c-bg: #FFFFFF;
-  --vp-c-bg-alt: #F8F8FA;
-  --vp-c-bg-soft: #F0F0F3;
-  --vp-c-bg-mute: #E8E8EC;
+  --vp-c-bg-alt: #F9FAFB;
+  --vp-c-bg-soft: #F3F4F6;
+  --vp-c-bg-mute: #E5E7EB;
   --vp-c-bg-elv: #FFFFFF;
 
-  /* Text */
-  --vp-c-text-1: #101828;
-  --vp-c-text-2: #344054;
-  --vp-c-text-3: #667085;
+  /* ── VitePress: Text ─────────────────────────────────────────────────── */
+  --vp-c-text-1: #111827;
+  --vp-c-text-2: #374151;
+  --vp-c-text-3: #6B7280;
 
-  /* Borders */
-  --vp-c-border: rgba(0, 0, 0, 0.1);
+  /* ── VitePress: Borders ──────────────────────────────────────────────── */
+  --vp-c-border: rgba(0, 0, 0, 0.12);
   --vp-c-divider: rgba(0, 0, 0, 0.08);
   --vp-c-gutter: rgba(0, 0, 0, 0.08);
 
-  /* Brand in light */
+  /* ── VitePress: Brand ────────────────────────────────────────────────── */
   --vp-c-brand-1: #7C3AED;
-  --vp-c-brand-2: #A78BFA;
-  --vp-c-brand-3: #C4B5FD;
+  --vp-c-brand-2: #6D28D9;
+  --vp-c-brand-3: #5B21B6;
 
-  /* Custom surface tokens */
-  --bg-surface-2: #F0F0F3;
-  --bg-surface-3: #E8E8EC;
-  --border-default: rgba(0, 0, 0, 0.1);
-  --border-hover: rgba(0, 0, 0, 0.18);
+  /* ── Custom surface tokens ───────────────────────────────────────────── */
+  --bg-surface-2: #F3F4F6;
+  --bg-surface-3: #E5E7EB;
+  --border-default: rgba(0, 0, 0, 0.12);
+  --border-hover: rgba(0, 0, 0, 0.22);
 
-  /* ── Semantic: Light mode overrides ─────────────────────────────────────── */
+  /* ── Semantic: Surfaces ──────────────────────────────────────────────── */
   --bg-primary: #FFFFFF;
-  --bg-surface-1: #F8F8FA;
+  --bg-surface-1: #F9FAFB;
   --bg-elevated: #FFFFFF;
-  --bg-overlay: rgba(0, 0, 0, 0.4);
-  --text-primary: #101828;
-  --text-secondary: #344054;
-  --text-muted: #667085;
+  --bg-overlay: rgba(0, 0, 0, 0.45);
+
+  /* ── Semantic: Text ──────────────────────────────────────────────────── */
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6B7280;
   --text-disabled: #9CA3AF;
   --text-inverse: #FFFFFF;
-  --border-subtle: rgba(0, 0, 0, 0.06);
+
+  /* ── Semantic: Borders ───────────────────────────────────────────────── */
+  --border-subtle: rgba(0, 0, 0, 0.08);
   --border-strong: #D1D5DB;
   --border-focus: #7C3AED;
+
+  /* ── Semantic: Interactive states ─────────────────────────────────────── */
   --interactive-default: #7C3AED;
   --interactive-hover: #6D28D9;
   --interactive-active: #5B21B6;
   --interactive-muted: rgba(124, 58, 237, 0.08);
 
-  /* ── Component: Button — light mode ──────────────────────────────────── */
+  /* ── Semantic: Status — darker values for WCAG AA on light bg ────────── */
+  --color-status-success: #16A34A;
+  --color-status-warning: #A16207;
+  --color-status-error: #DC2626;
+  --color-status-info: #2563EB;
+
+  /* ── Component: Button ───────────────────────────────────────────────── */
   --button-primary-bg: #7C3AED;
   --button-primary-bg-hover: #6D28D9;
   --button-primary-bg-active: #5B21B6;
   --button-primary-text: #FFFFFF;
   --button-secondary-bg: transparent;
-  --button-secondary-bg-hover: #F0F0F3;
-  --button-secondary-bg-active: #E8E8EC;
-  --button-secondary-text: #101828;
-  --button-secondary-border: rgba(0, 0, 0, 0.15);
+  --button-secondary-bg-hover: #F3F4F6;
+  --button-secondary-bg-active: #E5E7EB;
+  --button-secondary-text: #111827;
+  --button-secondary-border: #D1D5DB;
   --button-ghost-bg: transparent;
   --button-ghost-bg-hover: rgba(124, 58, 237, 0.08);
-  --button-ghost-bg-active: rgba(124, 58, 237, 0.12);
+  --button-ghost-bg-active: rgba(124, 58, 237, 0.14);
   --button-ghost-text: #7C3AED;
-  --button-danger-bg: #EF4444;
-  --button-danger-bg-hover: #DC2626;
-  --button-danger-bg-active: #B91C1C;
+  --button-danger-bg: #DC2626;
+  --button-danger-bg-hover: #B91C1C;
+  --button-danger-bg-active: #991B1B;
   --button-danger-text: #FFFFFF;
 
-  /* ── Component: Card — light mode ────────────────────────────────────── */
+  /* ── Component: Card ─────────────────────────────────────────────────── */
   --card-default-bg: #FFFFFF;
-  --card-default-border: rgba(0, 0, 0, 0.1);
-  --card-default-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --card-default-border: #E5E7EB;
+  --card-default-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
   --card-elevated-bg: #FFFFFF;
   --card-elevated-border: transparent;
-  --card-elevated-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --card-elevated-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.05);
   --card-outlined-bg: transparent;
-  --card-outlined-border: rgba(0, 0, 0, 0.15);
-  --card-clickable-border-hover: rgba(0, 0, 0, 0.2);
+  --card-outlined-border: #D1D5DB;
+  --card-clickable-border-hover: #9CA3AF;
   --card-clickable-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
-  --card-header-border-bottom: rgba(0, 0, 0, 0.08);
-  --card-footer-border-top: rgba(0, 0, 0, 0.08);
-  --card-footer-bg: #F8F8FA;
+  --card-header-border-bottom: #E5E7EB;
+  --card-footer-border-top: #E5E7EB;
+  --card-footer-bg: #F9FAFB;
 
-  /* ── Component: Input — light mode ───────────────────────────────────── */
+  /* ── Component: Input ────────────────────────────────────────────────── */
   --input-default-bg: #FFFFFF;
-  --input-default-border: rgba(0, 0, 0, 0.15);
-  --input-default-text: #101828;
+  --input-default-border: #D1D5DB;
+  --input-default-border-error: #DC2626;
+  --input-default-text: #111827;
   --input-default-placeholder: #9CA3AF;
-  --input-disabled-bg: #F8F8FA;
+  --input-disabled-bg: #F3F4F6;
   --input-disabled-text: #9CA3AF;
-  --input-label-color: #344054;
-  --input-helper-color: #667085;
+  --input-label-color: #374151;
+  --input-helper-color: #6B7280;
+  --input-error-color: #DC2626;
 
-  /* ── Component: Badge — light mode ───────────────────────────────────── */
-  --badge-default-bg: #F0F0F3;
-  --badge-default-text: #344054;
-  --badge-default-border: rgba(0, 0, 0, 0.08);
+  /* ── Component: Badge ────────────────────────────────────────────────── */
+  --badge-default-bg: #F3F4F6;
+  --badge-default-text: #374151;
+  --badge-default-border: #E5E7EB;
+  --badge-success-bg: rgba(22, 163, 74, 0.1);
+  --badge-success-text: #15803D;
+  --badge-warning-bg: rgba(161, 98, 7, 0.1);
+  --badge-warning-text: #92400E;
+  --badge-error-bg: rgba(220, 38, 38, 0.1);
+  --badge-error-text: #B91C1C;
+  --badge-info-bg: rgba(37, 99, 235, 0.1);
+  --badge-info-text: #1D4ED8;
 
-  /* ── Component: Table — light mode ───────────────────────────────────── */
-  --table-header-bg: #F8F8FA;
-  --table-header-text: #667085;
-  --table-header-border-bottom: rgba(0, 0, 0, 0.1);
+  /* ── Component: Table ────────────────────────────────────────────────── */
+  --table-header-bg: #F9FAFB;
+  --table-header-text: #6B7280;
+  --table-header-border-bottom: #E5E7EB;
   --table-row-bg: transparent;
-  --table-row-bg-hover: #F8F8FA;
+  --table-row-bg-hover: #F9FAFB;
   --table-row-bg-striped: #FAFAFB;
-  --table-row-text: #344054;
-  --table-row-border-bottom: rgba(0, 0, 0, 0.06);
-  --table-footer-bg: #F8F8FA;
-  --table-footer-border-top: rgba(0, 0, 0, 0.1);
+  --table-row-text: #374151;
+  --table-row-border-bottom: #F3F4F6;
+  --table-footer-bg: #F9FAFB;
+  --table-footer-border-top: #E5E7EB;
 
-  /* ── Component: Tabs — light mode ────────────────────────────────────── */
-  --tabs-list-border-bottom: rgba(0, 0, 0, 0.08);
-  --tabs-tab-text: #667085;
-  --tabs-tab-text-active: #101828;
-  --tabs-tab-text-hover: #344054;
-  --tabs-enclosed-bg: #F0F0F3;
+  /* ── Component: Tabs ─────────────────────────────────────────────────── */
+  --tabs-list-border-bottom: #E5E7EB;
+  --tabs-tab-text: #6B7280;
+  --tabs-tab-text-active: #111827;
+  --tabs-tab-text-hover: #374151;
+  --tabs-enclosed-bg: #F3F4F6;
   --tabs-enclosed-bg-active: #FFFFFF;
-  --tabs-enclosed-border: rgba(0, 0, 0, 0.08);
+  --tabs-enclosed-border: #E5E7EB;
 
-  /* ── Component: Toggle — light mode ──────────────────────────────────── */
+  /* ── Component: Toggle ───────────────────────────────────────────────── */
   --toggle-track-bg-off: #D1D5DB;
-  --toggle-track-border: rgba(0, 0, 0, 0.1);
+  --toggle-track-border: #D1D5DB;
   --toggle-thumb-bg: #FFFFFF;
-  --toggle-thumb-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-  --toggle-label-color: #344054;
+  --toggle-thumb-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  --toggle-label-color: #374151;
 
-  /* ── Component: Modal — light mode ───────────────────────────────────── */
-  --modal-overlay-bg: rgba(0, 0, 0, 0.4);
+  /* ── Component: Modal ────────────────────────────────────────────────── */
+  --modal-overlay-bg: rgba(0, 0, 0, 0.45);
   --modal-dialog-bg: #FFFFFF;
-  --modal-dialog-border: rgba(0, 0, 0, 0.1);
-  --modal-dialog-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.06);
-  --modal-title-color: #101828;
-  --modal-description-color: #667085;
+  --modal-dialog-border: #E5E7EB;
+  --modal-dialog-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.08);
+  --modal-title-color: #111827;
+  --modal-description-color: #6B7280;
   --modal-close-color: #9CA3AF;
-  --modal-close-color-hover: #101828;
+  --modal-close-color-hover: #111827;
 
-  /* ── Component: Tooltip — light mode ─────────────────────────────────── */
-  --tooltip-default-bg: #1A1B1F;
+  /* ── Component: Tooltip — inverted for light mode ────────────────────── */
+  --tooltip-default-bg: #1F2937;
   --tooltip-default-text: #FFFFFF;
   --tooltip-default-border: transparent;
-  --tooltip-arrow-bg: #1A1B1F;
+  --tooltip-default-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --tooltip-arrow-bg: #1F2937;
 
-  /* ── Component: Avatar — light mode ──────────────────────────────────── */
+  /* ── Component: Avatar ───────────────────────────────────────────────── */
+  --avatar-default-bg: rgba(124, 58, 237, 0.08);
   --avatar-default-border: 2px solid #FFFFFF;
   --avatar-status-border: 2px solid #FFFFFF;
-  --avatar-group-counter-bg: #E8E8EC;
-  --avatar-group-counter-text: #667085;
+  --avatar-group-counter-bg: #E5E7EB;
+  --avatar-group-counter-text: #6B7280;
 
-  /* ── Elevation — light mode ──────────────────────────────────────────── */
-  --level-1: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
-  --level-2: 0 4px 8px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
-  --level-3: 0 10px 20px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
-  --level-4: 0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.04);
+  /* ── Elevation ───────────────────────────────────────────────────────── */
+  --level-1: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --level-2: 0 4px 8px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --level-3: 0 10px 20px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.05);
+  --level-4: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.06);
 }
 
 /* ── Heading font override ───────────────────────────────────────────────── */
@@ -296,8 +320,8 @@ html:not(.dark) {
   font-weight: 600;
   padding: 2px 8px;
   border-radius: 9999px;
-  background: rgba(124, 58, 237, 0.12);
-  color: #A78BFA;
+  background: var(--interactive-muted);
+  color: var(--vp-c-brand-1);
   text-transform: uppercase;
   letter-spacing: 0.04em;
   vertical-align: middle;
@@ -329,7 +353,7 @@ html:not(.dark) {
 }
 
 .pricing-card.featured {
-  border: 1.5px solid #7C3AED;
+  border: 1.5px solid var(--vp-c-brand-1);
 }
 
 .pricing-card h3 {
@@ -376,8 +400,8 @@ html:not(.dark) {
 }
 
 .pricing-card .cta-primary {
-  background: #7C3AED;
-  color: #fff;
+  background: var(--vp-c-brand-1);
+  color: var(--button-primary-text);
 }
 
 .pricing-card .cta-outline {
@@ -462,7 +486,7 @@ html:not(.dark) {
 }
 
 .comparison-table .check {
-  color: #A78BFA;
+  color: var(--vp-c-brand-1);
 }
 
 .comparison-table .dash {
