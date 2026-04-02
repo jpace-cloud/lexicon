@@ -1582,7 +1582,274 @@ html:not(.dark) .lex-skeleton::after {
   border-bottom-color: var(--tabs-underline-indicator-color);
 }
 .lex-tabs__tab:disabled { opacity: 0.5; cursor: not-allowed; }
+.lex-tabs__tab:focus-visible { outline: 2px solid var(--border-focus); outline-offset: -2px; border-radius: 4px; }
 .lex-tabs__panel { padding-top: var(--tabs-panel-padding-top); font-size: 14px; color: var(--vp-c-text-2); }
+/* Tabs pills variant */
+.lex-tabs--pills .lex-tabs__list { border-bottom: none; gap: 4px; }
+.lex-tabs--pills .lex-tabs__tab { border-bottom: none; margin-bottom: 0; border-radius: var(--tabs-pills-radius); }
+.lex-tabs--pills .lex-tabs__tab--active { background: var(--tabs-pills-bg-active); color: var(--tabs-pills-text-active); }
+.lex-tabs--pills .lex-tabs__tab:hover:not(.lex-tabs__tab--active) { background: var(--vp-c-bg-soft); }
+/* Tabs enclosed variant */
+.lex-tabs--enclosed .lex-tabs__list { background: var(--tabs-enclosed-bg); border: 1px solid var(--tabs-enclosed-border); border-radius: var(--tabs-enclosed-radius); padding: 4px; border-bottom: 1px solid var(--tabs-enclosed-border); gap: 2px; }
+.lex-tabs--enclosed .lex-tabs__tab { border-bottom: none; margin-bottom: 0; border-radius: calc(var(--tabs-enclosed-radius) - 2px); }
+.lex-tabs--enclosed .lex-tabs__tab--active { background: var(--tabs-enclosed-bg-active); color: var(--tabs-tab-text-active); box-shadow: 0 1px 2px rgba(0,0,0,0.06); }
+
+/* Lexicon breadcrumbs previews */
+.lex-breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--vp-font-family-base);
+  font-size: 14px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.lex-breadcrumbs__item { display: inline-flex; align-items: center; gap: 6px; }
+.lex-breadcrumbs__link {
+  color: var(--vp-c-text-2);
+  text-decoration: none;
+  transition: color 0.15s;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font: inherit;
+  padding: 0;
+}
+.lex-breadcrumbs__link:hover { color: var(--vp-c-brand-1); text-decoration: underline; text-underline-offset: 2px; }
+.lex-breadcrumbs__link:focus-visible { outline: 2px solid var(--border-focus); outline-offset: 2px; border-radius: 2px; }
+.lex-breadcrumbs__separator { color: var(--vp-c-text-3); font-size: 12px; user-select: none; display: inline-flex; }
+.lex-breadcrumbs__current { color: var(--vp-c-text-1); font-weight: 500; }
+
+/* Lexicon menu previews */
+.lex-menu {
+  display: flex;
+  flex-direction: column;
+  background: var(--vp-c-bg-elv);
+  border: 1px solid var(--vp-c-border);
+  border-radius: var(--input-default-radius);
+  box-shadow: var(--shadow-lg, 0 10px 25px rgba(0,0,0,0.15));
+  padding: 4px;
+  min-width: 200px;
+  font-family: var(--vp-font-family-base);
+  font-size: 14px;
+}
+.lex-menu__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--vp-c-text-1);
+  background: none;
+  border: none;
+  font: inherit;
+  width: 100%;
+  text-align: left;
+  transition: background 0.15s;
+}
+.lex-menu__item:hover { background: var(--vp-c-bg-soft); }
+.lex-menu__item:focus-visible { outline: 2px solid var(--border-focus); outline-offset: -2px; }
+.lex-menu__item--active { background: var(--vp-c-bg-soft); font-weight: 500; }
+.lex-menu__item--danger { color: var(--color-status-error); }
+.lex-menu__item--danger:hover { background: var(--feedback-error-fill); }
+.lex-menu__item:disabled, .lex-menu__item--disabled { opacity: 0.5; cursor: not-allowed; pointer-events: none; }
+.lex-menu__icon { flex-shrink: 0; width: 16px; height: 16px; color: var(--vp-c-text-3); }
+.lex-menu__item--danger .lex-menu__icon { color: var(--color-status-error); }
+.lex-menu__label { flex: 1; }
+.lex-menu__shortcut { font-size: 12px; color: var(--vp-c-text-3); margin-left: auto; }
+.lex-menu__submenu-indicator { margin-left: auto; color: var(--vp-c-text-3); }
+.lex-menu__divider { height: 1px; background: var(--vp-c-border); margin: 4px 0; }
+
+/* Lexicon sidebar nav previews */
+.lex-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: var(--vp-font-family-base);
+  width: 100%;
+  max-width: 240px;
+}
+.lex-sidebar-nav__section { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--vp-c-text-3); padding: 12px 12px 4px; }
+.lex-sidebar-nav__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--vp-c-text-2);
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+  border: none;
+  background: none;
+  font: inherit;
+  width: 100%;
+  text-align: left;
+}
+.lex-sidebar-nav__item:hover { background: var(--vp-c-bg-soft); color: var(--vp-c-text-1); }
+.lex-sidebar-nav__item--active {
+  background: rgba(124, 58, 237, 0.08);
+  color: var(--vp-c-brand-1);
+  font-weight: 500;
+  border-left: 3px solid var(--vp-c-brand-1);
+  padding-left: 9px;
+}
+.lex-sidebar-nav__item:focus-visible { outline: 2px solid var(--border-focus); outline-offset: -2px; }
+.lex-sidebar-nav__icon { flex-shrink: 0; width: 18px; height: 18px; }
+.lex-sidebar-nav__badge { margin-left: auto; font-size: 11px; font-weight: 600; background: var(--vp-c-bg-mute); color: var(--vp-c-text-2); padding: 1px 6px; border-radius: 10px; }
+.lex-sidebar-nav__item--active .lex-sidebar-nav__badge { background: rgba(124, 58, 237, 0.12); color: var(--vp-c-brand-1); }
+.lex-sidebar-nav__chevron { margin-left: auto; color: var(--vp-c-text-3); transition: transform 0.15s; }
+.lex-sidebar-nav__chevron--open { transform: rotate(90deg); }
+
+/* Lexicon pagination previews */
+.lex-pagination {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-family: var(--vp-font-family-base);
+}
+.lex-pagination__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 8px;
+  border-radius: 8px;
+  border: 1px solid var(--vp-c-border);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-1);
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+.lex-pagination__btn:hover { background: var(--vp-c-bg-soft); border-color: var(--vp-c-text-3); }
+.lex-pagination__btn:focus-visible { outline: 2px solid var(--border-focus); outline-offset: 2px; }
+.lex-pagination__btn--active {
+  background: var(--vp-c-brand-1);
+  color: #fff;
+  border-color: var(--vp-c-brand-1);
+}
+.lex-pagination__btn--active:hover { background: var(--vp-c-brand-2, var(--vp-c-brand-1)); }
+.lex-pagination__btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.lex-pagination__ellipsis { color: var(--vp-c-text-3); padding: 0 4px; font-size: 14px; user-select: none; }
+
+/* Lexicon stepper previews */
+.lex-stepper {
+  display: flex;
+  align-items: flex-start;
+  font-family: var(--vp-font-family-base);
+}
+.lex-stepper__step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  position: relative;
+}
+.lex-stepper__circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid var(--vp-c-border);
+  background: var(--vp-c-bg);
+  color: var(--vp-c-text-3);
+  font-size: 13px;
+  font-weight: 600;
+  flex-shrink: 0;
+  z-index: 1;
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.lex-stepper__step--completed .lex-stepper__circle {
+  background: var(--vp-c-brand-1);
+  border-color: var(--vp-c-brand-1);
+  color: #fff;
+}
+.lex-stepper__step--active .lex-stepper__circle {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-brand-1);
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15);
+}
+.lex-stepper__label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--vp-c-text-3);
+  white-space: nowrap;
+}
+.lex-stepper__step--active .lex-stepper__label { color: var(--vp-c-text-1); font-weight: 600; }
+.lex-stepper__step--completed .lex-stepper__label { color: var(--vp-c-text-2); }
+.lex-stepper__connector {
+  flex: 1;
+  height: 2px;
+  background: var(--vp-c-border);
+  margin: 0 8px;
+  align-self: center;
+  margin-top: -16px;
+}
+.lex-stepper__step--completed + .lex-stepper__connector,
+.lex-stepper__connector--completed { background: var(--vp-c-brand-1); }
+/* Vertical stepper */
+.lex-stepper--vertical {
+  flex-direction: column;
+  gap: 0;
+}
+.lex-stepper--vertical .lex-stepper__step {
+  flex-direction: row;
+  align-items: flex-start;
+}
+.lex-stepper--vertical .lex-stepper__connector {
+  width: 2px;
+  height: 24px;
+  margin: 4px 0 4px 15px;
+  flex: none;
+  align-self: auto;
+  margin-top: 0;
+}
+
+/* Lexicon bottom nav previews */
+.lex-bottom-nav {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  background: var(--vp-c-bg-elv);
+  border-top: 1px solid var(--vp-c-border);
+  padding: 6px 0 2px;
+  font-family: var(--vp-font-family-base);
+  width: 100%;
+  max-width: 400px;
+}
+.lex-bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 4px 12px;
+  cursor: pointer;
+  color: var(--vp-c-text-3);
+  font-size: 11px;
+  font-weight: 500;
+  text-decoration: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+  transition: color 0.15s;
+}
+.lex-bottom-nav__item:hover { color: var(--vp-c-text-1); }
+.lex-bottom-nav__item--active { color: var(--vp-c-brand-1); }
+.lex-bottom-nav__item:focus-visible { outline: 2px solid var(--border-focus); outline-offset: -2px; border-radius: 4px; }
+.lex-bottom-nav__icon { width: 22px; height: 22px; }
 
 /* Lexicon toggle previews */
 .lex-toggle { display: inline-flex; align-items: center; gap: var(--toggle-label-gap); cursor: pointer; }

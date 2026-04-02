@@ -9,12 +9,39 @@ A compound tab component for organising content into switchable panels. Supports
 <div class="component-preview component-preview--col">
   <div class="lex-tabs">
     <div class="lex-tabs__list" role="tablist">
-      <button class="lex-tabs__tab lex-tabs__tab--active" role="tab">General</button>
-      <button class="lex-tabs__tab" role="tab">Security</button>
+      <button class="lex-tabs__tab" role="tab">General</button>
+      <button class="lex-tabs__tab lex-tabs__tab--active" role="tab" aria-selected="true">Security</button>
       <button class="lex-tabs__tab" role="tab">Billing</button>
       <button class="lex-tabs__tab" role="tab" disabled>API</button>
     </div>
-    <div class="lex-tabs__panel" role="tabpanel">General settings content goes here.</div>
+    <div class="lex-tabs__panel" role="tabpanel">Security settings content goes here.</div>
+  </div>
+</div>
+
+### Pills variant
+
+<div class="component-preview component-preview--col">
+  <div class="lex-tabs lex-tabs--pills">
+    <div class="lex-tabs__list" role="tablist">
+      <button class="lex-tabs__tab" role="tab">All</button>
+      <button class="lex-tabs__tab lex-tabs__tab--active" role="tab" aria-selected="true">Active</button>
+      <button class="lex-tabs__tab" role="tab">Archived</button>
+      <button class="lex-tabs__tab" role="tab" disabled>Drafts</button>
+    </div>
+    <div class="lex-tabs__panel" role="tabpanel">Active items list.</div>
+  </div>
+</div>
+
+### Enclosed variant
+
+<div class="component-preview component-preview--col">
+  <div class="lex-tabs lex-tabs--enclosed">
+    <div class="lex-tabs__list" role="tablist">
+      <button class="lex-tabs__tab" role="tab">Overview</button>
+      <button class="lex-tabs__tab lex-tabs__tab--active" role="tab" aria-selected="true">Analytics</button>
+      <button class="lex-tabs__tab" role="tab">Settings</button>
+    </div>
+    <div class="lex-tabs__panel" role="tabpanel">Analytics dashboard content.</div>
   </div>
 </div>
 
@@ -23,6 +50,16 @@ A compound tab component for organising content into switchable panels. Supports
 - **Underline** (default) -- a 2 px purple indicator bar below the active tab. Clean and minimal.
 - **Pills** -- the active tab gets a muted purple background with rounded corners.
 - **Enclosed** -- tabs sit inside a bordered container; the active tab has a raised surface.
+
+## States
+
+| State | Appearance |
+| --- | --- |
+| Default | Muted text colour |
+| Hover | Text shifts toward primary colour |
+| Active | Full contrast text, variant-specific indicator |
+| Disabled | 50% opacity, `cursor: not-allowed` |
+| Focus | 2 px brand-purple ring |
 
 ## Compound pattern
 
@@ -44,12 +81,6 @@ A compound tab component for organising content into switchable panels. Supports
 | `onChange` | `(value: string) => void` | -- | Called when the active tab changes |
 | `variant` | `'underline' \| 'pills' \| 'enclosed'` | `'underline'` | Visual style |
 | `className` | `string` | -- | Additional CSS classes |
-
-### Tabs.List
-
-| Prop | Type | Default | Description |
-| --- | --- | --- | --- |
-| `children` | `React.ReactNode` | -- | Tab triggers |
 
 ### Tabs.Tab
 
@@ -89,9 +120,6 @@ function SettingsPage() {
       <Tabs.Panel value="security">
         <p>Security settings content.</p>
       </Tabs.Panel>
-      <Tabs.Panel value="billing">
-        <p>Billing settings content.</p>
-      </Tabs.Panel>
     </Tabs>
   );
 }
@@ -102,18 +130,10 @@ function SettingsPage() {
 ```html
 <div class="lex-tabs lex-tabs--underline">
   <div class="lex-tabs__list" role="tablist">
-    <button class="lex-tabs__tab lex-tabs__tab--active" role="tab" aria-selected="true">
-      General
-    </button>
-    <button class="lex-tabs__tab" role="tab" aria-selected="false">
-      Security
-    </button>
-    <button class="lex-tabs__tab" role="tab" aria-selected="false">
-      Billing
-    </button>
-    <button class="lex-tabs__tab" role="tab" aria-selected="false" disabled>
-      API
-    </button>
+    <button class="lex-tabs__tab lex-tabs__tab--active" role="tab"
+            aria-selected="true">General</button>
+    <button class="lex-tabs__tab" role="tab"
+            aria-selected="false">Security</button>
   </div>
   <div class="lex-tabs__panel" role="tabpanel">
     <p>General settings content.</p>
@@ -142,3 +162,16 @@ function SettingsPage() {
 - **Arrow keys** move focus between tabs. **Home** and **End** jump to the first and last tab.
 - Only the active tab is in the tab order (`tabindex="0"`); inactive tabs have `tabindex="-1"`.
 - Disabled tabs are skipped during keyboard navigation.
+
+## Guidelines
+
+::: tip Do
+- Use underline for page-level navigation (settings, profile sections).
+- Use pills for filtering or toggling content views.
+- Use enclosed for dashboard widget panels.
+:::
+
+::: danger Don't
+- Don't use more than 6 tabs — consider a dropdown or sidebar instead.
+- Don't nest tabs within tabs.
+:::

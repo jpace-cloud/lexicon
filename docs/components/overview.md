@@ -29,6 +29,12 @@ Lexicon components are token-driven, accessible, and framework-aware. Every comp
 | [Avatar](/components/avatar) | User representation | Image, initials, fallback, status, groups |
 | [Tabs](/components/tabs) | Content sections | 3 variants, keyboard navigation |
 | [Toggle](/components/toggle) | On/off switch | Switch role, label position, 2 sizes |
+| [Breadcrumbs](/components/breadcrumbs) | Page trail | Chevron/slash separators, truncation |
+| [Menu](/components/menu) | Dropdown menu | Icons, shortcuts, dividers, destructive |
+| [Sidebar Nav](/components/sidebar-nav) | Vertical navigation | Sections, badges, active state, icons |
+| [Pagination](/components/pagination) | Page controls | Prev/next, ellipsis, active page |
+| [Stepper](/components/stepper) | Multi-step indicator | Horizontal/vertical, completed/active/upcoming |
+| [Bottom Nav](/components/bottom-nav) | Mobile nav bar | 3–5 items, icon + label |
 | [Alert](/components/alert) | Inline message | 5 variants, dismiss, icon + title + description |
 | [Banner](/components/banner) | Full-width notice | 5 variants, action link, dismiss |
 | [Toast](/components/toast) | Floating notification | 4 variants, auto-dismiss, stacking |
