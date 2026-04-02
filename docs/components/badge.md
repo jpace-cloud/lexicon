@@ -2,6 +2,31 @@
 
 A compact status indicator with semantic variants, optional dot mode, and a removable option.
 
+## Preview
+
+<div class="component-preview">
+  <span class="lex-badge">Draft</span>
+  <span class="lex-badge lex-badge--success">Active</span>
+  <span class="lex-badge lex-badge--warning">Pending</span>
+  <span class="lex-badge lex-badge--error">Failed</span>
+  <span class="lex-badge lex-badge--info">Info</span>
+</div>
+
+### With dot indicator
+
+<div class="component-preview">
+  <span class="lex-badge lex-badge--success lex-badge--dot">Online</span>
+  <span class="lex-badge lex-badge--warning lex-badge--dot">Away</span>
+  <span class="lex-badge lex-badge--error lex-badge--dot">Offline</span>
+</div>
+
+### Sizes
+
+<div class="component-preview">
+  <span class="lex-badge lex-badge--info lex-badge--sm">Small</span>
+  <span class="lex-badge lex-badge--info lex-badge--md">Medium</span>
+</div>
+
 ## Variants
 
 | Variant | Background | Text colour | Use case |

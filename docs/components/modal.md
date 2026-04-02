@@ -2,6 +2,21 @@
 
 A dialog overlay with focus trapping, keyboard dismissal, and multiple size options.
 
+## Preview
+
+<div class="component-preview component-preview--col">
+  <div class="lex-modal-preview">
+    <div class="lex-modal-static">
+      <div class="lex-modal__title">Delete project?</div>
+      <p class="lex-modal__description">This action cannot be undone. All data will be permanently removed.</p>
+      <div class="lex-modal__footer">
+        <button class="lex-button lex-button--secondary lex-button--sm">Cancel</button>
+        <button class="lex-button lex-button--danger lex-button--sm">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 ## Features
 
 - **Focus trapping** -- focus cycles within the modal when open. The first focusable element receives focus on mount.

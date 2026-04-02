@@ -2,6 +2,25 @@
 
 A flexible content container with three visual variants and composable sub-components.
 
+## Preview
+
+<div class="component-preview component-preview--col" style="gap: 16px;">
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+    <div class="lex-card lex-card--default">
+      <div class="lex-card__header">Default Card</div>
+      <div class="lex-card__body">Surface-1 background with a subtle border. The standard card for most content.</div>
+    </div>
+    <div class="lex-card lex-card--elevated">
+      <div class="lex-card__header">Elevated Card</div>
+      <div class="lex-card__body">Surface-2 background with a medium shadow and no visible border.</div>
+    </div>
+    <div class="lex-card lex-card--outlined">
+      <div class="lex-card__header">Outlined Card</div>
+      <div class="lex-card__body">Transparent background with a visible border.</div>
+    </div>
+  </div>
+</div>
+
 ## Variants
 
 - **Default** -- surface-1 background with a subtle border. The standard card for most content.

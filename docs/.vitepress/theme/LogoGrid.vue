@@ -58,6 +58,6 @@ function logoPath(file: string): string {
     </div>
   </div>
   <p style="font-size: 12px; color: var(--vp-c-text-3); margin-top: 16px;">
-    Token-compatible platforms can consume Lexicon design tokens as raw values. Direct integration packages coming soon.
+    Token-compatible platforms can consume Lexicon design tokens as raw values. Direct integration packages planned for v1.1.
   </p>
 </template>

@@ -2,6 +2,42 @@
 
 A text input field with built-in label, helper text, error messaging, and icon slots.
 
+## Preview
+
+<div class="component-preview component-preview--col" style="gap: 16px;">
+  <div class="lex-input-wrapper">
+    <label class="lex-input__label">Email address</label>
+    <input class="lex-input lex-input--md" type="email" placeholder="you@example.com" />
+    <span class="lex-input__helper">We'll never share your email.</span>
+  </div>
+  <div class="lex-input-wrapper lex-input-wrapper--error">
+    <label class="lex-input__label">Password</label>
+    <input class="lex-input lex-input--md" type="password" value="short" />
+    <span class="lex-input__error">Password must be at least 8 characters.</span>
+  </div>
+  <div class="lex-input-wrapper">
+    <label class="lex-input__label">Disabled field</label>
+    <input class="lex-input lex-input--md" disabled placeholder="Cannot edit" />
+  </div>
+</div>
+
+### Sizes
+
+<div class="component-preview" style="gap: 16px; align-items: flex-end;">
+  <div class="lex-input-wrapper">
+    <label class="lex-input__label">Small</label>
+    <input class="lex-input lex-input--sm" placeholder="sm" />
+  </div>
+  <div class="lex-input-wrapper">
+    <label class="lex-input__label">Medium</label>
+    <input class="lex-input lex-input--md" placeholder="md" />
+  </div>
+  <div class="lex-input-wrapper">
+    <label class="lex-input__label">Large</label>
+    <input class="lex-input lex-input--lg" placeholder="lg" />
+  </div>
+</div>
+
 ## Features
 
 - **Label** -- rendered above the field. Always visible for accessibility.

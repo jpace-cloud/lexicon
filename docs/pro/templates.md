@@ -2,8 +2,8 @@
 
 Page templates are production-ready layouts available with a [Lexicon Pro](/pro/) licence. Each template is built from Lexicon primitives and tokens, fully responsive, and ships with both React and plain HTML versions.
 
-::: tip Coming soon
-Page templates are currently in development. Subscribe for updates at [hello@thepace.io](mailto:hello@thepace.io).
+::: info Planned for v1.1
+Page templates are in active development. Subscribe for updates at [hello@thepace.io](mailto:hello@thepace.io).
 :::
 
 ## Dashboard

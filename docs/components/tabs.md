@@ -2,6 +2,22 @@
 
 A compound tab component for organising content into switchable panels. Supports three visual variants and full keyboard navigation.
 
+## Preview
+
+### Underline variant
+
+<div class="component-preview component-preview--col">
+  <div class="lex-tabs">
+    <div class="lex-tabs__list" role="tablist">
+      <button class="lex-tabs__tab lex-tabs__tab--active" role="tab">General</button>
+      <button class="lex-tabs__tab" role="tab">Security</button>
+      <button class="lex-tabs__tab" role="tab">Billing</button>
+      <button class="lex-tabs__tab" role="tab" disabled>API</button>
+    </div>
+    <div class="lex-tabs__panel" role="tabpanel">General settings content goes here.</div>
+  </div>
+</div>
+
 ## Variants
 
 - **Underline** (default) -- a 2 px purple indicator bar below the active tab. Clean and minimal.

@@ -2,6 +2,35 @@
 
 A switch control for binary on/off states. Renders with the `switch` ARIA role for correct screen reader semantics.
 
+## Preview
+
+<div class="component-preview component-preview--col" style="gap: 16px; align-items: flex-start;">
+  <label class="lex-toggle">
+    <span class="lex-toggle__track lex-toggle__track--md lex-toggle__track--on" role="switch" aria-checked="true">
+      <span class="lex-toggle__thumb"></span>
+    </span>
+    <span class="lex-toggle__label">Email notifications</span>
+  </label>
+  <label class="lex-toggle">
+    <span class="lex-toggle__track lex-toggle__track--md" role="switch" aria-checked="false">
+      <span class="lex-toggle__thumb"></span>
+    </span>
+    <span class="lex-toggle__label">SMS notifications</span>
+  </label>
+  <label class="lex-toggle">
+    <span class="lex-toggle__track lex-toggle__track--sm lex-toggle__track--on" role="switch" aria-checked="true">
+      <span class="lex-toggle__thumb"></span>
+    </span>
+    <span class="lex-toggle__label">Small toggle (on)</span>
+  </label>
+  <label class="lex-toggle lex-toggle--disabled">
+    <span class="lex-toggle__track lex-toggle__track--md" role="switch" aria-checked="false" aria-disabled="true">
+      <span class="lex-toggle__thumb"></span>
+    </span>
+    <span class="lex-toggle__label">Disabled toggle</span>
+  </label>
+</div>
+
 ## Sizes
 
 | Size | Track width | Track height | Thumb size |

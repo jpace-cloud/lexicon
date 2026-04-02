@@ -2,6 +2,24 @@
 
 A token-driven button with four variants, three sizes, and loading/disabled states.
 
+## Preview
+
+<div class="component-preview">
+  <button class="lex-button lex-button--primary lex-button--md">Primary</button>
+  <button class="lex-button lex-button--secondary lex-button--md">Secondary</button>
+  <button class="lex-button lex-button--ghost lex-button--md">Ghost</button>
+  <button class="lex-button lex-button--danger lex-button--md">Danger</button>
+  <button class="lex-button lex-button--primary lex-button--md" disabled>Disabled</button>
+</div>
+
+### Sizes
+
+<div class="component-preview">
+  <button class="lex-button lex-button--primary lex-button--sm">Small</button>
+  <button class="lex-button lex-button--primary lex-button--md">Medium</button>
+  <button class="lex-button lex-button--primary lex-button--lg">Large</button>
+</div>
+
 ## Variants
 
 - **Primary** -- solid purple background. Use for the main action on a page.

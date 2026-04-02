@@ -2,8 +2,8 @@
 
 These components are available with a [Lexicon Pro](/pro/) licence. They are built on the same token system and follow the same accessibility standards as the 10 free primitives.
 
-::: tip Coming soon
-Advanced components are currently in development. Subscribe for updates at [hello@thepace.io](mailto:hello@thepace.io).
+::: info Planned for v1.1
+Advanced components are in active development. Subscribe for updates at [hello@thepace.io](mailto:hello@thepace.io).
 :::
 
 ## DataTable

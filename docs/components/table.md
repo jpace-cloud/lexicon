@@ -2,6 +2,37 @@
 
 A compound table component for displaying structured, tabular data with support for striped rows, adjustable density, and a sticky header.
 
+## Preview
+
+<div class="component-preview component-preview--col">
+  <table class="lex-table lex-table--striped">
+    <thead>
+      <tr>
+        <th class="lex-table__header-cell">Name</th>
+        <th class="lex-table__header-cell">Role</th>
+        <th class="lex-table__header-cell" style="text-align: right;">Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="lex-table__row">
+        <td class="lex-table__cell">Alice Martin</td>
+        <td class="lex-table__cell">Engineer</td>
+        <td class="lex-table__cell" style="text-align: right;"><span class="lex-badge lex-badge--success lex-badge--dot">Active</span></td>
+      </tr>
+      <tr class="lex-table__row">
+        <td class="lex-table__cell">Bob Chen</td>
+        <td class="lex-table__cell">Designer</td>
+        <td class="lex-table__cell" style="text-align: right;"><span class="lex-badge lex-badge--warning lex-badge--dot">Away</span></td>
+      </tr>
+      <tr class="lex-table__row">
+        <td class="lex-table__cell">Carol Davis</td>
+        <td class="lex-table__cell">Product</td>
+        <td class="lex-table__cell" style="text-align: right;"><span class="lex-badge lex-badge--error lex-badge--dot">Offline</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 ## Compound pattern
 
 Table uses a compound component pattern with five parts:

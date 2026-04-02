@@ -2,6 +2,19 @@
 
 A lightweight popup that shows contextual information when hovering or focusing a trigger element.
 
+## Preview
+
+<div class="component-preview" style="padding: 48px 32px; gap: 40px;">
+  <div class="lex-tooltip-wrapper">
+    <button class="lex-button lex-button--ghost lex-button--sm">Hover me (top)</button>
+    <div class="lex-tooltip lex-tooltip--top">Create a new project</div>
+  </div>
+  <div class="lex-tooltip-wrapper">
+    <button class="lex-button lex-button--ghost lex-button--sm">Hover me (bottom)</button>
+    <div class="lex-tooltip lex-tooltip--bottom">Save your changes</div>
+  </div>
+</div>
+
 ## Features
 
 - **Four positions** -- top, right, bottom, left. The tooltip auto-positions its arrow.

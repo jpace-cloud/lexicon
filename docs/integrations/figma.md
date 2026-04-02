@@ -30,7 +30,13 @@ Semantic and component tokens follow the same convention:
 3. In any other Figma file, enable the Lexicon library from the **Assets** panel.
 4. All components and styles will now appear in your asset browser.
 
-For a detailed walkthrough, see the `FIGMA-SETUP.md` file in the repository root.
+### Detailed setup
+
+1. Create a new Figma file named **"Lexicon — Design System"** in your team workspace.
+2. Create a **"Primitives"** variable collection with all colour, spacing, and radii values (see [Colours](/tokens/colors) and [Spacing](/tokens/spacing) for the full list).
+3. Create a **"Semantic"** variable collection with **two modes** (Dark and Light). Alias semantic variables to primitive variables — e.g., `bg/primary` → `color/grey/950` in dark mode, `color/grey/50` in light mode.
+4. Build components using auto-layout and semantic variables. All 10 primitives (Button, Input, Card, Badge, Table, Modal, Tooltip, Avatar, Tabs, Toggle) are documented in [Components](/components/overview).
+5. Publish as a team library: **File → Publish Library**.
 
 ## Workflow
 

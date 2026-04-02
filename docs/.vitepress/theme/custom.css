@@ -67,9 +67,9 @@ html:not(.dark) {
   --vp-c-text-3: #667085;
 
   /* Borders */
-  --vp-c-border: rgba(0, 0, 0, 0.08);
-  --vp-c-divider: rgba(0, 0, 0, 0.06);
-  --vp-c-gutter: rgba(0, 0, 0, 0.06);
+  --vp-c-border: rgba(0, 0, 0, 0.1);
+  --vp-c-divider: rgba(0, 0, 0, 0.08);
+  --vp-c-gutter: rgba(0, 0, 0, 0.08);
 
   /* Brand in light */
   --vp-c-brand-1: #7C3AED;
@@ -79,8 +79,131 @@ html:not(.dark) {
   /* Custom surface tokens */
   --bg-surface-2: #F0F0F3;
   --bg-surface-3: #E8E8EC;
-  --border-default: rgba(0, 0, 0, 0.08);
-  --border-hover: rgba(0, 0, 0, 0.15);
+  --border-default: rgba(0, 0, 0, 0.1);
+  --border-hover: rgba(0, 0, 0, 0.18);
+
+  /* ── Semantic: Light mode overrides ─────────────────────────────────────── */
+  --bg-primary: #FFFFFF;
+  --bg-surface-1: #F8F8FA;
+  --bg-elevated: #FFFFFF;
+  --bg-overlay: rgba(0, 0, 0, 0.4);
+  --text-primary: #101828;
+  --text-secondary: #344054;
+  --text-muted: #667085;
+  --text-disabled: #9CA3AF;
+  --text-inverse: #FFFFFF;
+  --border-subtle: rgba(0, 0, 0, 0.06);
+  --border-strong: #D1D5DB;
+  --border-focus: #7C3AED;
+  --interactive-default: #7C3AED;
+  --interactive-hover: #6D28D9;
+  --interactive-active: #5B21B6;
+  --interactive-muted: rgba(124, 58, 237, 0.08);
+
+  /* ── Component: Button — light mode ──────────────────────────────────── */
+  --button-primary-bg: #7C3AED;
+  --button-primary-bg-hover: #6D28D9;
+  --button-primary-bg-active: #5B21B6;
+  --button-primary-text: #FFFFFF;
+  --button-secondary-bg: transparent;
+  --button-secondary-bg-hover: #F0F0F3;
+  --button-secondary-bg-active: #E8E8EC;
+  --button-secondary-text: #101828;
+  --button-secondary-border: rgba(0, 0, 0, 0.15);
+  --button-ghost-bg: transparent;
+  --button-ghost-bg-hover: rgba(124, 58, 237, 0.08);
+  --button-ghost-bg-active: rgba(124, 58, 237, 0.12);
+  --button-ghost-text: #7C3AED;
+  --button-danger-bg: #EF4444;
+  --button-danger-bg-hover: #DC2626;
+  --button-danger-bg-active: #B91C1C;
+  --button-danger-text: #FFFFFF;
+
+  /* ── Component: Card — light mode ────────────────────────────────────── */
+  --card-default-bg: #FFFFFF;
+  --card-default-border: rgba(0, 0, 0, 0.1);
+  --card-default-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --card-elevated-bg: #FFFFFF;
+  --card-elevated-border: transparent;
+  --card-elevated-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+  --card-outlined-bg: transparent;
+  --card-outlined-border: rgba(0, 0, 0, 0.15);
+  --card-clickable-border-hover: rgba(0, 0, 0, 0.2);
+  --card-clickable-shadow-hover: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --card-header-border-bottom: rgba(0, 0, 0, 0.08);
+  --card-footer-border-top: rgba(0, 0, 0, 0.08);
+  --card-footer-bg: #F8F8FA;
+
+  /* ── Component: Input — light mode ───────────────────────────────────── */
+  --input-default-bg: #FFFFFF;
+  --input-default-border: rgba(0, 0, 0, 0.15);
+  --input-default-text: #101828;
+  --input-default-placeholder: #9CA3AF;
+  --input-disabled-bg: #F8F8FA;
+  --input-disabled-text: #9CA3AF;
+  --input-label-color: #344054;
+  --input-helper-color: #667085;
+
+  /* ── Component: Badge — light mode ───────────────────────────────────── */
+  --badge-default-bg: #F0F0F3;
+  --badge-default-text: #344054;
+  --badge-default-border: rgba(0, 0, 0, 0.08);
+
+  /* ── Component: Table — light mode ───────────────────────────────────── */
+  --table-header-bg: #F8F8FA;
+  --table-header-text: #667085;
+  --table-header-border-bottom: rgba(0, 0, 0, 0.1);
+  --table-row-bg: transparent;
+  --table-row-bg-hover: #F8F8FA;
+  --table-row-bg-striped: #FAFAFB;
+  --table-row-text: #344054;
+  --table-row-border-bottom: rgba(0, 0, 0, 0.06);
+  --table-footer-bg: #F8F8FA;
+  --table-footer-border-top: rgba(0, 0, 0, 0.1);
+
+  /* ── Component: Tabs — light mode ────────────────────────────────────── */
+  --tabs-list-border-bottom: rgba(0, 0, 0, 0.08);
+  --tabs-tab-text: #667085;
+  --tabs-tab-text-active: #101828;
+  --tabs-tab-text-hover: #344054;
+  --tabs-enclosed-bg: #F0F0F3;
+  --tabs-enclosed-bg-active: #FFFFFF;
+  --tabs-enclosed-border: rgba(0, 0, 0, 0.08);
+
+  /* ── Component: Toggle — light mode ──────────────────────────────────── */
+  --toggle-track-bg-off: #D1D5DB;
+  --toggle-track-border: rgba(0, 0, 0, 0.1);
+  --toggle-thumb-bg: #FFFFFF;
+  --toggle-thumb-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  --toggle-label-color: #344054;
+
+  /* ── Component: Modal — light mode ───────────────────────────────────── */
+  --modal-overlay-bg: rgba(0, 0, 0, 0.4);
+  --modal-dialog-bg: #FFFFFF;
+  --modal-dialog-border: rgba(0, 0, 0, 0.1);
+  --modal-dialog-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 8px 16px rgba(0, 0, 0, 0.06);
+  --modal-title-color: #101828;
+  --modal-description-color: #667085;
+  --modal-close-color: #9CA3AF;
+  --modal-close-color-hover: #101828;
+
+  /* ── Component: Tooltip — light mode ─────────────────────────────────── */
+  --tooltip-default-bg: #1A1B1F;
+  --tooltip-default-text: #FFFFFF;
+  --tooltip-default-border: transparent;
+  --tooltip-arrow-bg: #1A1B1F;
+
+  /* ── Component: Avatar — light mode ──────────────────────────────────── */
+  --avatar-default-border: 2px solid #FFFFFF;
+  --avatar-status-border: 2px solid #FFFFFF;
+  --avatar-group-counter-bg: #E8E8EC;
+  --avatar-group-counter-text: #667085;
+
+  /* ── Elevation — light mode ──────────────────────────────────────────── */
+  --level-1: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --level-2: 0 4px 8px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --level-3: 0 10px 20px rgba(0, 0, 0, 0.08), 0 4px 8px rgba(0, 0, 0, 0.04);
+  --level-4: 0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.04);
 }
 
 /* ── Heading font override ───────────────────────────────────────────────── */
@@ -185,7 +308,7 @@ html:not(.dark) {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
   margin: 24px 0;
 }
@@ -244,6 +367,7 @@ html:not(.dark) {
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
+  white-space: nowrap;
   transition: filter 200ms ease;
 }
 
@@ -374,6 +498,330 @@ html:not(.dark) {
   border-radius: 8px;
   margin: 8px;
 }
+
+/* ── Inline component previews (HTML-rendered in markdown) ───────────────── */
+
+/* Preview variant layout */
+.component-preview--col {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.component-preview--start {
+  justify-content: flex-start;
+}
+
+/* Lexicon button previews */
+.lex-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-family: var(--vp-font-family-base);
+  font-weight: var(--button-primary-font-weight, 500);
+  line-height: 1;
+  transition: var(--button-primary-transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+.lex-button--primary {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border-color: var(--button-primary-border, transparent);
+  border-radius: var(--button-primary-radius);
+}
+.lex-button--primary:hover { background: var(--button-primary-bg-hover); }
+.lex-button--primary:active { background: var(--button-primary-bg-active); }
+.lex-button--secondary {
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  border-color: var(--button-secondary-border);
+  border-radius: var(--button-secondary-radius);
+}
+.lex-button--secondary:hover { background: var(--button-secondary-bg-hover); }
+.lex-button--secondary:active { background: var(--button-secondary-bg-active); }
+.lex-button--ghost {
+  background: var(--button-ghost-bg);
+  color: var(--button-ghost-text);
+  border-color: var(--button-ghost-border, transparent);
+  border-radius: var(--button-ghost-radius);
+}
+.lex-button--ghost:hover { background: var(--button-ghost-bg-hover); }
+.lex-button--ghost:active { background: var(--button-ghost-bg-active); }
+.lex-button--danger {
+  background: var(--button-danger-bg);
+  color: var(--button-danger-text);
+  border-color: var(--button-danger-border, transparent);
+  border-radius: var(--button-danger-radius);
+}
+.lex-button--danger:hover { background: var(--button-danger-bg-hover); }
+.lex-button--danger:active { background: var(--button-danger-bg-active); }
+.lex-button--sm { height: var(--button-sizes-sm-height); padding: 0 var(--button-sizes-sm-padding-x); font-size: var(--button-sizes-sm-font-size); }
+.lex-button--md { height: var(--button-sizes-md-height); padding: 0 var(--button-sizes-md-padding-x); font-size: var(--button-sizes-md-font-size); }
+.lex-button--lg { height: var(--button-sizes-lg-height); padding: 0 var(--button-sizes-lg-padding-x); font-size: var(--button-sizes-lg-font-size); }
+.lex-button:disabled, .lex-button[disabled] {
+  opacity: var(--button-disabled-opacity);
+  cursor: var(--button-disabled-cursor);
+  pointer-events: none;
+}
+.lex-button:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Lexicon input previews */
+.lex-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  max-width: 320px;
+}
+.lex-input__label {
+  font-size: var(--input-label-font-size);
+  font-weight: var(--input-label-font-weight);
+  color: var(--input-label-color);
+  margin-bottom: var(--input-label-margin-bottom);
+  font-family: var(--vp-font-family-base);
+}
+.lex-input {
+  background: var(--input-default-bg);
+  border: 1px solid var(--input-default-border);
+  border-radius: var(--input-default-radius);
+  color: var(--input-default-text);
+  font-size: var(--input-default-font-size);
+  font-family: var(--vp-font-family-base);
+  transition: var(--input-default-transition);
+  outline: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+.lex-input--sm { height: var(--input-sizes-sm-height); padding: 0 var(--input-sizes-sm-padding-x); font-size: var(--input-sizes-sm-font-size); }
+.lex-input--md { height: var(--input-sizes-md-height); padding: 0 var(--input-sizes-md-padding-x); font-size: var(--input-sizes-md-font-size); }
+.lex-input--lg { height: var(--input-sizes-lg-height); padding: 0 var(--input-sizes-lg-padding-x); font-size: var(--input-sizes-lg-font-size); }
+.lex-input::placeholder { color: var(--input-default-placeholder); }
+.lex-input:focus { border-color: var(--input-default-border-focus); box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1); }
+.lex-input:disabled { background: var(--input-disabled-bg); color: var(--input-disabled-text); opacity: var(--input-disabled-opacity); cursor: var(--input-disabled-cursor); }
+.lex-input__helper { font-size: var(--input-helper-font-size); color: var(--input-helper-color); margin-top: var(--input-helper-margin-top); }
+.lex-input__error { font-size: var(--input-error-font-size); color: var(--input-error-color); margin-top: var(--input-error-margin-top); }
+.lex-input-wrapper--error .lex-input { border-color: var(--input-default-border-error); }
+
+/* Lexicon card previews */
+.lex-card {
+  border-radius: var(--card-default-radius);
+  padding: var(--card-default-padding);
+  font-family: var(--vp-font-family-base);
+  color: var(--vp-c-text-1);
+}
+.lex-card--default { background: var(--card-default-bg); border: 1px solid var(--card-default-border); box-shadow: var(--card-default-shadow); }
+.lex-card--elevated { background: var(--card-elevated-bg); border: 1px solid var(--card-elevated-border, transparent); box-shadow: var(--card-elevated-shadow); }
+.lex-card--outlined { background: var(--card-outlined-bg, transparent); border: 1px solid var(--card-outlined-border); }
+.lex-card__header { font-size: var(--card-header-font-size); font-weight: var(--card-header-font-weight); margin-bottom: 12px; }
+.lex-card__body { font-size: 14px; color: var(--vp-c-text-2); line-height: 1.6; }
+.lex-card__footer { margin-top: 16px; display: flex; gap: 8px; justify-content: flex-end; }
+
+/* Lexicon badge previews */
+.lex-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border-radius: var(--badge-default-radius);
+  font-family: var(--vp-font-family-base);
+  font-weight: var(--badge-default-font-weight);
+  letter-spacing: var(--badge-default-letter-spacing);
+  line-height: 1;
+  white-space: nowrap;
+}
+.lex-badge--sm { font-size: var(--badge-sizes-sm-font-size); padding: var(--badge-sizes-sm-padding); }
+.lex-badge--md { font-size: var(--badge-sizes-md-font-size); padding: var(--badge-sizes-md-padding); }
+.lex-badge:not(.lex-badge--sm):not(.lex-badge--md) { font-size: var(--badge-default-font-size); padding: var(--badge-default-padding); }
+.lex-badge--default, .lex-badge:not([class*="--success"]):not([class*="--warning"]):not([class*="--error"]):not([class*="--info"]) {
+  background: var(--badge-default-bg); color: var(--badge-default-text); border: 1px solid var(--badge-default-border);
+}
+.lex-badge--success { background: var(--badge-success-bg); color: var(--badge-success-text); border: 1px solid var(--badge-success-border, transparent); }
+.lex-badge--warning { background: var(--badge-warning-bg); color: var(--badge-warning-text); border: 1px solid var(--badge-warning-border, transparent); }
+.lex-badge--error { background: var(--badge-error-bg); color: var(--badge-error-text); border: 1px solid var(--badge-error-border, transparent); }
+.lex-badge--info { background: var(--badge-info-bg); color: var(--badge-info-text); border: 1px solid var(--badge-info-border, transparent); }
+.lex-badge--dot::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  flex-shrink: 0;
+}
+
+/* Lexicon table previews */
+.lex-table { width: 100%; border-collapse: collapse; font-family: var(--vp-font-family-base); }
+.lex-table__header-cell {
+  background: var(--table-header-bg);
+  color: var(--table-header-text);
+  font-size: var(--table-header-font-size);
+  font-weight: var(--table-header-font-weight);
+  letter-spacing: var(--table-header-letter-spacing);
+  text-transform: var(--table-header-text-transform);
+  padding: var(--table-header-padding);
+  text-align: left;
+  border-bottom: 1px solid var(--table-header-border-bottom);
+}
+.lex-table__cell {
+  color: var(--table-row-text);
+  font-size: var(--table-row-font-size);
+  padding: var(--table-row-padding);
+  border-bottom: 1px solid var(--table-row-border-bottom);
+  transition: var(--table-row-transition);
+}
+.lex-table__row:hover .lex-table__cell { background: var(--table-row-bg-hover); }
+.lex-table--striped .lex-table__row:nth-child(even) .lex-table__cell { background: var(--table-row-bg-striped); }
+
+/* Lexicon tabs previews */
+.lex-tabs { font-family: var(--vp-font-family-base); }
+.lex-tabs__list {
+  display: flex;
+  gap: var(--tabs-list-gap);
+  border-bottom: 1px solid var(--tabs-list-border-bottom);
+  margin-bottom: 0;
+}
+.lex-tabs__tab {
+  background: none;
+  border: none;
+  color: var(--tabs-tab-text);
+  font-size: var(--tabs-tab-font-size);
+  font-weight: var(--tabs-tab-font-weight);
+  padding: var(--tabs-tab-padding);
+  cursor: pointer;
+  transition: var(--tabs-tab-transition);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  font-family: var(--vp-font-family-base);
+}
+.lex-tabs__tab:hover { color: var(--tabs-tab-text-hover); }
+.lex-tabs__tab--active {
+  color: var(--tabs-tab-text-active);
+  border-bottom-color: var(--tabs-underline-indicator-color);
+}
+.lex-tabs__tab:disabled { opacity: 0.5; cursor: not-allowed; }
+.lex-tabs__panel { padding-top: var(--tabs-panel-padding-top); font-size: 14px; color: var(--vp-c-text-2); }
+
+/* Lexicon toggle previews */
+.lex-toggle { display: inline-flex; align-items: center; gap: var(--toggle-label-gap); cursor: pointer; }
+.lex-toggle__track {
+  position: relative;
+  background: var(--toggle-track-bg-off);
+  border: 1px solid var(--toggle-track-border);
+  border-radius: var(--toggle-track-radius);
+  cursor: pointer;
+  transition: var(--toggle-track-transition);
+  padding: 0;
+  flex-shrink: 0;
+}
+.lex-toggle__track--md { width: var(--toggle-sizes-md-track-width); height: var(--toggle-sizes-md-track-height); }
+.lex-toggle__track--sm { width: var(--toggle-sizes-sm-track-width); height: var(--toggle-sizes-sm-track-height); }
+.lex-toggle__thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: var(--toggle-thumb-bg);
+  border-radius: var(--toggle-thumb-radius);
+  box-shadow: var(--toggle-thumb-shadow);
+  transition: var(--toggle-thumb-transition);
+}
+.lex-toggle__track--md .lex-toggle__thumb { width: var(--toggle-sizes-md-thumb-size); height: var(--toggle-sizes-md-thumb-size); }
+.lex-toggle__track--sm .lex-toggle__thumb { width: var(--toggle-sizes-sm-thumb-size); height: var(--toggle-sizes-sm-thumb-size); }
+.lex-toggle__track--on { background: var(--toggle-track-bg-on); border-color: var(--toggle-track-bg-on); }
+.lex-toggle__track--on.lex-toggle__track--md .lex-toggle__thumb { transform: translateX(20px); }
+.lex-toggle__track--on.lex-toggle__track--sm .lex-toggle__thumb { transform: translateX(16px); }
+.lex-toggle__label { font-size: var(--toggle-label-font-size); color: var(--toggle-label-color); font-family: var(--vp-font-family-base); }
+.lex-toggle--disabled { opacity: var(--toggle-disabled-opacity); cursor: var(--toggle-disabled-cursor); }
+
+/* Lexicon tooltip previews */
+.lex-tooltip-wrapper { position: relative; display: inline-block; }
+.lex-tooltip {
+  position: absolute;
+  background: var(--tooltip-default-bg);
+  color: var(--tooltip-default-text);
+  border: 1px solid var(--tooltip-default-border);
+  border-radius: var(--tooltip-default-radius);
+  box-shadow: var(--tooltip-default-shadow);
+  padding: var(--tooltip-default-padding);
+  font-size: var(--tooltip-default-font-size);
+  max-width: var(--tooltip-default-max-width);
+  white-space: nowrap;
+  font-family: var(--vp-font-family-base);
+  z-index: 10;
+  pointer-events: none;
+}
+.lex-tooltip--top { bottom: calc(100% + 8px); left: 50%; transform: translateX(-50%); }
+.lex-tooltip--bottom { top: calc(100% + 8px); left: 50%; transform: translateX(-50%); }
+.lex-tooltip--left { right: calc(100% + 8px); top: 50%; transform: translateY(-50%); }
+.lex-tooltip--right { left: calc(100% + 8px); top: 50%; transform: translateY(-50%); }
+
+/* Lexicon avatar previews */
+.lex-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--avatar-default-radius);
+  background: var(--avatar-default-bg);
+  color: var(--avatar-default-text);
+  font-weight: var(--avatar-default-font-weight);
+  font-family: var(--vp-font-family-base);
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+}
+.lex-avatar--xs { width: var(--avatar-sizes-xs-size); height: var(--avatar-sizes-xs-size); font-size: var(--avatar-sizes-xs-font-size); }
+.lex-avatar--sm { width: var(--avatar-sizes-sm-size); height: var(--avatar-sizes-sm-size); font-size: var(--avatar-sizes-sm-font-size); }
+.lex-avatar--md { width: var(--avatar-sizes-md-size); height: var(--avatar-sizes-md-size); font-size: var(--avatar-sizes-md-font-size); }
+.lex-avatar--lg { width: var(--avatar-sizes-lg-size); height: var(--avatar-sizes-lg-size); font-size: var(--avatar-sizes-lg-font-size); }
+.lex-avatar--xl { width: var(--avatar-sizes-xl-size); height: var(--avatar-sizes-xl-size); font-size: var(--avatar-sizes-xl-font-size); }
+.lex-avatar--square { border-radius: var(--avatar-square-radius); }
+.lex-avatar__initials { line-height: 1; }
+.lex-avatar__status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: var(--avatar-status-size);
+  height: var(--avatar-status-size);
+  border-radius: 50%;
+  border: var(--avatar-status-border, var(--avatar-default-border));
+}
+.lex-avatar__status--online { background: var(--avatar-status-online); }
+.lex-avatar__status--offline { background: var(--avatar-status-offline); }
+.lex-avatar__status--busy { background: var(--avatar-status-busy); }
+.lex-avatar-group { display: inline-flex; }
+.lex-avatar-group .lex-avatar { margin-left: var(--avatar-group-overlap); border: var(--avatar-default-border); }
+.lex-avatar-group .lex-avatar:first-child { margin-left: 0; }
+.lex-avatar-group__counter {
+  background: var(--avatar-group-counter-bg);
+  color: var(--avatar-group-counter-text);
+  font-weight: 500;
+}
+
+/* Lexicon modal previews (static, not interactive) */
+.lex-modal-preview {
+  position: relative;
+  background: var(--modal-overlay-bg);
+  border-radius: 12px;
+  padding: 40px 24px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.lex-modal-static {
+  background: var(--modal-dialog-bg);
+  border: 1px solid var(--modal-dialog-border);
+  border-radius: var(--modal-dialog-radius);
+  box-shadow: var(--modal-dialog-shadow);
+  padding: var(--modal-dialog-padding);
+  max-width: 400px;
+  width: 100%;
+  text-align: left;
+}
+.lex-modal__title { font-size: var(--modal-title-font-size); font-weight: var(--modal-title-font-weight); color: var(--modal-title-color); margin-bottom: var(--modal-title-margin-bottom); font-family: 'Satoshi Variable', 'Satoshi', sans-serif; }
+.lex-modal__description { font-size: var(--modal-description-font-size); color: var(--modal-description-color); line-height: var(--modal-description-line-height); }
+.lex-modal__footer { margin-top: var(--modal-footer-padding-top); display: flex; gap: var(--modal-footer-gap); justify-content: flex-end; }
 
 /* ── Reduced motion ──────────────────────────────────────────────────────── */
 
