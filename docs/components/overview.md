@@ -2,11 +2,16 @@
 
 Lexicon components are token-driven, accessible, and framework-aware. Every component consumes design tokens through CSS custom properties, ships with full TypeScript types, and renders valid, semantic HTML.
 
-## The 10 primitives
+## Primitives
 
 | Component | Description | Key features |
 | --- | --- | --- |
-| [Button](/components/button) | Primary action trigger | 4 variants, 3 sizes, loading state |
+| [Button](/components/button) | Primary action trigger | 4 variants, 3 sizes, loading state, icon slots |
+| [Icon Button](/components/icon-button) | Icon-only square button | 4 variants, 3 sizes, compact toolbar use |
+| [FAB](/components/fab) | Floating action button | Circular, elevated, extended variant |
+| [Button Group](/components/button-group) | Connected button row | Segmented control, active state |
+| [Link Button](/components/link-button) | Link-styled button | Underline on hover, trailing icon |
+| [Split Button](/components/split-button) | Action + dropdown trigger | Primary action with alternatives |
 | [Input](/components/input) | Text entry field | Label, helper, error, icon slots |
 | [Card](/components/card) | Content container | 3 variants, sub-components, clickable mode |
 | [Badge](/components/badge) | Status indicator | 5 variants, dot mode, removable |

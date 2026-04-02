@@ -20,6 +20,36 @@ A token-driven button with four variants, three sizes, and loading/disabled stat
   <button class="lex-button lex-button--primary lex-button--lg">Large</button>
 </div>
 
+### Loading
+
+<div class="component-preview">
+  <button class="lex-button lex-button--primary lex-button--md lex-button--loading" aria-busy="true">Saving</button>
+  <button class="lex-button lex-button--secondary lex-button--md lex-button--loading" aria-busy="true">Loading</button>
+  <button class="lex-button lex-button--danger lex-button--md lex-button--loading" aria-busy="true">Deleting</button>
+</div>
+
+### With icons
+
+<div class="component-preview">
+  <button class="lex-button lex-button--primary lex-button--md">
+    <span class="lex-button__icon lex-button__icon--leading"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="3" x2="8" y2="13"/><line x1="3" y1="8" x2="13" y2="8"/></svg></span>
+    Add item
+  </button>
+  <button class="lex-button lex-button--secondary lex-button--md">
+    Export
+    <span class="lex-button__icon lex-button__icon--trailing"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4,6 8,10 12,6"/></svg></span>
+  </button>
+  <button class="lex-button lex-button--ghost lex-button--md lex-button--icon-only" aria-label="Settings">
+    <span class="lex-button__icon"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="8" cy="8" r="2"/><path d="M8 1v2M8 13v2M1 8h2M13 8h2M2.9 2.9l1.4 1.4M11.7 11.7l1.4 1.4M2.9 13.1l1.4-1.4M11.7 4.3l1.4-1.4"/></svg></span>
+  </button>
+</div>
+
+### Full width
+
+<div class="component-preview" style="max-width: 400px;">
+  <button class="lex-button lex-button--primary lex-button--md lex-button--full-width">Full width button</button>
+</div>
+
 ## Variants
 
 - **Primary** -- solid purple background. Use for the main action on a page.
@@ -37,8 +67,14 @@ A token-driven button with four variants, three sizes, and loading/disabled stat
 
 ## States
 
-- **Disabled** -- reduced to 50% opacity with `cursor: not-allowed`. Pointer events are suppressed.
-- **Loading** -- shows a spinner and sets `aria-busy="true"`. The button remains its full width to prevent layout shift.
+| State | Appearance |
+| --- | --- |
+| Default | Resting state with stable colour fill |
+| Hover | Background shifts lighter (primary) or shows subtle fill (ghost) |
+| Focus | 2 px brand-purple ring with 2 px offset |
+| Active | Darker than hover, slight inset feel |
+| Disabled | 50 % opacity, `cursor: not-allowed`, no hover effect |
+| Loading | Spinner replaces text, button non-interactive, `aria-busy="true"` |
 
 ## Props
 
@@ -49,8 +85,9 @@ A token-driven button with four variants, three sizes, and loading/disabled stat
 | `disabled` | `boolean` | `false` | Disables interaction |
 | `loading` | `boolean` | `false` | Shows spinner, sets aria-busy |
 | `fullWidth` | `boolean` | `false` | Stretches to 100% of container |
+| `iconLeading` | `ReactNode` | -- | Icon before the label |
+| `iconTrailing` | `ReactNode` | -- | Icon after the label |
 | `className` | `string` | -- | Additional CSS classes |
-| `style` | `React.CSSProperties` | -- | Inline styles |
 | `children` | `React.ReactNode` | -- | Button label content |
 
 All standard `<button>` HTML attributes are also forwarded.
@@ -70,6 +107,7 @@ function Actions() {
       <Button variant="ghost" size="sm">Reset</Button>
       <Button variant="danger" disabled>Delete</Button>
       <Button variant="primary" loading>Saving...</Button>
+      <Button variant="primary" iconLeading={<PlusIcon />}>Add item</Button>
     </div>
   );
 }
@@ -86,12 +124,13 @@ function Actions() {
   Cancel
 </button>
 
-<button class="lex-button lex-button--ghost lex-button--sm">
-  Reset
+<button class="lex-button lex-button--primary lex-button--md lex-button--loading"
+        aria-busy="true">
+  Saving...
 </button>
 
-<button class="lex-button lex-button--danger lex-button--md" disabled>
-  Delete
+<button class="lex-button lex-button--primary lex-button--md lex-button--full-width">
+  Full width
 </button>
 ```
 
@@ -108,7 +147,8 @@ function Actions() {
 | `.lex-button--md` | Medium size (default) |
 | `.lex-button--lg` | Large size |
 | `.lex-button--full-width` | 100% width |
-| `.lex-button--loading` | Loading state |
+| `.lex-button--loading` | Loading state with spinner |
+| `.lex-button--icon-only` | Square icon-only button |
 
 ## Accessibility
 
@@ -117,3 +157,19 @@ function Actions() {
 - When `disabled`, the button receives `aria-disabled="true"` and suppresses click events.
 - When `loading`, `aria-busy="true"` is set and the label remains visible for screen readers.
 - Colour contrast between text and background meets WCAG AA (4.5:1) for all variants.
+- Icon-only buttons require an `aria-label` for screen reader context.
+- Keyboard: Enter and Space trigger the button action.
+
+## Guidelines
+
+::: tip Do
+- Use a single primary button per section to establish a clear visual hierarchy.
+- Pair primary with secondary or ghost for multi-action layouts.
+- Add `aria-label` to icon-only buttons.
+:::
+
+::: danger Don't
+- Don't use danger variant for non-destructive actions.
+- Don't disable buttons without explaining why (use a tooltip or helper text).
+- Don't nest interactive elements inside a button.
+:::

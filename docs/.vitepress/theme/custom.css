@@ -593,6 +593,228 @@ html:not(.dark) {
   outline: 2px solid var(--border-focus);
   outline-offset: 2px;
 }
+.lex-button--full-width { width: 100%; }
+.lex-button--loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+.lex-button--loading::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: lex-spin 0.6s linear infinite;
+}
+.lex-button--primary.lex-button--loading::after { border-color: var(--button-primary-text); border-right-color: transparent; }
+.lex-button--danger.lex-button--loading::after { border-color: var(--button-danger-text); border-right-color: transparent; }
+.lex-button--secondary.lex-button--loading::after { border-color: var(--button-secondary-text); border-right-color: transparent; }
+.lex-button--ghost.lex-button--loading::after { border-color: var(--button-ghost-text); border-right-color: transparent; }
+@keyframes lex-spin { to { transform: rotate(360deg); } }
+.lex-button .lex-button__icon { display: inline-flex; align-items: center; flex-shrink: 0; }
+.lex-button .lex-button__icon--leading { margin-right: 6px; }
+.lex-button .lex-button__icon--trailing { margin-left: 6px; }
+.lex-button--icon-only { padding: 0; aspect-ratio: 1; justify-content: center; }
+.lex-button--icon-only .lex-button__icon { margin: 0; }
+
+/* Lexicon icon button previews */
+.lex-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  cursor: pointer;
+  aspect-ratio: 1;
+  padding: 0;
+  line-height: 1;
+  transition: var(--button-primary-transition);
+}
+.lex-icon-button--primary {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border-radius: var(--button-primary-radius);
+}
+.lex-icon-button--primary:hover { background: var(--button-primary-bg-hover); }
+.lex-icon-button--primary:active { background: var(--button-primary-bg-active); }
+.lex-icon-button--secondary {
+  background: var(--button-secondary-bg);
+  color: var(--button-secondary-text);
+  border-color: var(--button-secondary-border);
+  border-radius: var(--button-secondary-radius);
+}
+.lex-icon-button--secondary:hover { background: var(--button-secondary-bg-hover); }
+.lex-icon-button--secondary:active { background: var(--button-secondary-bg-active); }
+.lex-icon-button--ghost {
+  background: var(--button-ghost-bg);
+  color: var(--button-ghost-text);
+  border-radius: var(--button-ghost-radius);
+}
+.lex-icon-button--ghost:hover { background: var(--button-ghost-bg-hover); }
+.lex-icon-button--ghost:active { background: var(--button-ghost-bg-active); }
+.lex-icon-button--danger {
+  background: var(--button-danger-bg);
+  color: var(--button-danger-text);
+  border-radius: var(--button-danger-radius);
+}
+.lex-icon-button--danger:hover { background: var(--button-danger-bg-hover); }
+.lex-icon-button--danger:active { background: var(--button-danger-bg-active); }
+.lex-icon-button--sm { width: var(--button-sizes-sm-height); height: var(--button-sizes-sm-height); }
+.lex-icon-button--md { width: var(--button-sizes-md-height); height: var(--button-sizes-md-height); }
+.lex-icon-button--lg { width: var(--button-sizes-lg-height); height: var(--button-sizes-lg-height); }
+.lex-icon-button:disabled, .lex-icon-button[disabled] {
+  opacity: var(--button-disabled-opacity);
+  cursor: var(--button-disabled-cursor);
+  pointer-events: none;
+}
+.lex-icon-button:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+.lex-icon-button svg { width: 20px; height: 20px; }
+.lex-icon-button--sm svg { width: 16px; height: 16px; }
+.lex-icon-button--lg svg { width: 24px; height: 24px; }
+
+/* Lexicon FAB previews */
+.lex-fab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0;
+  line-height: 1;
+  box-shadow: var(--shadow-md);
+  transition: var(--button-primary-transition);
+}
+.lex-fab--primary { background: var(--button-primary-bg); color: var(--button-primary-text); }
+.lex-fab--primary:hover { background: var(--button-primary-bg-hover); box-shadow: var(--shadow-lg); }
+.lex-fab--primary:active { background: var(--button-primary-bg-active); }
+.lex-fab--secondary { background: var(--button-secondary-bg-hover); color: var(--button-secondary-text); border: 1px solid var(--button-secondary-border); }
+.lex-fab--secondary:hover { background: var(--button-secondary-bg-active); box-shadow: var(--shadow-lg); }
+.lex-fab--sm { width: 40px; height: 40px; }
+.lex-fab--md { width: 56px; height: 56px; }
+.lex-fab--lg { width: 72px; height: 72px; }
+.lex-fab:disabled, .lex-fab[disabled] {
+  opacity: var(--button-disabled-opacity);
+  cursor: var(--button-disabled-cursor);
+  pointer-events: none;
+}
+.lex-fab:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+.lex-fab svg { width: 24px; height: 24px; }
+.lex-fab--sm svg { width: 20px; height: 20px; }
+.lex-fab--lg svg { width: 28px; height: 28px; }
+.lex-fab--extended {
+  border-radius: var(--button-primary-radius);
+  padding: 0 20px;
+  gap: 8px;
+  aspect-ratio: auto;
+  width: auto;
+}
+
+/* Lexicon button group previews */
+.lex-button-group {
+  display: inline-flex;
+}
+.lex-button-group .lex-button {
+  border-radius: 0;
+  margin-left: -1px;
+}
+.lex-button-group .lex-button:first-child {
+  border-radius: var(--button-primary-radius) 0 0 var(--button-primary-radius);
+  margin-left: 0;
+}
+.lex-button-group .lex-button:last-child {
+  border-radius: 0 var(--button-primary-radius) var(--button-primary-radius) 0;
+}
+.lex-button-group .lex-button--active {
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  border-color: var(--button-primary-bg);
+  z-index: 1;
+}
+
+/* Lexicon link button previews */
+.lex-link-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--vp-font-family-base);
+  font-weight: 500;
+  color: var(--button-ghost-text);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 2px;
+  transition: var(--button-primary-transition);
+  padding: 4px 2px;
+}
+.lex-link-button:hover { text-decoration-color: currentColor; }
+.lex-link-button:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+.lex-link-button:disabled, .lex-link-button[disabled] {
+  opacity: var(--button-disabled-opacity);
+  cursor: var(--button-disabled-cursor);
+  pointer-events: none;
+}
+.lex-link-button--sm { font-size: var(--button-sizes-sm-font-size); }
+.lex-link-button--md { font-size: var(--button-sizes-md-font-size); }
+.lex-link-button--lg { font-size: var(--button-sizes-lg-font-size); }
+
+/* Lexicon split button previews */
+.lex-split-button {
+  display: inline-flex;
+}
+.lex-split-button .lex-split-button__action {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-family: var(--vp-font-family-base);
+  font-weight: 500;
+  line-height: 1;
+  white-space: nowrap;
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  height: var(--button-sizes-md-height);
+  padding: 0 var(--button-sizes-md-padding-x);
+  font-size: var(--button-sizes-md-font-size);
+  border-radius: var(--button-primary-radius) 0 0 var(--button-primary-radius);
+  transition: var(--button-primary-transition);
+}
+.lex-split-button .lex-split-button__action:hover { background: var(--button-primary-bg-hover); }
+.lex-split-button .lex-split-button__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-left: 1px solid rgba(255,255,255,0.2);
+  cursor: pointer;
+  background: var(--button-primary-bg);
+  color: var(--button-primary-text);
+  height: var(--button-sizes-md-height);
+  padding: 0 10px;
+  border-radius: 0 var(--button-primary-radius) var(--button-primary-radius) 0;
+  transition: var(--button-primary-transition);
+}
+.lex-split-button .lex-split-button__trigger:hover { background: var(--button-primary-bg-hover); }
+.lex-split-button:focus-within {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+  border-radius: var(--button-primary-radius);
+}
 
 /* Lexicon input previews */
 .lex-input-wrapper {

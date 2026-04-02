@@ -50,6 +50,11 @@ export default defineConfig({
           items: [
             { text: 'Overview', link: '/components/overview' },
             { text: 'Button', link: '/components/button' },
+            { text: 'Icon Button', link: '/components/icon-button' },
+            { text: 'FAB', link: '/components/fab' },
+            { text: 'Button Group', link: '/components/button-group' },
+            { text: 'Link Button', link: '/components/link-button' },
+            { text: 'Split Button', link: '/components/split-button' },
             { text: 'Input', link: '/components/input' },
             { text: 'Card', link: '/components/card' },
             { text: 'Badge', link: '/components/badge' },
