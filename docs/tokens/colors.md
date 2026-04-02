@@ -6,6 +6,19 @@ Lexicon ships four colour groups: **purple** (brand), **grey** (neutrals), **ink
 
 The primary brand colour. Used for interactive elements, accents, and focus states.
 
+<div class="token-grid">
+  <div class="token-swatch" style="background: #F5F0FF; color: #430F96;">50</div>
+  <div class="token-swatch" style="background: #EDE1FF; color: #430F96;">100</div>
+  <div class="token-swatch" style="background: #D9CEFF; color: #430F96;">200</div>
+  <div class="token-swatch" style="background: #C4B5FD; color: #430F96;">300</div>
+  <div class="token-swatch" style="background: #A78BFA; color: #1F1740;">400</div>
+  <div class="token-swatch" style="background: #7C3AED; color: #FFFFFF;">500</div>
+  <div class="token-swatch" style="background: #5B21B6; color: #FFFFFF;">600</div>
+  <div class="token-swatch" style="background: #430F96; color: #FFFFFF;">700</div>
+  <div class="token-swatch" style="background: #1F1740; color: #FFFFFF;">800</div>
+  <div class="token-swatch" style="background: #19022B; color: #FFFFFF;">900</div>
+</div>
+
 | Token | CSS variable | Hex |
 | --- | --- | --- |
 | `purple.50` | `--color-purple-50` | `#F5F0FF` |
@@ -22,6 +35,21 @@ The primary brand colour. Used for interactive elements, accents, and focus stat
 ## Grey scale
 
 Neutrals used for backgrounds, surfaces, borders, and secondary text.
+
+<div class="token-grid">
+  <div class="token-swatch" style="background: #F4F4F5; color: #3E4048;">50</div>
+  <div class="token-swatch" style="background: #E0E1E3; color: #3E4048;">100</div>
+  <div class="token-swatch" style="background: #C5C6CA; color: #232428;">200</div>
+  <div class="token-swatch" style="background: #9B9DA4; color: #121316;">300</div>
+  <div class="token-swatch" style="background: #71737B; color: #FFFFFF;">400</div>
+  <div class="token-swatch" style="background: #55575F; color: #FFFFFF;">500</div>
+  <div class="token-swatch" style="background: #3E4048; color: #FFFFFF;">600</div>
+  <div class="token-swatch" style="background: #35363C; color: #FFFFFF;">700</div>
+  <div class="token-swatch" style="background: #232428; color: #FFFFFF;">800</div>
+  <div class="token-swatch" style="background: #1A1B1F; color: #FFFFFF;">850</div>
+  <div class="token-swatch" style="background: #121316; color: #FFFFFF;">900</div>
+  <div class="token-swatch" style="background: #0C0C0F; color: #FFFFFF;">950</div>
+</div>
 
 | Token | CSS variable | Hex |
 | --- | --- | --- |
@@ -50,6 +78,13 @@ High-contrast text colours for light and dark contexts.
 ## Status
 
 Feedback colours for success, warning, error, and informational states.
+
+<div class="token-grid" style="grid-template-columns: repeat(4, 1fr);">
+  <div class="token-swatch" style="background: #22C55E; color: #FFFFFF;">Success</div>
+  <div class="token-swatch" style="background: #EAB308; color: #1F1740;">Warning</div>
+  <div class="token-swatch" style="background: #EF4444; color: #FFFFFF;">Error</div>
+  <div class="token-swatch" style="background: #3B82F6; color: #FFFFFF;">Info</div>
+</div>
 
 | Token | CSS variable | Hex |
 | --- | --- | --- |

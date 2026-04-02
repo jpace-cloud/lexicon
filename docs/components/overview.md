@@ -55,6 +55,10 @@ Lexicon components are token-driven, accessible, and framework-aware. Every comp
 | [Context Menu](/components/context-menu) | Right-click menu | Icons, shortcuts, dividers, sub-menus |
 | [Dropdown Menu](/components/dropdown) | Trigger + action list | Toolbar actions, more-options pattern |
 | [Command Palette](/components/command-palette) | Search-driven commands | ⌘K activation, grouped, keyboard nav |
+| [Divider](/components/divider) | Content separator | Horizontal, vertical, with text label |
+| [Grid](/components/grid) | Column layout | 12/8/4-column, responsive breakpoints |
+| [Stack](/components/stack) | Flex spacing | Vertical, horizontal, configurable gap |
+| [Container](/components/container) | Max-width wrapper | Narrow, standard, wide, full |
 
 ## Data Visualisation
 

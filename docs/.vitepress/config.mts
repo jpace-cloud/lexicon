@@ -105,6 +105,10 @@ export default defineConfig({
             { text: 'Context Menu', link: '/components/context-menu' },
             { text: 'Dropdown Menu', link: '/components/dropdown' },
             { text: 'Command Palette', link: '/components/command-palette' },
+            { text: 'Divider', link: '/components/divider' },
+            { text: 'Grid', link: '/components/grid' },
+            { text: 'Stack', link: '/components/stack' },
+            { text: 'Container', link: '/components/container' },
           ],
         },
         {

@@ -12,6 +12,23 @@ Lexicon defines three font stacks, eleven size steps, four weights, four line he
 
 Load Satoshi from [Fontshare](https://api.fontshare.com) and DM Sans / JetBrains Mono from Google Fonts. See [Installation](/start/installation) for the exact link tags.
 
+### Font pairing specimen
+
+<div class="component-preview component-preview--col" style="gap: 0;">
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'Satoshi Variable', 'Satoshi', sans-serif; font-size: 28px; font-weight: 600; line-height: 1.2;">Satoshi — The quick brown fox</div>
+    <div class="lex-type-meta">Headings</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.6;">DM Sans — The quick brown fox jumps over the lazy dog. Pack my box with five dozen liquor jugs.</div>
+    <div class="lex-type-meta">Body</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 400; line-height: 1.6;">JetBrains Mono — const x = 42;</div>
+    <div class="lex-type-meta">Code</div>
+  </div>
+</div>
+
 ## Font sizes
 
 | Token | CSS variable | Value |
@@ -89,6 +106,51 @@ These presets combine family, size, weight, line height, and letter spacing into
 | Preset | Size | Weight | Line height |
 | --- | --- | --- | --- |
 | `code.md` | 13 px | Regular (400) | 1.6 |
+
+### Type scale specimen
+
+<div class="component-preview component-preview--col" style="gap: 0;">
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'Satoshi Variable', 'Satoshi', sans-serif; font-size: 48px; font-weight: 700; line-height: 1.1; letter-spacing: -0.025em;">Display</div>
+    <div class="lex-type-meta">48px / 700</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'Satoshi Variable', 'Satoshi', sans-serif; font-size: 36px; font-weight: 700; line-height: 1.2; letter-spacing: -0.025em;">Heading XL</div>
+    <div class="lex-type-meta">36px / 700</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'Satoshi Variable', 'Satoshi', sans-serif; font-size: 28px; font-weight: 600; line-height: 1.2; letter-spacing: -0.025em;">Heading Large</div>
+    <div class="lex-type-meta">28px / 600</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'Satoshi Variable', 'Satoshi', sans-serif; font-size: 20px; font-weight: 500; line-height: 1.5;">Heading Medium</div>
+    <div class="lex-type-meta">20px / 500</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'Satoshi Variable', 'Satoshi', sans-serif; font-size: 18px; font-weight: 500; line-height: 1.5;">Heading Small</div>
+    <div class="lex-type-meta">18px / 500</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'DM Sans', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.6;">Body Large — The quick brown fox jumps over the lazy dog.</div>
+    <div class="lex-type-meta">16px / 400</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 400; line-height: 1.6;">Body — The quick brown fox jumps over the lazy dog.</div>
+    <div class="lex-type-meta">14px / 400</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 400; line-height: 1.5;">Body Small — The quick brown fox jumps over the lazy dog.</div>
+    <div class="lex-type-meta">13px / 400</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 500; line-height: 1.5; text-transform: uppercase; letter-spacing: 0.05em;">Overline label</div>
+    <div class="lex-type-meta">11px / 500 / upper</div>
+  </div>
+  <div class="lex-type-row">
+    <div class="lex-type-sample" style="font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 400; line-height: 1.6;">const token = 'code.md';</div>
+    <div class="lex-type-meta">13px / mono</div>
+  </div>
+</div>
 
 ## Usage
 

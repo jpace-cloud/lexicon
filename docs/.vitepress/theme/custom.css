@@ -2264,6 +2264,153 @@ html:not(.dark) .lex-skeleton::after {
 .lex-command__item-shortcut { font-size: 11px; color: var(--vp-c-text-3); font-family: var(--vp-font-family-mono); }
 .lex-command__empty { padding: 24px 16px; text-align: center; font-size: 14px; color: var(--vp-c-text-3); }
 
+/* Lexicon divider previews */
+.lex-divider {
+  border: none;
+  height: 1px;
+  background: var(--vp-c-divider);
+  margin: 16px 0;
+  width: 100%;
+}
+.lex-divider--subtle { background: var(--vp-c-divider); }
+.lex-divider--default { background: var(--vp-c-border); }
+.lex-divider--strong { background: var(--vp-c-text-3); opacity: 0.3; }
+.lex-divider--vertical {
+  width: 1px;
+  height: auto;
+  align-self: stretch;
+  margin: 0 16px;
+  display: inline-block;
+}
+.lex-divider--with-text {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: none;
+  height: auto;
+}
+.lex-divider--with-text::before,
+.lex-divider--with-text::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--vp-c-border);
+}
+.lex-divider__text {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--vp-c-text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  font-family: var(--vp-font-family-base);
+}
+
+/* Lexicon container previews */
+.lex-container-demo {
+  background: rgba(124, 58, 237, 0.06);
+  border: 1px dashed rgba(124, 58, 237, 0.2);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  font-size: 13px;
+  font-family: var(--vp-font-family-base);
+  color: var(--vp-c-text-2);
+  width: 100%;
+  box-sizing: border-box;
+}
+.lex-container-demo--narrow { max-width: 640px; margin: 0 auto; }
+.lex-container-demo--standard { max-width: 960px; margin: 0 auto; }
+.lex-container-demo--wide { max-width: 1280px; margin: 0 auto; }
+
+/* Lexicon grid demo */
+.lex-grid-demo {
+  display: grid;
+  gap: 8px;
+  width: 100%;
+}
+.lex-grid-demo--12 { grid-template-columns: repeat(12, 1fr); }
+.lex-grid-demo--6 { grid-template-columns: repeat(6, 1fr); }
+.lex-grid-demo--4 { grid-template-columns: repeat(4, 1fr); }
+.lex-grid-demo--3 { grid-template-columns: repeat(3, 1fr); }
+.lex-grid-demo__col {
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.2);
+  border-radius: 4px;
+  padding: 8px 4px;
+  text-align: center;
+  font-size: 11px;
+  font-family: var(--vp-font-family-mono);
+  color: var(--vp-c-brand-1);
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lexicon stack demo */
+.lex-stack-demo {
+  display: flex;
+  font-family: var(--vp-font-family-base);
+}
+.lex-stack-demo--vertical { flex-direction: column; }
+.lex-stack-demo--horizontal { flex-direction: row; flex-wrap: wrap; }
+.lex-stack-demo__item {
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.15);
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-size: 13px;
+  color: var(--vp-c-text-1);
+}
+
+/* Lexicon type specimen preview */
+.lex-type-row {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--vp-c-divider);
+  font-family: var(--vp-font-family-base);
+}
+.lex-type-row:last-child { border-bottom: none; }
+.lex-type-sample { flex: 1; min-width: 0; }
+.lex-type-meta {
+  flex-shrink: 0;
+  font-size: 11px;
+  color: var(--vp-c-text-3);
+  font-family: var(--vp-font-family-mono);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Lexicon spacing visual */
+.lex-spacing-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+  font-family: var(--vp-font-family-base);
+}
+.lex-spacing-bar {
+  height: 20px;
+  background: rgba(124, 58, 237, 0.15);
+  border: 1px solid rgba(124, 58, 237, 0.25);
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.lex-spacing-label {
+  font-size: 12px;
+  font-family: var(--vp-font-family-mono);
+  color: var(--vp-c-text-2);
+  min-width: 80px;
+}
+.lex-spacing-value {
+  font-size: 11px;
+  color: var(--vp-c-text-3);
+  font-family: var(--vp-font-family-mono);
+}
+
 /* Lexicon list previews */
 .lex-list {
   list-style: none;

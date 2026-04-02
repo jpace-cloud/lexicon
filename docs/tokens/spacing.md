@@ -23,15 +23,73 @@ Lexicon uses a base-4 spacing scale. Every value is a multiple of 4 px, providin
 
 ## Visual reference
 
-```
---space-1   ████                          4px
---space-2   ████████                      8px
---space-3   ████████████                  12px
---space-4   ████████████████              16px
---space-5   ████████████████████          20px
---space-6   ████████████████████████      24px
---space-8   ████████████████████████████████  32px
-```
+<div class="component-preview component-preview--col" style="gap: 4px;">
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-1</span>
+    <div class="lex-spacing-bar" style="width: 4px;"></div>
+    <span class="lex-spacing-value">4px / 0.25rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-2</span>
+    <div class="lex-spacing-bar" style="width: 8px;"></div>
+    <span class="lex-spacing-value">8px / 0.5rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-3</span>
+    <div class="lex-spacing-bar" style="width: 12px;"></div>
+    <span class="lex-spacing-value">12px / 0.75rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-4</span>
+    <div class="lex-spacing-bar" style="width: 16px;"></div>
+    <span class="lex-spacing-value">16px / 1rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-5</span>
+    <div class="lex-spacing-bar" style="width: 20px;"></div>
+    <span class="lex-spacing-value">20px / 1.25rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-6</span>
+    <div class="lex-spacing-bar" style="width: 24px;"></div>
+    <span class="lex-spacing-value">24px / 1.5rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-8</span>
+    <div class="lex-spacing-bar" style="width: 32px;"></div>
+    <span class="lex-spacing-value">32px / 2rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-10</span>
+    <div class="lex-spacing-bar" style="width: 40px;"></div>
+    <span class="lex-spacing-value">40px / 2.5rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-12</span>
+    <div class="lex-spacing-bar" style="width: 48px;"></div>
+    <span class="lex-spacing-value">48px / 3rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-16</span>
+    <div class="lex-spacing-bar" style="width: 64px;"></div>
+    <span class="lex-spacing-value">64px / 4rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-20</span>
+    <div class="lex-spacing-bar" style="width: 80px;"></div>
+    <span class="lex-spacing-value">80px / 5rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-24</span>
+    <div class="lex-spacing-bar" style="width: 96px;"></div>
+    <span class="lex-spacing-value">96px / 6rem</span>
+  </div>
+  <div class="lex-spacing-row">
+    <span class="lex-spacing-label">--space-32</span>
+    <div class="lex-spacing-bar" style="width: 128px;"></div>
+    <span class="lex-spacing-value">128px / 8rem</span>
+  </div>
+</div>
 
 ## Usage
 
