@@ -44,6 +44,12 @@ Lexicon components are token-driven, accessible, and framework-aware. Every comp
 | [Progress Ring](/components/progress-ring) | Circular progress | Percentage label, indeterminate |
 | [Skeleton](/components/skeleton) | Content placeholder | Shimmer animation, 5 shapes |
 | [Status Indicator](/components/status-indicator) | Presence dot | Online, away, busy, offline |
+| [List](/components/list) | Structured vertical list | Icons, secondary text, actions, bordered |
+| [Accordion](/components/accordion) | Collapsible sections | Single/multiple mode, keyboard nav |
+| [Tag / Chip](/components/tag) | Category label | 5 variants, rounded, removable, avatar |
+| [Stat Block](/components/stat-block) | Metric display | Value, label, trend indicator, card mode |
+| [Key-Value Pair](/components/key-value) | Labelled data rows | Striped, horizontal layout |
+| [Timeline](/components/timeline) | Chronological events | Completed, active, pending dots |
 
 ## Usage patterns
 

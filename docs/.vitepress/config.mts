@@ -87,6 +87,12 @@ export default defineConfig({
             { text: 'Progress Ring', link: '/components/progress-ring' },
             { text: 'Skeleton', link: '/components/skeleton' },
             { text: 'Status Indicator', link: '/components/status-indicator' },
+            { text: 'List', link: '/components/list' },
+            { text: 'Accordion', link: '/components/accordion' },
+            { text: 'Tag / Chip', link: '/components/tag' },
+            { text: 'Stat Block', link: '/components/stat-block' },
+            { text: 'Key-Value Pair', link: '/components/key-value' },
+            { text: 'Timeline', link: '/components/timeline' },
           ],
         },
         {
