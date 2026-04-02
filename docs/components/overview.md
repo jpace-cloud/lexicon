@@ -51,6 +51,28 @@ Lexicon components are token-driven, accessible, and framework-aware. Every comp
 | [Key-Value Pair](/components/key-value) | Labelled data rows | Striped, horizontal layout |
 | [Timeline](/components/timeline) | Chronological events | Completed, active, pending dots |
 
+## Data Visualisation
+
+| Component | Description | Key features |
+| --- | --- | --- |
+| [Line Chart](/components/line-chart) | Multi-series trend lines | Axes, grid, dots, tooltip, legend |
+| [Bar Chart](/components/bar-chart) | Vertical bar comparison | Single, grouped, stacked variants |
+| [Area Chart](/components/area-chart) | Filled trend area | Gradient fill, multi-series |
+| [Pie / Donut Chart](/components/pie-chart) | Proportional segments | Centre label, legend, hover |
+| [Sparkline](/components/sparkline) | Inline mini chart | Line, area, bar variants |
+| [Legend](/components/chart-legend) | Series colour map | Horizontal, vertical, toggleable |
+| [Chart Tooltip](/components/chart-tooltip) | Hover data card | Multi-series rows, themed surface |
+
+### Chart colour palette
+
+| Series | Light mode | Dark mode |
+| --- | --- | --- |
+| 1 — Primary | `#7C3AED` (purple) | `#A78BFA` |
+| 2 — Secondary | `#0D9488` (teal) | `#5EEAD4` |
+| 3 — Tertiary | `#EA580C` (coral) | `#FB923C` |
+| 4 — Fourth | `#DB2777` (pink) | `#F472B6` |
+| 5 — Fifth | `#2563EB` (blue) | `#60A5FA` |
+
 ## Usage patterns
 
 ### React

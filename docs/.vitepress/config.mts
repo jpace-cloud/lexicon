@@ -93,6 +93,13 @@ export default defineConfig({
             { text: 'Stat Block', link: '/components/stat-block' },
             { text: 'Key-Value Pair', link: '/components/key-value' },
             { text: 'Timeline', link: '/components/timeline' },
+            { text: 'Line Chart', link: '/components/line-chart' },
+            { text: 'Bar Chart', link: '/components/bar-chart' },
+            { text: 'Area Chart', link: '/components/area-chart' },
+            { text: 'Pie / Donut Chart', link: '/components/pie-chart' },
+            { text: 'Sparkline', link: '/components/sparkline' },
+            { text: 'Legend', link: '/components/chart-legend' },
+            { text: 'Chart Tooltip', link: '/components/chart-tooltip' },
           ],
         },
         {
