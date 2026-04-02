@@ -4,14 +4,64 @@ A dialog overlay with focus trapping, keyboard dismissal, and multiple size opti
 
 ## Preview
 
+### Confirmation dialog (small)
+
 <div class="component-preview component-preview--col">
   <div class="lex-modal-preview">
-    <div class="lex-modal-static">
+    <div class="lex-modal-static lex-modal-static--sm" style="position: relative;">
+      <button class="lex-modal__close" aria-label="Close">&times;</button>
       <div class="lex-modal__title">Delete project?</div>
       <p class="lex-modal__description">This action cannot be undone. All data will be permanently removed.</p>
       <div class="lex-modal__footer">
         <button class="lex-button lex-button--secondary lex-button--sm">Cancel</button>
         <button class="lex-button lex-button--danger lex-button--sm">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Form dialog (medium)
+
+<div class="component-preview component-preview--col">
+  <div class="lex-modal-preview">
+    <div class="lex-modal-static lex-modal-static--md" style="position: relative;">
+      <button class="lex-modal__close" aria-label="Close">&times;</button>
+      <div class="lex-modal__title">Create new project</div>
+      <p class="lex-modal__description">Fill in the details below to set up your project.</p>
+      <div class="lex-modal__body" style="margin-top: 16px;">
+        <div style="margin-bottom: 12px;">
+          <label class="lex-input__label">Project name</label>
+          <input class="lex-input" type="text" placeholder="My project" />
+        </div>
+        <div>
+          <label class="lex-input__label">Description</label>
+          <textarea class="lex-textarea" rows="2" placeholder="Brief description..."></textarea>
+        </div>
+      </div>
+      <div class="lex-modal__footer">
+        <button class="lex-button lex-button--secondary lex-button--sm">Cancel</button>
+        <button class="lex-button lex-button--primary lex-button--sm">Create project</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+### Scrollable content (large)
+
+<div class="component-preview component-preview--col">
+  <div class="lex-modal-preview">
+    <div class="lex-modal-static lex-modal-static--lg lex-modal-static--scrollable" style="position: relative;">
+      <button class="lex-modal__close" aria-label="Close">&times;</button>
+      <div class="lex-modal__title">Terms of Service</div>
+      <p class="lex-modal__description">Please review and accept the terms below.</p>
+      <div class="lex-modal__body" style="margin-top: 16px;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p style="margin-top: 12px;">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p style="margin-top: 12px;">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      </div>
+      <div class="lex-modal__footer">
+        <button class="lex-button lex-button--secondary lex-button--sm">Decline</button>
+        <button class="lex-button lex-button--primary lex-button--sm">Accept</button>
       </div>
     </div>
   </div>
@@ -23,15 +73,24 @@ A dialog overlay with focus trapping, keyboard dismissal, and multiple size opti
 - **Escape to close** -- pressing `Escape` fires the close handler.
 - **Overlay dismiss** -- clicking the backdrop closes the modal (can be disabled).
 - **Sizes** -- four width presets from compact (400 px) to full-screen.
+- **Scroll lock** -- page scroll is disabled while the modal is open.
 
 ## Sizes
 
-| Size | Max width |
+| Size | Max width | Use case |
+| --- | --- | --- |
+| `sm` | 400 px | Confirmations, simple alerts |
+| `md` | 560 px | Forms, detail views |
+| `lg` | 720 px | Long content, terms, multi-step |
+| `full` | `calc(100vw - 48px)` | Media viewers, complex editors |
+
+## Variants
+
+| Variant | Description |
 | --- | --- |
-| `sm` | 400 px |
-| `md` | 560 px |
-| `lg` | 720 px |
-| `full` | `calc(100vw - 48px)` |
+| Confirmation | Short message with confirm/cancel actions |
+| Form | Contains input fields and a submit action |
+| Scrollable | Fixed header/footer with scrollable body |
 
 ## Props
 
@@ -110,9 +169,9 @@ function ConfirmDialog() {
 | --- | --- |
 | `.lex-modal-overlay` | Full-screen backdrop |
 | `.lex-modal` | Dialog container |
-| `.lex-modal--sm` | Small size |
-| `.lex-modal--md` | Medium size (default) |
-| `.lex-modal--lg` | Large size |
+| `.lex-modal--sm` | Small size (400 px) |
+| `.lex-modal--md` | Medium size (560 px) |
+| `.lex-modal--lg` | Large size (720 px) |
 | `.lex-modal--full` | Full-screen size |
 | `.lex-modal__close` | Close button |
 | `.lex-modal__title` | Title text |
@@ -129,3 +188,18 @@ function ConfirmDialog() {
 - When the modal closes, focus returns to the element that triggered it.
 - The close button has `aria-label="Close"`.
 - The overlay receives `role="presentation"` so it is not announced by screen readers.
+- Body scroll is locked while the modal is open.
+
+## Guidelines
+
+::: tip Do
+- Use the smallest size that fits your content.
+- Always provide a clear close mechanism (X button, Cancel, Escape).
+- Use confirmation dialogs for destructive actions.
+:::
+
+::: danger Don't
+- Don't stack modals on top of modals.
+- Don't use modals for simple, inline interactions — use a popover instead.
+- Don't auto-open modals on page load unless absolutely necessary.
+:::

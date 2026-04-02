@@ -50,6 +50,11 @@ Lexicon components are token-driven, accessible, and framework-aware. Every comp
 | [Stat Block](/components/stat-block) | Metric display | Value, label, trend indicator, card mode |
 | [Key-Value Pair](/components/key-value) | Labelled data rows | Striped, horizontal layout |
 | [Timeline](/components/timeline) | Chronological events | Completed, active, pending dots |
+| [Drawer](/components/drawer) | Slide-in panel | Left, right, bottom positions |
+| [Popover](/components/popover) | Floating content panel | Click/hover trigger, 4 positions |
+| [Context Menu](/components/context-menu) | Right-click menu | Icons, shortcuts, dividers, sub-menus |
+| [Dropdown Menu](/components/dropdown) | Trigger + action list | Toolbar actions, more-options pattern |
+| [Command Palette](/components/command-palette) | Search-driven commands | ⌘K activation, grouped, keyboard nav |
 
 ## Data Visualisation
 

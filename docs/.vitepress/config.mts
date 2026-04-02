@@ -100,6 +100,11 @@ export default defineConfig({
             { text: 'Sparkline', link: '/components/sparkline' },
             { text: 'Legend', link: '/components/chart-legend' },
             { text: 'Chart Tooltip', link: '/components/chart-tooltip' },
+            { text: 'Drawer', link: '/components/drawer' },
+            { text: 'Popover', link: '/components/popover' },
+            { text: 'Context Menu', link: '/components/context-menu' },
+            { text: 'Dropdown Menu', link: '/components/dropdown' },
+            { text: 'Command Palette', link: '/components/command-palette' },
           ],
         },
         {
