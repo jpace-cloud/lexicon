@@ -29,6 +29,15 @@ Lexicon components are token-driven, accessible, and framework-aware. Every comp
 | [Avatar](/components/avatar) | User representation | Image, initials, fallback, status, groups |
 | [Tabs](/components/tabs) | Content sections | 3 variants, keyboard navigation |
 | [Toggle](/components/toggle) | On/off switch | Switch role, label position, 2 sizes |
+| [Alert](/components/alert) | Inline message | 5 variants, dismiss, icon + title + description |
+| [Banner](/components/banner) | Full-width notice | 5 variants, action link, dismiss |
+| [Toast](/components/toast) | Floating notification | 4 variants, auto-dismiss, stacking |
+| [Empty State](/components/empty-state) | No-data placeholder | Icon, heading, description, CTA |
+| [Spinner](/components/spinner) | Loading indicator | 3 sizes, 4 colour variants |
+| [Progress Bar](/components/progress) | Horizontal progress | 4 colours, 3 sizes, indeterminate |
+| [Progress Ring](/components/progress-ring) | Circular progress | Percentage label, indeterminate |
+| [Skeleton](/components/skeleton) | Content placeholder | Shimmer animation, 5 shapes |
+| [Status Indicator](/components/status-indicator) | Presence dot | Online, away, busy, offline |
 
 ## Usage patterns
 

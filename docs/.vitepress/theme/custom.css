@@ -49,6 +49,23 @@
   --bg-surface-3: #1e1f26;
   --border-default: rgba(255, 255, 255, 0.08);
   --border-hover: rgba(255, 255, 255, 0.15);
+
+  /* Feedback fills (dark mode) */
+  --feedback-success-fill: #14532d;
+  --feedback-success-text: #86efac;
+  --feedback-success-border: #166534;
+  --feedback-warning-fill: #78350f;
+  --feedback-warning-text: #fcd34d;
+  --feedback-warning-border: #92400e;
+  --feedback-error-fill: #7f1d1d;
+  --feedback-error-text: #fca5a5;
+  --feedback-error-border: #991b1b;
+  --feedback-info-fill: #1e3a5f;
+  --feedback-info-text: #93c5fd;
+  --feedback-info-border: #1e40af;
+  --feedback-neutral-fill: #232428;
+  --feedback-neutral-text: #9B9DA4;
+  --feedback-neutral-border: rgba(255, 255, 255, 0.1);
 }
 
 /* ── Light mode ────────────────────────────────────────────────────────────── */
@@ -222,6 +239,23 @@ html:not(.dark) {
   --avatar-status-border: 2px solid #FFFFFF;
   --avatar-group-counter-bg: #E5E7EB;
   --avatar-group-counter-text: #6B7280;
+
+  /* ── Feedback fills (tinted backgrounds for alerts, banners, toasts) ── */
+  --feedback-success-fill: #f0fdf4;
+  --feedback-success-text: #15803d;
+  --feedback-success-border: #bbf7d0;
+  --feedback-warning-fill: #fffbeb;
+  --feedback-warning-text: #92400e;
+  --feedback-warning-border: #fde68a;
+  --feedback-error-fill: #fef2f2;
+  --feedback-error-text: #991b1b;
+  --feedback-error-border: #fecaca;
+  --feedback-info-fill: #eff6ff;
+  --feedback-info-text: #1e40af;
+  --feedback-info-border: #bfdbfe;
+  --feedback-neutral-fill: #f3f4f6;
+  --feedback-neutral-text: #374151;
+  --feedback-neutral-border: #e5e7eb;
 
   /* ── Elevation ───────────────────────────────────────────────────────── */
   --level-1: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
@@ -1196,6 +1230,262 @@ html:not(.dark) {
 .lex-number-input--lg { height: var(--input-sizes-lg-height); }
 .lex-number-input--disabled { opacity: var(--input-disabled-opacity); cursor: var(--input-disabled-cursor); pointer-events: none; }
 .lex-number-input--error { border-color: var(--input-default-border-error); }
+
+/* Lexicon alert previews */
+.lex-alert {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--input-default-radius);
+  font-family: var(--vp-font-family-base);
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid transparent;
+}
+.lex-alert__icon { flex-shrink: 0; margin-top: 2px; }
+.lex-alert__content { flex: 1; min-width: 0; }
+.lex-alert__title { font-weight: 600; margin-bottom: 2px; }
+.lex-alert__description { opacity: 0.9; }
+.lex-alert__dismiss {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+  padding: 0;
+  margin-top: 2px;
+  transition: opacity 0.15s;
+}
+.lex-alert__dismiss:hover { opacity: 1; }
+.lex-alert--info { background: var(--feedback-info-fill); color: var(--feedback-info-text); border-color: var(--feedback-info-border); }
+.lex-alert--success { background: var(--feedback-success-fill); color: var(--feedback-success-text); border-color: var(--feedback-success-border); }
+.lex-alert--warning { background: var(--feedback-warning-fill); color: var(--feedback-warning-text); border-color: var(--feedback-warning-border); }
+.lex-alert--error { background: var(--feedback-error-fill); color: var(--feedback-error-text); border-color: var(--feedback-error-border); }
+.lex-alert--neutral { background: var(--feedback-neutral-fill); color: var(--feedback-neutral-text); border-color: var(--feedback-neutral-border); }
+
+/* Lexicon banner previews */
+.lex-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px;
+  font-family: var(--vp-font-family-base);
+  font-size: 14px;
+  line-height: 1.5;
+  width: 100%;
+  box-sizing: border-box;
+}
+.lex-banner__icon { flex-shrink: 0; }
+.lex-banner__content { flex: 1; min-width: 0; }
+.lex-banner__action {
+  flex-shrink: 0;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+.lex-banner__dismiss {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+  padding: 4px;
+  transition: opacity 0.15s;
+}
+.lex-banner__dismiss:hover { opacity: 1; }
+.lex-banner--info { background: var(--feedback-info-fill); color: var(--feedback-info-text); }
+.lex-banner--success { background: var(--feedback-success-fill); color: var(--feedback-success-text); }
+.lex-banner--warning { background: var(--feedback-warning-fill); color: var(--feedback-warning-text); }
+.lex-banner--error { background: var(--feedback-error-fill); color: var(--feedback-error-text); }
+.lex-banner--neutral { background: var(--feedback-neutral-fill); color: var(--feedback-neutral-text); }
+
+/* Lexicon toast previews */
+.lex-toast {
+  display: flex;
+  gap: 12px;
+  padding: 12px 16px;
+  border-radius: var(--input-default-radius);
+  font-family: var(--vp-font-family-base);
+  font-size: 14px;
+  line-height: 1.5;
+  background: var(--vp-c-bg-elv);
+  border: 1px solid var(--vp-c-border);
+  box-shadow: var(--shadow-lg, 0 10px 25px rgba(0,0,0,0.15));
+  max-width: 360px;
+  width: 100%;
+  box-sizing: border-box;
+  color: var(--vp-c-text-1);
+}
+.lex-toast__icon { flex-shrink: 0; margin-top: 2px; }
+.lex-toast__content { flex: 1; min-width: 0; }
+.lex-toast__title { font-weight: 600; margin-bottom: 2px; color: var(--vp-c-text-1); }
+.lex-toast__description { color: var(--vp-c-text-2); font-size: 13px; }
+.lex-toast__dismiss {
+  flex-shrink: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--vp-c-text-3);
+  opacity: 0.6;
+  padding: 0;
+  margin-top: 2px;
+  transition: opacity 0.15s;
+}
+.lex-toast__dismiss:hover { opacity: 1; }
+.lex-toast--info .lex-toast__icon { color: var(--color-status-info, #3B82F6); }
+.lex-toast--success .lex-toast__icon { color: var(--color-status-success, #22C55E); }
+.lex-toast--warning .lex-toast__icon { color: var(--color-status-warning, #EAB308); }
+.lex-toast--error .lex-toast__icon { color: var(--color-status-error, #EF4444); }
+.lex-toast-stack { display: flex; flex-direction: column; gap: 8px; }
+
+/* Lexicon empty state previews */
+.lex-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 24px;
+  gap: 12px;
+  font-family: var(--vp-font-family-base);
+}
+.lex-empty-state__icon { color: var(--vp-c-text-3); margin-bottom: 4px; }
+.lex-empty-state__title { font-size: 18px; font-weight: 600; color: var(--vp-c-text-1); }
+.lex-empty-state__description { font-size: 14px; color: var(--vp-c-text-2); max-width: 320px; line-height: 1.5; }
+
+/* Lexicon spinner previews */
+.lex-spinner {
+  display: inline-block;
+  border: 2px solid currentColor;
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: lex-spin 0.6s linear infinite;
+  color: var(--vp-c-brand-1);
+}
+.lex-spinner--sm { width: 16px; height: 16px; }
+.lex-spinner--md { width: 24px; height: 24px; }
+.lex-spinner--lg { width: 40px; height: 40px; border-width: 3px; }
+.lex-spinner--neutral { color: var(--vp-c-text-3); }
+.lex-spinner--on-dark { color: #ffffff; }
+.lex-spinner--on-light { color: #111827; }
+
+/* Lexicon progress bar previews */
+.lex-progress {
+  width: 100%;
+  max-width: 320px;
+  font-family: var(--vp-font-family-base);
+}
+.lex-progress__track {
+  width: 100%;
+  background: var(--vp-c-bg-mute);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.lex-progress__track--thin { height: 4px; }
+.lex-progress__track--default { height: 8px; }
+.lex-progress__track--thick { height: 12px; }
+.lex-progress__fill {
+  height: 100%;
+  border-radius: 99px;
+  transition: width 0.3s ease;
+}
+.lex-progress__fill--brand { background: var(--vp-c-brand-1); }
+.lex-progress__fill--success { background: var(--color-status-success); }
+.lex-progress__fill--warning { background: var(--color-status-warning); }
+.lex-progress__fill--error { background: var(--color-status-error); }
+.lex-progress__fill--indeterminate {
+  width: 40% !important;
+  animation: lex-progress-indeterminate 1.5s ease-in-out infinite;
+}
+@keyframes lex-progress-indeterminate {
+  0% { margin-left: -40%; }
+  100% { margin-left: 100%; }
+}
+.lex-progress__label { font-size: 12px; color: var(--vp-c-text-2); margin-top: 4px; text-align: right; }
+.lex-progress__row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4px; }
+.lex-progress__title { font-size: 13px; font-weight: 500; color: var(--vp-c-text-1); }
+.lex-progress__value { font-size: 13px; color: var(--vp-c-text-2); }
+
+/* Lexicon progress ring previews */
+.lex-progress-ring {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.lex-progress-ring__svg { transform: rotate(-90deg); }
+.lex-progress-ring__track { fill: none; stroke: var(--vp-c-bg-mute); }
+.lex-progress-ring__fill { fill: none; stroke: var(--vp-c-brand-1); stroke-linecap: round; transition: stroke-dashoffset 0.3s ease; }
+.lex-progress-ring__label {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+  font-family: var(--vp-font-family-base);
+}
+.lex-progress-ring--indeterminate .lex-progress-ring__svg { animation: lex-spin 1.2s linear infinite; }
+
+/* Lexicon skeleton previews */
+.lex-skeleton {
+  background: var(--vp-c-bg-mute);
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+.lex-skeleton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+  animation: lex-skeleton-shimmer 1.5s ease-in-out infinite;
+}
+html:not(.dark) .lex-skeleton::after {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+}
+@keyframes lex-skeleton-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.lex-skeleton--text { height: 14px; border-radius: 4px; }
+.lex-skeleton--heading { height: 20px; width: 60%; border-radius: 4px; }
+.lex-skeleton--avatar { width: 40px; height: 40px; border-radius: 50%; }
+.lex-skeleton--image { width: 100%; height: 120px; border-radius: 8px; }
+.lex-skeleton--card { width: 100%; max-width: 300px; height: 160px; border-radius: var(--input-default-radius); }
+.lex-skeleton--row { display: flex; gap: 12px; align-items: center; width: 100%; }
+
+/* Lexicon status indicator previews */
+.lex-status-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.lex-status-dot--online { background: var(--color-status-success); }
+.lex-status-dot--offline { background: var(--vp-c-text-3); }
+.lex-status-dot--busy { background: var(--color-status-error); }
+.lex-status-dot--away { background: var(--color-status-warning); }
+.lex-status-dot--sm { width: 8px; height: 8px; }
+.lex-status-dot--lg { width: 12px; height: 12px; }
+.lex-status-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--vp-font-family-base);
+  font-size: 14px;
+  color: var(--vp-c-text-1);
+}
 
 /* Lexicon card previews */
 .lex-card {
