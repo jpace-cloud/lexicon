@@ -23,33 +23,79 @@ One-time purchase. Lifetime updates. No subscription.
 
 <div class="pricing-grid">
   <div class="pricing-card">
+    <span class="plan-badge plan-badge--free">Free</span>
+    <h3>Free</h3>
+    <div class="price">€0</div>
+    <div class="period">Forever</div>
+    <div class="features">
+      <ul>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>44 open-source components</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Full design token system</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>CSS + Tailwind preset</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Documentation + playground</span></li>
+        <li><svg class="feature-x" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg><span>Pro components</span></li>
+        <li><svg class="feature-x" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg><span>Page templates</span></li>
+        <li><svg class="feature-x" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg><span>Figma library</span></li>
+      </ul>
+    </div>
+    <a class="cta cta-outline" href="/lexicon/start/">
+      Get Started →
+    </a>
+  </div>
+  <div class="pricing-card">
     <h3>Individual</h3>
     <div class="price">€149</div>
     <div class="period">One-time purchase</div>
     <div class="features">
-      All Pro components, all page templates, Figma library (1 seat).
+      <ul>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>131 components (44 free + 87 Pro)</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>All page templates</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Figma library (1 seat)</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Lifetime updates</span></li>
+        <li><svg class="feature-x" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg><span>Team seats</span></li>
+        <li><svg class="feature-x" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg><span>Priority support</span></li>
+        <li><svg class="feature-x" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg><span>Custom token config</span></li>
+      </ul>
     </div>
     <a class="cta cta-outline" href="https://parlance.business/api/lexicon-checkout?tier=individual">
       Get Individual →
     </a>
   </div>
   <div class="pricing-card featured">
+    <span class="plan-badge plan-badge--popular">Most Popular</span>
     <h3>Team</h3>
     <div class="price">€249</div>
     <div class="period">One-time purchase</div>
     <div class="features">
-      Everything in Individual + team Figma library access (up to 10 seats), priority support.
+      <ul>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>131 components (44 free + 87 Pro)</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>All page templates</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Figma library (up to 5 seats)</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Lifetime updates</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Priority support</span></li>
+        <li><svg class="feature-x" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg><span>Unlimited seats</span></li>
+        <li><svg class="feature-x" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l8 8M12 4l-8 8"/></svg><span>Custom token config</span></li>
+      </ul>
     </div>
     <a class="cta cta-primary" href="https://parlance.business/api/lexicon-checkout?tier=team">
       Get Team →
     </a>
   </div>
   <div class="pricing-card">
+    <span class="plan-badge plan-badge--enterprise">Enterprise</span>
     <h3>Organisation</h3>
     <div class="price">€499</div>
     <div class="period">One-time purchase</div>
     <div class="features">
-      Everything in Team + unlimited seats, custom token configuration, dedicated onboarding.
+      <ul>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>131 components (44 free + 87 Pro)</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>All page templates</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Figma library (unlimited seats)</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Lifetime updates</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Priority support</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Custom token configuration</span></li>
+        <li><svg class="feature-check" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5l3.5 3.5 6.5-7"/></svg><span>Dedicated onboarding</span></li>
+      </ul>
     </div>
     <a class="cta cta-outline" href="https://parlance.business/api/lexicon-checkout?tier=organisation">
       Get Organisation →
