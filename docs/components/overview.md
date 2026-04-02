@@ -12,7 +12,15 @@ Lexicon components are token-driven, accessible, and framework-aware. Every comp
 | [Button Group](/components/button-group) | Connected button row | Segmented control, active state |
 | [Link Button](/components/link-button) | Link-styled button | Underline on hover, trailing icon |
 | [Split Button](/components/split-button) | Action + dropdown trigger | Primary action with alternatives |
-| [Input](/components/input) | Text entry field | Label, helper, error, icon slots |
+| [Input](/components/input) | Text entry field | Label, helper, error, success, icon slots |
+| [Textarea](/components/textarea) | Multi-line text input | Character counter, resize, error state |
+| [Select](/components/select) | Native dropdown | Custom chevron, 3 sizes, error state |
+| [Checkbox](/components/checkbox) | Toggle option | Checked, indeterminate, groups |
+| [Radio](/components/radio) | Exclusive choice | Groups, error state |
+| [Slider](/components/slider) | Range input | Track, thumb, value label |
+| [Search Input](/components/search-input) | Search field | Search icon, clear button |
+| [Number Input](/components/number-input) | Numeric stepper | Increment/decrement buttons, min/max |
+| [File Upload](/components/file-upload) | File selector | Drag-and-drop, file preview |
 | [Card](/components/card) | Content container | 3 variants, sub-components, clickable mode |
 | [Badge](/components/badge) | Status indicator | 5 variants, dot mode, removable |
 | [Table](/components/table) | Tabular data | Compound pattern, striped, density, sticky header |
