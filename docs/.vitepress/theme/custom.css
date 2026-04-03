@@ -67,6 +67,25 @@
   --feedback-neutral-text: #9B9DA4;
   --feedback-neutral-border: rgba(255, 255, 255, 0.1);
 
+  /* Component: Button (dark mode) */
+  --button-primary-bg: #7C3AED;
+  --button-primary-bg-hover: #6D28D9;
+  --button-primary-bg-active: #5B21B6;
+  --button-primary-text: #FFFFFF;
+  --button-secondary-bg: transparent;
+  --button-secondary-bg-hover: rgba(255, 255, 255, 0.08);
+  --button-secondary-bg-active: rgba(255, 255, 255, 0.12);
+  --button-secondary-text: #E5E7EB;
+  --button-secondary-border: rgba(255, 255, 255, 0.16);
+  --button-ghost-bg: transparent;
+  --button-ghost-bg-hover: rgba(167, 139, 250, 0.12);
+  --button-ghost-bg-active: rgba(167, 139, 250, 0.2);
+  --button-ghost-text: #C4B5FD;
+  --button-danger-bg: #DC2626;
+  --button-danger-bg-hover: #B91C1C;
+  --button-danger-bg-active: #991B1B;
+  --button-danger-text: #FFFFFF;
+
   /* Chart palette (dark mode — lighter tints for dark backgrounds) */
   --chart-series-1: #A78BFA;
   --chart-series-2: #5EEAD4;
@@ -155,9 +174,9 @@ html:not(.dark) {
   --button-secondary-text: #111827;
   --button-secondary-border: #D1D5DB;
   --button-ghost-bg: transparent;
-  --button-ghost-bg-hover: rgba(124, 58, 237, 0.08);
-  --button-ghost-bg-active: rgba(124, 58, 237, 0.14);
-  --button-ghost-text: #7C3AED;
+  --button-ghost-bg-hover: rgba(124, 58, 237, 0.1);
+  --button-ghost-bg-active: rgba(124, 58, 237, 0.18);
+  --button-ghost-text: #6D28D9;
   --button-danger-bg: #DC2626;
   --button-danger-bg-hover: #B91C1C;
   --button-danger-bg-active: #991B1B;
@@ -742,6 +761,39 @@ html:not(.dark) {
 .lex-button .lex-button__icon--trailing { margin-left: 6px; }
 .lex-button--icon-only { padding: 0; aspect-ratio: 1; justify-content: center; }
 .lex-button--icon-only .lex-button__icon { margin: 0; }
+
+/* Forced state classes for static previews */
+.lex-button--primary.lex-button--force-hover { background: var(--button-primary-bg-hover); }
+.lex-button--primary.lex-button--force-active { background: var(--button-primary-bg-active); }
+.lex-button--secondary.lex-button--force-hover { background: var(--button-secondary-bg-hover); }
+.lex-button--secondary.lex-button--force-active { background: var(--button-secondary-bg-active); }
+.lex-button--ghost.lex-button--force-hover { background: var(--button-ghost-bg-hover); }
+.lex-button--ghost.lex-button--force-active { background: var(--button-ghost-bg-active); }
+.lex-button--danger.lex-button--force-hover { background: var(--button-danger-bg-hover); }
+.lex-button--danger.lex-button--force-active { background: var(--button-danger-bg-active); }
+.lex-button--force-focus { outline: 2px solid var(--border-focus); outline-offset: 2px; }
+
+/* Preview group layout */
+.lex-preview-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+.lex-preview-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--vp-c-text-3);
+  user-select: none;
+}
+.lex-preview-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
 
 /* Lexicon icon button previews */
 .lex-icon-button {

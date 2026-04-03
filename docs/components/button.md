@@ -4,12 +4,13 @@ A token-driven button with four variants, three sizes, and loading/disabled stat
 
 ## Preview
 
+### Variants
+
 <div class="component-preview">
   <button class="lex-button lex-button--primary lex-button--md">Primary</button>
   <button class="lex-button lex-button--secondary lex-button--md">Secondary</button>
   <button class="lex-button lex-button--ghost lex-button--md">Ghost</button>
   <button class="lex-button lex-button--danger lex-button--md">Danger</button>
-  <button class="lex-button lex-button--primary lex-button--md" disabled>Disabled</button>
 </div>
 
 ### Sizes
@@ -20,12 +21,63 @@ A token-driven button with four variants, three sizes, and loading/disabled stat
   <button class="lex-button lex-button--primary lex-button--lg">Large</button>
 </div>
 
-### Loading
+### States
 
-<div class="component-preview">
-  <button class="lex-button lex-button--primary lex-button--md lex-button--loading" aria-busy="true">Saving</button>
-  <button class="lex-button lex-button--secondary lex-button--md lex-button--loading" aria-busy="true">Loading</button>
-  <button class="lex-button lex-button--danger lex-button--md lex-button--loading" aria-busy="true">Deleting</button>
+<div class="component-preview component-preview--col">
+  <div class="lex-preview-group">
+    <span class="lex-preview-label">Default</span>
+    <div class="lex-preview-row">
+      <button class="lex-button lex-button--primary lex-button--sm">Primary</button>
+      <button class="lex-button lex-button--secondary lex-button--sm">Secondary</button>
+      <button class="lex-button lex-button--ghost lex-button--sm">Ghost</button>
+      <button class="lex-button lex-button--danger lex-button--sm">Danger</button>
+    </div>
+  </div>
+  <div class="lex-preview-group">
+    <span class="lex-preview-label">Hover</span>
+    <div class="lex-preview-row">
+      <button class="lex-button lex-button--primary lex-button--sm lex-button--force-hover">Primary</button>
+      <button class="lex-button lex-button--secondary lex-button--sm lex-button--force-hover">Secondary</button>
+      <button class="lex-button lex-button--ghost lex-button--sm lex-button--force-hover">Ghost</button>
+      <button class="lex-button lex-button--danger lex-button--sm lex-button--force-hover">Danger</button>
+    </div>
+  </div>
+  <div class="lex-preview-group">
+    <span class="lex-preview-label">Active</span>
+    <div class="lex-preview-row">
+      <button class="lex-button lex-button--primary lex-button--sm lex-button--force-active">Primary</button>
+      <button class="lex-button lex-button--secondary lex-button--sm lex-button--force-active">Secondary</button>
+      <button class="lex-button lex-button--ghost lex-button--sm lex-button--force-active">Ghost</button>
+      <button class="lex-button lex-button--danger lex-button--sm lex-button--force-active">Danger</button>
+    </div>
+  </div>
+  <div class="lex-preview-group">
+    <span class="lex-preview-label">Focus</span>
+    <div class="lex-preview-row">
+      <button class="lex-button lex-button--primary lex-button--sm lex-button--force-focus">Primary</button>
+      <button class="lex-button lex-button--secondary lex-button--sm lex-button--force-focus">Secondary</button>
+      <button class="lex-button lex-button--ghost lex-button--sm lex-button--force-focus">Ghost</button>
+      <button class="lex-button lex-button--danger lex-button--sm lex-button--force-focus">Danger</button>
+    </div>
+  </div>
+  <div class="lex-preview-group">
+    <span class="lex-preview-label">Disabled</span>
+    <div class="lex-preview-row">
+      <button class="lex-button lex-button--primary lex-button--sm" disabled>Primary</button>
+      <button class="lex-button lex-button--secondary lex-button--sm" disabled>Secondary</button>
+      <button class="lex-button lex-button--ghost lex-button--sm" disabled>Ghost</button>
+      <button class="lex-button lex-button--danger lex-button--sm" disabled>Danger</button>
+    </div>
+  </div>
+  <div class="lex-preview-group">
+    <span class="lex-preview-label">Loading</span>
+    <div class="lex-preview-row">
+      <button class="lex-button lex-button--primary lex-button--sm lex-button--loading" aria-busy="true">Save</button>
+      <button class="lex-button lex-button--secondary lex-button--sm lex-button--loading" aria-busy="true">Load</button>
+      <button class="lex-button lex-button--ghost lex-button--sm lex-button--loading" aria-busy="true">Sync</button>
+      <button class="lex-button lex-button--danger lex-button--sm lex-button--loading" aria-busy="true">Delete</button>
+    </div>
+  </div>
 </div>
 
 ### With icons
@@ -53,7 +105,7 @@ A token-driven button with four variants, three sizes, and loading/disabled stat
 ## Variants
 
 - **Primary** -- solid purple background. Use for the main action on a page.
-- **Secondary** -- transparent with a border. Use for supporting actions alongside a primary button.
+- **Secondary** -- transparent with a visible border. Use for supporting actions alongside a primary button.
 - **Ghost** -- no background or border. Use for low-emphasis actions, toolbars, or inline triggers.
 - **Danger** -- solid red background. Use for destructive actions like delete or remove.
 
@@ -70,10 +122,10 @@ A token-driven button with four variants, three sizes, and loading/disabled stat
 | State | Appearance |
 | --- | --- |
 | Default | Resting state with stable colour fill |
-| Hover | Background shifts lighter (primary) or shows subtle fill (ghost) |
-| Focus | 2 px brand-purple ring with 2 px offset |
+| Hover | Background shifts one step darker (primary, danger) or shows subtle fill (secondary, ghost) |
 | Active | Darker than hover, slight inset feel |
-| Disabled | 50 % opacity, `cursor: not-allowed`, no hover effect |
+| Focus | 2 px brand-purple ring with 2 px offset, visible on both light and dark surfaces |
+| Disabled | 50 % opacity, `cursor: not-allowed`, no hover effect. Label remains legible. |
 | Loading | Spinner replaces text, button non-interactive, `aria-busy="true"` |
 
 ## Props
@@ -153,10 +205,10 @@ function Actions() {
 ## Accessibility
 
 - Renders a native `<button>` element with correct `type="button"` default.
-- Focus ring uses `--border-focus` (purple-500) with a 2 px offset for clear visibility.
-- When `disabled`, the button receives `aria-disabled="true"` and suppresses click events.
-- When `loading`, `aria-busy="true"` is set and the label remains visible for screen readers.
-- Colour contrast between text and background meets WCAG AA (4.5:1) for all variants.
+- Focus ring uses `--border-focus` (purple-500) with a 2 px offset for clear visibility on both light and dark surfaces.
+- When `disabled`, the button receives `aria-disabled="true"` and suppresses click events. Label text remains legible at reduced opacity.
+- When `loading`, `aria-busy="true"` is set and the label remains in the DOM for screen readers.
+- Colour contrast between text and background meets WCAG AA (4.5:1) for all variants in both themes.
 - Icon-only buttons require an `aria-label` for screen reader context.
 - Keyboard: Enter and Space trigger the button action.
 
