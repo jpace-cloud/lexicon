@@ -2,11 +2,15 @@
 
 Get up and running with Lexicon in under two minutes.
 
-## 1. Install the package
+## 1. Get the files
+
+Clone the repository and copy the assets you need into your project:
 
 ```bash
-npm install @thepace/lexicon
+git clone https://github.com/jpace-cloud/lexicon.git
 ```
+
+The key files are `css/lexicon.css` (all tokens + component classes), `tailwind/lexicon-preset.js` (Tailwind preset), and `tokens/` (raw JSON).
 
 ## 2. Import the stylesheet
 
@@ -14,30 +18,16 @@ Add the Lexicon CSS to the root of your project. This single file provides every
 
 ```js
 // main.js / main.ts / layout.tsx
-import '@thepace/lexicon/css';
+import './path/to/lexicon.css';
 ```
 
 Or link it in HTML:
 
 ```html
-<link rel="stylesheet" href="node_modules/@thepace/lexicon/css/lexicon.css" />
+<link rel="stylesheet" href="path/to/lexicon.css" />
 ```
 
 ## 3. Use a component
-
-### React
-
-```tsx
-import { Button } from '@thepace/lexicon/components';
-
-export default function App() {
-  return (
-    <Button variant="primary" size="md">
-      Get started
-    </Button>
-  );
-}
-```
 
 ### Vanilla HTML
 
@@ -47,16 +37,26 @@ export default function App() {
 </button>
 ```
 
+### CSS custom properties
+
+```css
+.card {
+  background: var(--bg-surface-1);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radii-lg);
+  padding: var(--space-6);
+}
+```
+
 ### Tailwind
 
-If you use Tailwind CSS, add the Lexicon preset to your config so that all token values are available as utility classes:
+If you use Tailwind CSS, copy `lexicon-preset.js` into your project and add it to your config:
 
 ```js
 // tailwind.config.js
-const lexicon = require('@thepace/lexicon/tailwind');
-
 module.exports = {
-  presets: [lexicon],
+  presets: [require('./lexicon-preset')],
   // ...
 };
 ```
@@ -71,6 +71,6 @@ Then use token-derived utilities directly:
 
 ## Next steps
 
-- [Installation details](/start/installation) -- CDN, package managers, and framework-specific setup.
+- [Installation details](/start/installation) -- repository structure, fonts, and all available paths.
 - [Token overview](/tokens/overview) -- understand the three-layer architecture.
-- [Component overview](/components/overview) -- browse all 10 primitives.
+- [Component overview](/components/overview) -- browse all primitives.

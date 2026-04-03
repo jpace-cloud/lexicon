@@ -1,104 +1,156 @@
 # Installation
 
-## Package managers
+Lexicon tokens are available directly from the repository. Choose the method that fits your workflow.
 
-::: code-group
+## Clone the repository
 
-```bash [npm]
-npm install @thepace/lexicon
+```bash
+git clone https://github.com/jpace-cloud/lexicon.git
 ```
 
-```bash [yarn]
-yarn add @thepace/lexicon
+The repo includes pre-built CSS, a Tailwind preset, raw JSON tokens, and component source code. Everything you need is in the repo — no build step required to start using tokens.
+
+## Project structure
+
+```
+lexicon/
+├── css/
+│   ├── lexicon.css              # All tokens + component classes
+│   ├── lexicon.min.css          # Minified
+│   ├── lexicon-bundle.css       # Tokens + reset + component classes
+│   ├── lexicon-bundle.min.css   # Minified bundle
+│   └── reset.css                # CSS reset only
+├── tailwind/
+│   └── lexicon-preset.js        # Tailwind CSS preset
+├── tokens/
+│   ├── primitive/               # Colours, spacing, radii, shadows, motion, typography
+│   ├── semantic/                # Backgrounds, text, borders, elevation
+│   └── component/               # Per-component tokens (button, card, input, etc.)
+└── components/                  # React component source (TypeScript)
 ```
 
-```bash [pnpm]
-pnpm add @thepace/lexicon
-```
+## CSS custom properties
 
-:::
-
-## CDN
-
-For quick prototyping you can load the minified bundle from a CDN. Replace `1.0.0` with the version you need.
+Copy `css/lexicon.css` (or the minified variant) into your project and import it:
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@thepace/lexicon@1.0.0/css/lexicon-bundle.min.css"
-/>
+<link rel="stylesheet" href="path/to/lexicon.css" />
 ```
 
-The bundle includes the CSS reset and all token variables.
-
-## Importing CSS
-
-The main entry point gives you every custom property and component class:
+Or in a JS bundler:
 
 ```js
-import '@thepace/lexicon/css';
+import './path/to/lexicon.css';
 ```
 
-If you only need the reset:
+This gives you every design token as a CSS custom property. Use them directly:
 
-```js
-import '@thepace/lexicon/css/reset';
+```css
+.card {
+  background: var(--bg-surface-1);
+  color: var(--text-primary);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radii-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  font-family: var(--font-family-body);
+}
 ```
 
-## Importing the Tailwind preset
+If you also want the bundled CSS reset, use `lexicon-bundle.css` instead.
 
-Add the preset to your Tailwind config so that token values map to utility classes:
+## Tailwind preset
+
+Copy `tailwind/lexicon-preset.js` into your project and add it to your Tailwind config:
 
 ```js
 // tailwind.config.js
-const lexicon = require('@thepace/lexicon/tailwind');
-
 module.exports = {
-  presets: [lexicon],
+  presets: [require('./lexicon-preset')],
   content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
 };
 ```
 
-This extends `colors`, `fontFamily`, `fontSize`, `spacing`, `borderRadius`, `boxShadow`, `transitionDuration`, and `transitionTimingFunction` with Lexicon values.
+This extends Tailwind's `colors`, `fontFamily`, `fontSize`, `spacing`, `borderRadius`, `boxShadow`, `transitionDuration`, and `transitionTimingFunction` with Lexicon values:
 
-## Importing React components
-
-All 10 primitive components are exported from a single path:
-
-```tsx
-import { Button, Input, Card, Badge, Modal } from '@thepace/lexicon/components';
+```html
+<div class="bg-grey-950 text-white rounded-lg p-6 shadow-sm font-body">
+  <h2 class="font-heading text-xl font-semibold text-purple-400">Dashboard</h2>
+  <p class="text-grey-300 text-sm mt-2">Welcome back.</p>
+</div>
 ```
 
-You can also import individual components for smaller bundles:
+## Raw JSON tokens
 
-```tsx
-import { Button } from '@thepace/lexicon/components/Button';
+The `tokens/` directory contains the complete token system as structured JSON, organised in three layers:
+
+- **Primitive** — raw values: colour hex codes, pixel sizes, font stacks
+- **Semantic** — intent-mapped: `bg.primary`, `text.secondary`, `border.focus`
+- **Component** — per-component decisions: `button.primary.bg`, `card.default.radius`
+
+Use these files to generate tokens for any platform — iOS, Android, Figma plugins, or custom build pipelines.
+
+```json
+// tokens/semantic/colors.json (excerpt)
+{
+  "bg": {
+    "primary": { "value": "{grey.950}", "type": "color" },
+    "surface-1": { "value": "{grey.900}", "type": "color" },
+    "surface-2": { "value": "{grey.850}", "type": "color" }
+  }
+}
 ```
-
-Every component ships with TypeScript types. No `@types` package is needed.
 
 ## Fonts
 
-Lexicon uses three font families. Load them from their respective CDNs or self-host.
+Lexicon uses three font families. Add these to your document `<head>`:
 
 ```html
 <!-- Satoshi (headings) -->
-<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" />
+<link rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" />
 
 <!-- DM Sans (body) + JetBrains Mono (code) -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" />
 ```
 
 If these fonts are not loaded, the system falls back to `-apple-system, BlinkMacSystemFont, sans-serif`.
 
-## Package exports
+## Quick example
 
-| Import path | Contents |
+Paste this into any HTML page after importing `lexicon.css` and the fonts:
+
+```html
+<button style="
+  background: var(--interactive-default);
+  color: var(--text-primary);
+  padding: var(--space-2) var(--space-5);
+  border-radius: var(--radii-md);
+  border: none;
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: var(--motion-transition-colors);
+">
+  Get started
+</button>
+```
+
+You should see a purple button with rounded corners, using Lexicon's exact brand colour and spacing values.
+
+## What's included
+
+| Path | Contents |
 | --- | --- |
-| `@thepace/lexicon` | Main CSS (tokens + component classes) |
-| `@thepace/lexicon/css` | Same as above |
-| `@thepace/lexicon/css/reset` | CSS reset only |
-| `@thepace/lexicon/tailwind` | Tailwind preset |
-| `@thepace/lexicon/components` | All React components |
-| `@thepace/lexicon/components/*` | Individual components |
-| `@thepace/lexicon/tokens/*` | Raw JSON token files |
+| `css/lexicon.css` | All tokens as CSS custom properties + component classes |
+| `css/lexicon-bundle.css` | Above + CSS reset |
+| `css/reset.css` | CSS reset only |
+| `tailwind/lexicon-preset.js` | Tailwind preset extending colours, fonts, spacing, radii, shadows, motion |
+| `tokens/primitive/` | Raw colour, typography, spacing, radii, shadow, motion values (JSON) |
+| `tokens/semantic/` | Intent-mapped colour, elevation, typography tokens (JSON) |
+| `tokens/component/` | Per-component design decisions (JSON) |
+| `components/` | React component source with TypeScript types |
+
+npm and CDN distribution are on the roadmap. For updates, follow the [changelog](/about/changelog).

@@ -2,11 +2,9 @@
 
 Lexicon works with both the Next.js App Router and Pages Router. This guide covers the App Router setup (Next.js 13+).
 
-## Install
+## Setup
 
-```bash
-npm install @thepace/lexicon
-```
+Clone or download the [Lexicon repository](https://github.com/jpace-cloud/lexicon), then copy the files you need into your project. At minimum, copy `css/lexicon.css` and the `components/` directory.
 
 ## Import CSS in your root layout
 
@@ -14,7 +12,7 @@ Add the Lexicon stylesheet to your root layout so tokens and component styles ar
 
 ```tsx
 // app/layout.tsx
-import '@thepace/lexicon/css';
+import './lexicon.css';
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -41,7 +39,7 @@ Lexicon components that do not require interactivity (Card, Badge, Avatar) can r
 
 ```tsx
 // app/page.tsx (Server Component)
-import { Card, Badge } from '@thepace/lexicon/components';
+import { Card, Badge } from '@/lexicon/components';
 
 export default function DashboardPage() {
   return (
@@ -65,7 +63,7 @@ Interactive components (Modal, Toggle, Tabs) manage state and need the `'use cli
 'use client';
 
 import { useState } from 'react';
-import { Toggle } from '@thepace/lexicon/components';
+import { Toggle } from '@/lexicon/components';
 
 export function ThemeToggle() {
   const [dark, setDark] = useState(true);
@@ -95,10 +93,8 @@ If you also use Tailwind CSS with Next.js, add the Lexicon preset to your config
 
 ```js
 // tailwind.config.js
-const lexicon = require('@thepace/lexicon/tailwind');
-
 module.exports = {
-  presets: [lexicon],
+  presets: [require('./lexicon-preset')],
   content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
 };
 ```
@@ -109,7 +105,7 @@ For the Pages Router, import the CSS in `_app.tsx`:
 
 ```tsx
 // pages/_app.tsx
-import '@thepace/lexicon/css';
+import '../lexicon.css';
 import type { AppProps } from 'next/app';
 
 export default function App({ Component, pageProps }: AppProps) {

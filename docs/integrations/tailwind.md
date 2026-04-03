@@ -2,21 +2,13 @@
 
 Lexicon ships a Tailwind preset that maps every design token to Tailwind utility classes. No manual theme configuration required.
 
-## Install
+## Setup
 
-```bash
-npm install @thepace/lexicon
-```
-
-## Configure
-
-Add the preset to your `tailwind.config.js`:
+Copy `tailwind/lexicon-preset.js` from the [Lexicon repository](https://github.com/jpace-cloud/lexicon) into your project, then add it to your `tailwind.config.js`:
 
 ```js
-const lexicon = require('@thepace/lexicon/tailwind');
-
 module.exports = {
-  presets: [lexicon],
+  presets: [require('./lexicon-preset')],
   content: ['./src/**/*.{js,ts,jsx,tsx,html}'],
 };
 ```
@@ -79,7 +71,7 @@ If you need the `lex-*` component classes in addition to Tailwind utilities, imp
 @tailwind components;
 @tailwind utilities;
 
-@import '@thepace/lexicon/css';
+@import './path/to/lexicon.css';
 ```
 
 This gives you both Tailwind utilities (token-aligned) and Lexicon component classes (`.lex-button`, `.lex-card`, etc.).

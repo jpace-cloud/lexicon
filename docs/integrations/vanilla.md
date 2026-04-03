@@ -4,22 +4,11 @@ Lexicon does not require React, Tailwind, or any build tool. Import the CSS file
 
 ## Load the stylesheet
 
-### From npm
+Copy `css/lexicon.css` (or `css/lexicon-bundle.css` which includes the CSS reset) from the [Lexicon repository](https://github.com/jpace-cloud/lexicon) into your project:
 
 ```html
-<link rel="stylesheet" href="node_modules/@thepace/lexicon/css/lexicon.css" />
+<link rel="stylesheet" href="path/to/lexicon.css" />
 ```
-
-### From CDN
-
-```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@thepace/lexicon@1.0.0/css/lexicon-bundle.min.css"
-/>
-```
-
-The bundle version includes the CSS reset. The standard version (`lexicon.css`) does not.
 
 ### Load fonts
 
@@ -36,13 +25,13 @@ Every token is available as a `var(--*)` reference:
 body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: var(--font-body);
+  font-family: var(--font-family-body);
   font-size: var(--font-size-base);
   line-height: var(--line-height-relaxed);
 }
 
 h1, h2, h3 {
-  font-family: var(--font-heading);
+  font-family: var(--font-family-heading);
   letter-spacing: var(--letter-spacing-tight);
 }
 
@@ -84,18 +73,18 @@ All component classes are prefixed with `lex-`:
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>My App</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@thepace/lexicon@1.0.0/css/lexicon-bundle.min.css" />
+  <link rel="stylesheet" href="lexicon-bundle.css" />
   <link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap" />
   <style>
     body {
       background: var(--bg-primary);
       color: var(--text-primary);
-      font-family: var(--font-body);
+      font-family: var(--font-family-body);
       padding: var(--space-8);
     }
     h1 {
-      font-family: var(--font-heading);
+      font-family: var(--font-family-heading);
       font-size: var(--font-size-3xl);
       font-weight: var(--font-weight-bold);
       margin-bottom: var(--space-4);

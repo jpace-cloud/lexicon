@@ -2,34 +2,35 @@
 
 Lexicon provides 10 React components with full TypeScript support. All components are token-driven and accessible by default.
 
-## Install
+## Setup
 
-```bash
-npm install @thepace/lexicon
-```
+Clone or download the [Lexicon repository](https://github.com/jpace-cloud/lexicon), then copy the files you need into your project:
+
+- `css/lexicon.css` — all tokens and component classes
+- `components/` — React component source (TypeScript)
 
 ## Import the CSS
 
-You must import the Lexicon stylesheet once at the root of your application. This provides all CSS custom properties and component styles.
+Import the Lexicon stylesheet once at the root of your application. This provides all CSS custom properties and component styles.
 
 ```tsx
 // main.tsx or App.tsx
-import '@thepace/lexicon/css';
+import './path/to/lexicon.css';
 ```
 
 ## Import components
 
-Import everything from a single entry point:
+Copy the `components/` directory into your project, then import from it:
 
 ```tsx
-import { Button, Input, Card, Badge, Table, Modal, Tooltip, Avatar, Tabs, Toggle } from '@thepace/lexicon/components';
+import { Button, Input, Card, Badge, Table, Modal, Tooltip, Avatar, Tabs, Toggle } from './lexicon/components';
 ```
 
-Or import individual components for smaller bundles:
+Or import individual components:
 
 ```tsx
-import { Button } from '@thepace/lexicon/components/Button';
-import { Card } from '@thepace/lexicon/components/Card';
+import { Button } from './lexicon/components/primitives/Button';
+import { Card } from './lexicon/components/primitives/Card';
 ```
 
 ## TypeScript support
@@ -37,7 +38,7 @@ import { Card } from '@thepace/lexicon/components/Card';
 All component props are fully typed. Types are exported alongside the components:
 
 ```tsx
-import type { ButtonProps, CardProps, ModalProps } from '@thepace/lexicon/components';
+import type { ButtonProps, CardProps, ModalProps } from './lexicon/components';
 ```
 
 Available type exports:
@@ -57,13 +58,13 @@ Available type exports:
 
 ## Tree-shaking
 
-When importing individual components (`@thepace/lexicon/components/Button`), bundlers like Vite, webpack, and esbuild will tree-shake unused components. The single entry point (`@thepace/lexicon/components`) also supports tree-shaking via `sideEffects: false`.
+When importing individual components, bundlers like Vite, webpack, and esbuild will tree-shake unused components. The single entry point also supports tree-shaking via `sideEffects: false`.
 
 ## Minimal example
 
 ```tsx
-import '@thepace/lexicon/css';
-import { Button, Card, Badge } from '@thepace/lexicon/components';
+import './lexicon.css';
+import { Button, Card, Badge } from './lexicon/components';
 
 export default function App() {
   return (

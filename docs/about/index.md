@@ -21,7 +21,7 @@ Lexicon is built and maintained by [The Pace](https://thepace.io), a product stu
 Lexicon is released under the MIT licence. The source code, token definitions, build scripts, and documentation are all available on GitHub.
 
 - Repository: [github.com/jpace-cloud/lexicon](https://github.com/jpace-cloud/lexicon)
-- Package: [@thepace/lexicon on npm](https://www.npmjs.com/package/@thepace/lexicon)
+- Package: @thepace/lexicon (npm distribution on the roadmap)
 - Documentation: [thepace.io/lexicon](https://thepace.io/lexicon)
 
 ## Pro

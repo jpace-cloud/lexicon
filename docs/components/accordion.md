@@ -66,7 +66,7 @@ import { Accordion } from '@thepace/lexicon/components';
     Lexicon is a token-driven design system for The Pace product family.
   </Accordion.Item>
   <Accordion.Item id="install" title="How do I install it?">
-    Run npm install @thepace/lexicon and import the CSS.
+    Clone the repo, copy the CSS file, and import it into your project.
   </Accordion.Item>
   <Accordion.Item id="custom" title="Can I customise the tokens?">
     Yes — override any CSS custom property on :root.
@@ -96,7 +96,7 @@ import { Accordion } from '@thepace/lexicon/components';
     </button>
     <div class="lex-accordion__content" id="panel-2" role="region"
          hidden>
-      Run npm install @thepace/lexicon.
+      Clone the repo and import the CSS file.
     </div>
   </div>
 </div>
